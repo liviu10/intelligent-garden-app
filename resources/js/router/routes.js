@@ -3,8 +3,10 @@ function page (path) {
 }
 
 export default [
-  { path: '/', name: 'welcome', component: page('welcome.vue') },
+  // The route to the home page will redirect the user to the login form
+  { path: '/', name: 'home', component: page('home.vue') },
 
+  // The routes to the login and registration system
   { path: '/login', name: 'login', component: page('auth/login.vue') },
   { path: '/register', name: 'register', component: page('auth/register.vue') },
   { path: '/password/reset', name: 'password.request', component: page('auth/password/email.vue') },
@@ -12,7 +14,7 @@ export default [
   { path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue') },
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
-  { path: '/home', name: 'home', component: page('home.vue') },
+  // The routes to the settings section: profile and password
   {
     path: '/settings',
     component: page('settings/index.vue'),
@@ -23,5 +25,6 @@ export default [
     ]
   },
 
+  // The route to display error message if the user is requesting for a resource that do not exist
   { path: '*', component: page('errors/404.vue') }
 ]
