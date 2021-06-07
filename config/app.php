@@ -86,6 +86,7 @@ return [
         'en' => 'EN',
         'es' => 'ES',
         'fr' => 'FR',
+        'ro' => 'RO',
         'pt-BR' => 'BR',
         'zh-CN' => '中文',
     ],
