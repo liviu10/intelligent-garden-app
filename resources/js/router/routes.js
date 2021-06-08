@@ -25,6 +25,9 @@ export default [
     ]
   },
 
+  // The route to the documents section
+  { path: '/documents/how-to-use-this-app', name: 'documents.documentation', component: page('documents/documentation.vue') },
+
   // The route to display error message if the user is requesting for a resource that do not exist
   { path: '*', component: page('errors/404.vue') }
 ]

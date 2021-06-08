@@ -24,6 +24,7 @@
     "sweetalert2": "^10.9.0",
     "vform": "^1.0.1",
     "vue": "^2.6.12",
+    "vue-country-flag": "^2.1.1",
     "vue-i18n": "^8.22.1",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.4.8",
