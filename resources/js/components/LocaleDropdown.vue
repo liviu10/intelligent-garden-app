@@ -5,10 +5,9 @@
     >
       {{ locales[locale] }}
     </a>
-    <div class="dropdown-menu">
-      <a v-for="(value, key) in locales" :key="key" class="dropdown-item" href="#"
-         @click.prevent="setLocale(key)"
-      >
+    <div class="dropdown-menu py-0">
+      <a v-for="(value, key) in locales" :key="key" class="dropdown-item py-2 d-flex justify-content-start align-items-center pl-2" href="#" @click.prevent="setLocale(key)">
+        <country-flag :country="value" size="normal" />
         {{ value }}
       </a>
     </div>
@@ -18,8 +17,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import { loadMessages } from '~/plugins/i18n'
+import CountryFlag from 'vue-country-flag'
 
 export default {
+  components: {
+    CountryFlag
+  },
   computed: mapGetters({
     locale: 'lang/locale',
     locales: 'lang/locales'
@@ -36,3 +39,10 @@ export default {
   }
 }
 </script>
+<style lang="css" scoped>
+  span.flag.f-ro.normal-flag, span.flag.f-usa.normal-flag,
+  span.flag.f-es.normal-flag, span.flag.f-fr.normal-flag,
+  span.flag.f-it.normal-flag {
+    margin-right: 0.5px;
+  }
+</style>

@@ -1,0 +1,11 @@
+{
+    "navigation_bar": {
+        "equipments_button": "Elenco attrezzature",
+        "about_us_button": "Chi siamo",
+        "documentation_button": "Documentazione",
+        "settings_button": "Impostazioni utente",
+        "logout_button": "Disconnettersi",
+        "login_button": "Accesso",
+        "register_button": "Registrati"
+    }
+}

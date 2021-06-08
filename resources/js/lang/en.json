@@ -1,4 +1,13 @@
 {
+  "navigation_bar": {
+    "equipments_button": "Equipment List",
+    "about_us_button": "About Us",
+    "documentation_button": "Documentation",
+    "settings_button": "User Settings",
+    "logout_button": "Log Out",
+    "login_button": "Log In",
+    "register_button": "Register"
+  },
   "ok": "Ok",
   "cancel": "Cancel",
   "error_alert_title": "Oops...",
