@@ -7,5 +7,19 @@
         "logout_button": "Se déconnecter",
         "login_button": "Connexion",
         "register_button": "S'inscrire"
+    },
+    "login_system": {
+        "login_form": {
+            "page_title": "Connexion",
+            "form_title": "Connectez-vous pour utiliser",
+            "email_label": "Adresse e-mail",
+            "email_placeholder": "Votre adresse email",
+            "password_label": "Mot de passe",
+            "password_placeholder": "Tapez votre mot de passe",
+            "remember_me": "Souviens-toi de moi",
+            "forgot_password": "Mot de passe oublié?",
+            "login_button": "Connexion",
+            "register_button": "Créer un compte"
+        }
     }
 }

@@ -7,5 +7,19 @@
         "logout_button": "Cerrar sesión",
         "login_button": "Iniciar sesión",
         "register_button": "Registrarse"
+    },
+    "login_system": {
+        "login_form": {
+            "page_title": "Iniciar sesión",
+            "form_title": "Iniciar sesión para usar",
+            "email_label": "Dirección de correo electrónico",
+            "email_placeholder": "Su dirección de correo electrónico",
+            "password_label": "Contraseña",
+            "password_placeholder": "Ingresa tu contraseña",
+            "remember_me": "Recuérdame",
+            "forgot_password": "¿Olvidaste tu contraseña?",
+            "login_button": "Iniciar sesión",
+            "register_button": "Crear una cuenta"
+        }
     }
 }

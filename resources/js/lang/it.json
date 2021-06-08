@@ -7,5 +7,19 @@
         "logout_button": "Disconnettersi",
         "login_button": "Accesso",
         "register_button": "Registrati"
+    },
+    "login_system": {
+        "login_form": {
+            "page_title": "Accesso",
+            "form_title": "Accedi per usare",
+            "email_label": "Indirizzo e-mail",
+            "email_placeholder": "Il tuo indirizzo di posta elettronica",
+            "password_label": "Parola d'ordine",
+            "password_placeholder": "Inserisci la tua password",
+            "remember_me": "Ricordati di me",
+            "forgot_password": "Hai dimenticato la password?",
+            "login_button": "Accesso",
+            "register_button": "Crea un account"
+        }
     }
 }

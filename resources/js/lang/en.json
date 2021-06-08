@@ -8,6 +8,20 @@
     "login_button": "Log In",
     "register_button": "Register"
   },
+  "login_system": {
+    "login_form": {
+      "page_title": "Log In",
+      "form_title": "Log In to use",
+      "email_label": "E-Mail Address",
+      "email_placeholder": "Your e-mail address",
+      "password_label": "Password",
+      "password_placeholder": "Enter your password",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot your password?",
+      "login_button": "Log In",
+      "register_button": "Create account"
+    }
+  },
   "ok": "Ok",
   "cancel": "Cancel",
   "error_alert_title": "Oops...",

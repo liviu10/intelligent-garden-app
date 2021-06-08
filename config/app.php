@@ -83,13 +83,11 @@ return [
     'locale' => 'en',
 
     'locales' => [
-        'en' => 'USA',
         'ro' => 'RO',
+        'en' => 'USA',
         'es' => 'ES',
         'fr' => 'FR',
         'it' => 'IT',
-        // 'pt-BR' => 'BR',
-        // 'zh-CN' => '中文',
     ],
 
     /*
