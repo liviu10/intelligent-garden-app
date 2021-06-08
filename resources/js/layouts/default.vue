@@ -2,7 +2,7 @@
   <div class="main-layout">
     <navbar />
 
-    <div class="container mt-4">
+    <div class="container my-5">
       <child />
     </div>
   </div>

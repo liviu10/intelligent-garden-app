@@ -7,5 +7,19 @@
         "logout_button": "Delogare",
         "login_button": "Autentificare",
         "register_button": "Înregistrare"
+    },
+    "login_system": {
+        "login_form": {
+            "page_title": "Autentificare",
+            "form_title": "Autentifică-te pentru a utiliza",
+            "email_label": "Adresă de e-mail",
+            "email_placeholder": "Adresa de e-mail a contului tău",
+            "password_label": "Parolă",
+            "password_placeholder": "Inserează parola contului tău",
+            "remember_me": "Ține-mă minte",
+            "forgot_password": "Parolă uitată?",
+            "login_button": "Autentificare",
+            "register_button": "Creare cont"
+        }
     }
 }
