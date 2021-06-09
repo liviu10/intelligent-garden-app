@@ -27,8 +27,26 @@
             "email_label": "Adresse e-mail",
             "email_placeholder": "Votre adresse email",
             "password_label": "Mot de passe",
+            "password_placeholder": "Saisissez le mot de passe de votre compte",
             "confirm_password_label": "Confirmer votre mot de passe",
+            "confirm_password_placeholder": "Ressaisissez le mot de passe de votre compte",
             "submit_button": "Envoyer le lien de réinitialisation du mot de passe"
+        },
+        "create_account_form": {
+            "page_title": "Créer un compte",
+            "form_title": "Créer un nouveau compte sur",
+            "name_label": "Nom",
+            "name_placeholder": "Ton nom complet",
+            "email_label": "Adresse e-mail",
+            "email_placeholder": "Votre adresse email",
+            "password_label": "Mot de passe",
+            "password_placeholder": "Tapez votre mot de passe",
+            "confirm_password_label": "Confirmer votre mot de passe",
+            "confirm_password_placeholder": "Entrez à nouveau votre mot de passe",
+            "register_button": "S'inscrire",
+            "login_button": "Retour connexion",
+            "verify_email_address": "Nous vous avons envoyé un e-mail avec un lien de vérification.",
+            "failed_to_verify_email": "Échec de la vérification de l'e-mail."
         }
     }
 }

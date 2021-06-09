@@ -27,8 +27,26 @@
             "email_label": "Adresă de e-mail",
             "email_placeholder": "Adresa de e-mail a contului tău",
             "password_label": "Parolă",
+            "password_placeholder": "Inserează parola contului tău",
             "confirm_password_label": "Confirmare Parolă",
+            "confirm_password_placeholder": "Reinserează parola contului tău",
             "submit_button": "Trimite link-ul de resetare"
+        },
+        "create_account_form": {
+            "page_title": "Creare cont nou",
+            "form_title": "Crează-ți un cont nou pe",
+            "name_label": "Nume",
+            "name_placeholder": "Nume și prenume",
+            "email_label": "Adresă de e-mail",
+            "email_placeholder": "Adresa de e-mail",
+            "password_label": "Parolă",
+            "password_placeholder": "Inserează parolă",
+            "confirm_password_label": "Confirmă parolă",
+            "confirm_password_placeholder": "Reinserează-ți parola",
+            "register_button": "Înregistrare",
+            "login_button": "Înapoi la Autentificare",
+            "verify_email_address": "Ți-am trimis un e-mail cu un link de verificare a adresei de e-mail.",
+            "failed_to_verify_email": "Eroare la verificarea adresei de e-mail."
         }
     }
 }

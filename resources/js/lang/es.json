@@ -27,8 +27,26 @@
             "email_label": "Dirección de correo electrónico",
             "email_placeholder": "Su dirección de correo electrónico",
             "password_label": "Contraseña",
+            "password_placeholder": "Ingrese la contraseña de su cuenta",
             "confirm_password_label": "Confirmar la contraseña",
+            "confirm_password_placeholder": "Vuelva a ingresar la contraseña de su cuenta",
             "submit_button": "Enviar enlace de restablecimiento de contraseña"
+        },
+        "create_account_form": {
+            "page_title": "Crear una cuenta",
+            "form_title": "Crea una nueva cuenta en",
+            "name_label": "Nombre",
+            "name_placeholder": "Tu nombre completo",
+            "email_label": "Dirección de correo electrónico",
+            "email_placeholder": "Su dirección de correo electrónico",
+            "password_label": "Contraseña",
+            "password_placeholder": "Ingrese la contraseña de su cuenta",
+            "confirm_password_label": "Confirmar la contraseña",
+            "confirm_password_placeholder": "Vuelva a ingresar la contraseña de su cuenta",
+            "register_button": "Iniciar sesión",
+            "login_button": "Atrás para iniciar sesión",
+            "verify_email_address": "Le enviamos un correo electrónico con un enlace de verificación.",
+            "failed_to_verify_email": "No se pudo verificar el correo electrónico."
         }
     }
 }

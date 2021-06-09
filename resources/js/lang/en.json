@@ -27,8 +27,26 @@
       "email_label": "E-Mail Address",
       "email_placeholder": "Your e-mail address",
       "password_label": "Password",
+      "password_placeholder": "Enter your password",
       "confirm_password_label": "Confirm your Password",
+      "confirm_password_placeholder": "Re-enter your password",
       "submit_button": "Send password reset link"
+    },
+    "create_account_form": {
+      "page_title": "Create account",
+      "form_title": "Create a new account on",
+      "name_label": "Name",
+      "name_placeholder": "Your full name",
+      "email_label": "E-Mail Address",
+      "email_placeholder": "Your e-mail address",
+      "password_label": "Password",
+      "password_placeholder": "Enter your password",
+      "confirm_password_label": "Confirm your Password",
+      "confirm_password_placeholder": "Re-enter your password",
+      "register_button": "Register",
+      "login_button": "Back to login",
+      "verify_email_address": "We sent you an email with an the verification link.",
+      "failed_to_verify_email": "Failed to verify email."
     }
   },
   "ok": "Ok",

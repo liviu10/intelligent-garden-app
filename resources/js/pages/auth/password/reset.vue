@@ -17,7 +17,7 @@
           <div class="container-login-form-body">
             <!-- EMAIL CONTAINER SECTION START -->
             <div class="form-group row">
-                          <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.email_label') }}</label>
+              <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.email_label') }}</label>
               <div class="col-md-12">
                 <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email" readonly>
                 <has-error :form="form" field="email" />
@@ -27,9 +27,9 @@
 
             <!-- PASSWORD CONTAINER SECTION START -->
             <div class="form-group row">
-              <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.password') }}</label>
+              <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.password_label') }}</label>
               <div class="col-md-12">
-                <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
+                <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password" :placeholder="$t('login_system.reset_password_form.password_placeholder')">
                 <has-error :form="form" field="password" />
               </div>
             </div>
@@ -37,9 +37,9 @@
 
             <!-- PASSWORD CONFIRMATION CONTAINER SECTION START -->
             <div class="form-group row">
-              <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.password') }}</label>
+              <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.confirm_password_label') }}</label>
               <div class="col-md-12">
-                <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
+                <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation" :placeholder="$t('login_system.reset_password_form.confirm_password_placeholder')">
                 <has-error :form="form" field="password_confirmation" />
               </div>
             </div>
@@ -99,3 +99,31 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .container-login-form {
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    &-header {
+      margin: 20px 0px !important;
+      & h1 {
+        margin-bottom: 0px !important;
+        user-select: none;
+      }
+    }
+    &-body {
+      margin: 40px 0px !important;
+      & label {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+    &-footer {
+      margin: 40px 0px !important;
+      & .btn {
+        margin: 0px 10px;
+        width: 200px;
+        border-radius: 0px;
+      }
+    }
+  }
+</style>

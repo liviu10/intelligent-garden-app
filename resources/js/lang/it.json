@@ -27,8 +27,26 @@
             "email_label": "Indirizzo e-mail",
             "email_placeholder": "Il tuo indirizzo di posta elettronica",
             "password_label": "Parola d'ordine",
+            "password_placeholder": "Inserisci la Parola d'ordine del tuo account",
             "confirm_password_label": "Conferma la tua Parola d'ordine",
+            "confirm_password_placeholder": "Reinserisci la Parola d'ordine del tuo account",
             "submit_button": "Invia il link per la reimpostazione della password"
+        },
+        "create_account_form": {
+            "page_title": "Crea un account",
+            "form_title": "Crea un nuovo account su",
+            "name_label": "Nome",
+            "name_placeholder": "Il tuo nome completo",
+            "email_label": "Indirizzo e-mail",
+            "email_placeholder": "Il tuo indirizzo di posta elettronica",
+            "password_label": "Parola d'ordine",
+            "password_placeholder": "Inserisci la tua password",
+            "confirm_password_label": "Conferma la tua Parola d'ordine",
+            "confirm_password_placeholder": "Reinserisci la tua Parola d'ordine",
+            "register_button": "Registrati",
+            "login_button": "Torna al login",
+            "verify_email_address": "Ti abbiamo inviato un'e-mail con un link di verifica.",
+            "failed_to_verify_email": "Impossibile verificare l'email."
         }
     }
 }
