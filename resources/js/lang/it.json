@@ -26,6 +26,8 @@
             "form_title": "Reimposta la tua Parola d'ordine",
             "email_label": "Indirizzo e-mail",
             "email_placeholder": "Il tuo indirizzo di posta elettronica",
+            "password_label": "Parola d'ordine",
+            "confirm_password_label": "Conferma la tua Parola d'ordine",
             "submit_button": "Invia il link per la reimpostazione della password"
         }
     }
