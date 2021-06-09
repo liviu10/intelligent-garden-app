@@ -26,6 +26,8 @@
             "form_title": "Réinitialisez votre mot de passe",
             "email_label": "Adresse e-mail",
             "email_placeholder": "Votre adresse email",
+            "password_label": "Mot de passe",
+            "confirm_password_label": "Confirmer votre mot de passe",
             "submit_button": "Envoyer le lien de réinitialisation du mot de passe"
         }
     }

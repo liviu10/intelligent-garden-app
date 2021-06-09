@@ -26,6 +26,8 @@
       "form_title": "Reset your password",
       "email_label": "E-Mail Address",
       "email_placeholder": "Your e-mail address",
+      "password_label": "Password",
+      "confirm_password_label": "Confirm your Password",
       "submit_button": "Send password reset link"
     }
   },

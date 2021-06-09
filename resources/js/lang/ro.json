@@ -26,6 +26,8 @@
             "form_title": "Resetează-ți parola",
             "email_label": "Adresă de e-mail",
             "email_placeholder": "Adresa de e-mail a contului tău",
+            "password_label": "Parolă",
+            "confirm_password_label": "Confirmare Parolă",
             "submit_button": "Trimite link-ul de resetare"
         }
     }
