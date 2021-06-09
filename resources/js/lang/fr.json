@@ -20,6 +20,13 @@
             "forgot_password": "Mot de passe oublié?",
             "login_button": "Connexion",
             "register_button": "Créer un compte"
+        },
+        "reset_password_form": {
+            "page_title": "Réinitialiser le mot de passe",
+            "form_title": "Réinitialisez votre mot de passe",
+            "email_label": "Adresse e-mail",
+            "email_placeholder": "Votre adresse email",
+            "submit_button": "Envoyer le lien de réinitialisation du mot de passe"
         }
     }
 }

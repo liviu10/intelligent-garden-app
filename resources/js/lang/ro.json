@@ -20,6 +20,13 @@
             "forgot_password": "Parolă uitată?",
             "login_button": "Autentificare",
             "register_button": "Creare cont"
+        },
+        "reset_password_form": {
+            "page_title": "Resetare Parolă",
+            "form_title": "Resetează-ți parola",
+            "email_label": "Adresă de e-mail",
+            "email_placeholder": "Adresa de e-mail a contului tău",
+            "submit_button": "Trimite link-ul de resetare"
         }
     }
 }

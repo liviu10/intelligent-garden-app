@@ -20,6 +20,13 @@
             "forgot_password": "Hai dimenticato la password?",
             "login_button": "Accesso",
             "register_button": "Crea un account"
+        },
+        "reset_password_form": {
+            "page_title": "Resetta la Parola d'ordine",
+            "form_title": "Reimposta la tua Parola d'ordine",
+            "email_label": "Indirizzo e-mail",
+            "email_placeholder": "Il tuo indirizzo di posta elettronica",
+            "submit_button": "Invia il link per la reimpostazione della password"
         }
     }
 }

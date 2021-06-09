@@ -20,6 +20,13 @@
             "forgot_password": "¿Olvidaste tu contraseña?",
             "login_button": "Iniciar sesión",
             "register_button": "Crear una cuenta"
+        },
+        "reset_password_form": {
+            "page_title": "Restablecer la contraseña",
+            "form_title": "Restablecer su contraseña",
+            "email_label": "Dirección de correo electrónico",
+            "email_placeholder": "Su dirección de correo electrónico",
+            "submit_button": "Enviar enlace de restablecimiento de contraseña"
         }
     }
 }

@@ -20,6 +20,13 @@
       "forgot_password": "Forgot your password?",
       "login_button": "Log In",
       "register_button": "Create account"
+    },
+    "reset_password_form": {
+      "page_title": "Reset Password",
+      "form_title": "Reset your password",
+      "email_label": "E-Mail Address",
+      "email_placeholder": "Your e-mail address",
+      "submit_button": "Send password reset link"
     }
   },
   "ok": "Ok",
