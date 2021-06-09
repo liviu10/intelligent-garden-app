@@ -1,4 +1,5 @@
 {
+    "app_name": "Giardino Intelligente",
     "navigation_bar": {
         "equipments_button": "Elenco attrezzature",
         "about_us_button": "Chi siamo",

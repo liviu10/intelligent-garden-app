@@ -4,7 +4,7 @@
       <!-- NAVBAR BRAND SECTION START -->
       <router-link :to="{ name: 'home' }" class="navbar-brand">
         <div class="text-uppercase">
-          {{ appName }}
+          {{ $t('app_name') }}
         </div>
       </router-link>
       <!-- NAVBAR BRAND SECTION END -->
@@ -88,10 +88,6 @@ export default {
   components: {
     LocaleDropdown
   },
-
-  data: () => ({
-    appName: window.config.appName
-  }),
 
   computed: mapGetters({
     user: 'auth/user'
