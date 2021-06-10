@@ -21,5 +21,18 @@
             "login_button": "Accesso",
             "register_button": "Crea un account"
         }
+    },
+    "footer_section": {
+        "first_paragraph": {
+            "title": "Questo sito è stato realizzato con",
+            "bootstrap_tooltip": "Controlla di più sulla documentazione del framework frontend di Bootstrap",
+            "vuejs_tooltip": "Controlla di più sulla documentazione del framework frontend di VueJS",
+            "laravel_tooltip": "Controlla di più sulla documentazione del Laravel Backend Framework"
+        },
+        "second_paragraph": {
+            "title": "Seguimi su:",
+            "github_tooltip": "Controlla il mio profilo Github",
+            "linkedin_tooltip": "Controlla il mio profilo Linkedin"
+        }
     }
 }

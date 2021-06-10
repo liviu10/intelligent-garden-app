@@ -21,5 +21,18 @@
             "login_button": "Iniciar sesión",
             "register_button": "Crear una cuenta"
         }
+    },
+    "footer_section": {
+        "first_paragraph": {
+            "title": "Este sitio web fue hecho con",
+            "bootstrap_tooltip": "Consulte más sobre la documentación del marco de frontend de Bootstrap",
+            "vuejs_tooltip": "Consulte más sobre la documentación del marco de interfaz de VueJS",
+            "laravel_tooltip": "Consulte más sobre la documentación del marco de backend de Laravel"
+        },
+        "second_paragraph": {
+            "title": "Sigueme en:",
+            "github_tooltip": "Consultar mi perfil de Github",
+            "linkedin_tooltip": "Consultar mi perfil de Linkedin"
+        }
     }
 }

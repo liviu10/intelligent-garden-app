@@ -22,6 +22,19 @@
       "register_button": "Create account"
     }
   },
+  "footer_section": {
+    "first_paragraph": {
+      "title": "This website was made with",
+      "bootstrap_tooltip": "Check more about the Bootstrap Frontend Framework Documentation",
+      "vuejs_tooltip": "Check more about the VueJS Frontend Framework Documentation",
+      "laravel_tooltip": "Check more about the Laravel Backend Framework Documentation"
+    },
+    "second_paragraph": {
+      "title": "Follow me on:",
+      "github_tooltip": "Check my Github Profile",
+      "linkedin_tooltip": "Check my Linkedin Profile"
+    }
+  },
   "ok": "Ok",
   "cancel": "Cancel",
   "error_alert_title": "Oops...",
