@@ -18,7 +18,7 @@
             {{ $t('login_system.create_account_form.form_title') }}
           </h1>
           <h1 class="text-center">
-            "{{ app_name }}"
+            "{{ $t('app_name') }}"
           </h1>
         </div>
       </div>
@@ -107,8 +107,7 @@ export default {
       password: '',
       password_confirmation: ''
     }),
-    mustVerifyEmail: false,
-    app_name: 'Grădina Inteligentă'
+    mustVerifyEmail: false
   }),
 
   methods: {
