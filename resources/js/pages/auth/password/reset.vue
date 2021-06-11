@@ -103,6 +103,9 @@ export default {
   .container-login-form {
     border: 1px solid #6c757d;
     border-radius: 5px;
+    @media (max-width: 575.98px) {
+      border: 0px;
+    }
     &-header {
       margin: 20px 0px !important;
       & h1 {
