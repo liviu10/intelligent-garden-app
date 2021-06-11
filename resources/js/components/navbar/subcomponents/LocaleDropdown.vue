@@ -1,14 +1,14 @@
 <template>
   <li v-if="Object.keys(locales).length > 1" class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button"
-       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-    >
-      {{ locales[locale] }}
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <country-flag :country="locales[locale].lang_code" size="small" />
+      {{ locales[locale].lang_code }}
+      <span class="small font-italic">({{ locales[locale].lang_name }})</span>
     </a>
     <div class="dropdown-menu py-0">
       <a v-for="(value, key) in locales" :key="key" class="dropdown-item py-2 d-flex justify-content-start align-items-center pl-2" href="#" @click.prevent="setLocale(key)">
-        <country-flag :country="value" size="normal" />
-        {{ value }}
+        <country-flag :country="value.lang_code" size="normal" />
+        {{ value.lang_code }} <span class="small font-italic" style="margin-left: 4px"> ({{ value.lang_name }}) </span>
       </a>
     </div>
   </li>

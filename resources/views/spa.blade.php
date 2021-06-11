@@ -1,6 +1,7 @@
 @php
 $config = [
     'appName' => config('app.name'),
+    'appOwner' => config('app.owner'),
     'locale' => $locale = app()->getLocale(),
     'locales' => config('app.locales'),
     'githubAuth' => config('services.github.client_id'),
@@ -12,7 +13,7 @@ $config = [
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>{{ config('app.name') }}</title>
+  <title>{{ config('app.name') }} &middot; {{ config('app.owner') }}</title>
 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 </head>

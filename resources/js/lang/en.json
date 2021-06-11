@@ -2,6 +2,15 @@
   "app_name": "Intelligent Garden",
   "navigation_bar": {
     "equipments_button": "Equipment List",
+    "equipment_records_button": {
+      "button_title": "Equipment Records",
+      "dropdown_item_1": "pH Sensor",
+      "dropdown_item_2": "EC Sensor",
+      "dropdown_item_3": "Level Sensor",
+      "dropdown_item_4": "pH Pump--",
+      "dropdown_item_5": "pH Pump++",
+      "dropdown_item_6": "Nutrients Pump"
+    },
     "about_us_button": "About Us",
     "documentation_button": "Documentation",
     "settings_button": "User Settings",
@@ -31,6 +40,7 @@
       "password_placeholder": "Enter your password",
       "confirm_password_label": "Confirm your Password",
       "confirm_password_placeholder": "Re-enter your password",
+      "login_button": "Log In with different account",
       "submit_button": "Send password reset link"
     },
     "create_account_form": {
@@ -62,6 +72,9 @@
       "github_tooltip": "Check my Github Profile",
       "linkedin_tooltip": "Check my Linkedin Profile"
     }
+  },
+  "home_page": {
+    "page_title": "Dashboard"
   },
   "ok": "Ok",
   "cancel": "Cancel",

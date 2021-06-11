@@ -28,7 +28,10 @@
         <div class="container-login-form-footer">
           <!-- SUBMIT BUTTON SECTION START -->
           <div class="form-group row">
-            <div class="col-md-12 d-flex justify-content-around m-auto">
+            <div class="col-md-8 d-flex justify-content-around m-auto">
+              <router-link :to="{ name: 'login' }" class="btn btn-success">
+                {{ $t('login_system.reset_password_form.login_button') }}
+              </router-link>
               <v-button :loading="form.busy">
                 {{ $t('login_system.reset_password_form.submit_button') }}
               </v-button>
@@ -73,6 +76,9 @@ export default {
   .container-login-form {
     border: 1px solid #6c757d;
     border-radius: 5px;
+    @media (max-width: 575.98px) {
+      border: 0px;
+    }
     &-header {
       margin: 20px 0px !important;
       & h1 {

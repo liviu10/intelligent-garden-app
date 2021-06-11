@@ -9,7 +9,7 @@ export default {
   middleware: 'auth',
 
   metaInfo () {
-    return { title: this.$t('home') }
+    return { title: this.$t('home_page.page_title') }
   }
 }
 </script>

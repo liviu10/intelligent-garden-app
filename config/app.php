@@ -17,6 +17,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Owner
+    |--------------------------------------------------------------------------
+    |
+    | This value represents the application owner's name. This value is used on
+    | the frontend to display the application owner's name in different sections.
+    | For instance: in the page title meta-tag, footer section etc.
+    |
+    */
+
+    'owner' => env('APP_OWNER', 'Laravel'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
@@ -83,11 +96,26 @@ return [
     'locale' => 'en',
 
     'locales' => [
-        'ro' => 'RO',
-        'en' => 'USA',
-        'es' => 'ES',
-        'fr' => 'FR',
-        'it' => 'IT',
+        'ro' => [
+            'lang_code' => 'RO',
+            'lang_name' => 'română',
+        ],
+        'en' => [
+            'lang_code' => 'USA',
+            'lang_name' => 'english',
+        ],
+        'es' => [
+            'lang_code' => 'ES',
+            'lang_name' => 'español',
+        ],
+        'fr' => [
+            'lang_code' => 'FR',
+            'lang_name' => 'français',
+        ],
+        'it' => [
+            'lang_code' => 'IT',
+            'lang_name' => 'italiano',
+        ],
     ],
 
     /*

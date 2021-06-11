@@ -2,6 +2,15 @@
     "app_name": "Grădina Inteligentă",
     "navigation_bar": {
         "equipments_button": "Listă de Echipamente",
+        "equipment_records_button": {
+            "button_title": "Înregistrări Echipamente",
+            "dropdown_item_1": "Senzor pH",
+            "dropdown_item_2": "Senzor EC",
+            "dropdown_item_3": "Senzor de nivel",
+            "dropdown_item_4": "Pompa pH--",
+            "dropdown_item_5": "Pompa pH++",
+            "dropdown_item_6": "Pompa nutrienți"
+        },
         "about_us_button": "Despre Noi",
         "documentation_button": "Documentație",
         "settings_button": "Setări utilizator",
@@ -31,6 +40,7 @@
             "password_placeholder": "Inserează parola contului tău",
             "confirm_password_label": "Confirmare Parolă",
             "confirm_password_placeholder": "Reinserează parola contului tău",
+            "login_button": "Autentifică-te cu un alt cont",
             "submit_button": "Trimite link-ul de resetare"
         },
         "create_account_form": {
@@ -62,5 +72,8 @@
             "github_tooltip": "Vezi profilul meu de Github",
             "linkedin_tooltip": "Vezi profilul meu de Linkedin"
         }
+    },
+    "home_page": {
+        "page_title": "Panou de bord"
     }
 }

@@ -2,6 +2,15 @@
     "app_name": "Jardin Intelligent",
     "navigation_bar": {
         "equipments_button": "Liste d'équipement",
+        "equipment_records_button": {
+            "button_title": "Dossiers d'équipement",
+            "dropdown_item_1": "Capteur de pH",
+            "dropdown_item_2": "Capteur CE",
+            "dropdown_item_3": "Capteur de niveau",
+            "dropdown_item_4": "Pompe pH--",
+            "dropdown_item_5": "Pompe pH++",
+            "dropdown_item_6": "Pompe à nutriments"
+        },
         "about_us_button": "À propos de nous",
         "documentation_button": "Documentation",
         "settings_button": "Paramètres utilisateur",
@@ -31,6 +40,7 @@
             "password_placeholder": "Saisissez le mot de passe de votre compte",
             "confirm_password_label": "Confirmer votre mot de passe",
             "confirm_password_placeholder": "Ressaisissez le mot de passe de votre compte",
+            "login_button": "Connectez-vous avec un compte différent",
             "submit_button": "Envoyer le lien de réinitialisation du mot de passe"
         },
         "create_account_form": {
@@ -62,5 +72,8 @@
             "github_tooltip": "Vérifier mon profil Github",
             "linkedin_tooltip": "Vérifier mon profil Linkedin"
         }
+    },
+    "home_page": {
+        "page_title": "Tableau de bord"
     }
 }

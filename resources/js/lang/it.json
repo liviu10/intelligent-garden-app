@@ -2,6 +2,15 @@
     "app_name": "Giardino Intelligente",
     "navigation_bar": {
         "equipments_button": "Elenco attrezzature",
+        "equipment_records_button": {
+            "button_title": "Registri dell'attrezzatura",
+            "dropdown_item_1": "Sensore di pH",
+            "dropdown_item_2": "Sensore EC",
+            "dropdown_item_3": "Sensore di livello",
+            "dropdown_item_4": "Pompa pH--",
+            "dropdown_item_5": "Pompa pH++",
+            "dropdown_item_6": "Pompa di nutrienti"
+        },
         "about_us_button": "Chi siamo",
         "documentation_button": "Documentazione",
         "settings_button": "Impostazioni utente",
@@ -31,6 +40,7 @@
             "password_placeholder": "Inserisci la Parola d'ordine del tuo account",
             "confirm_password_label": "Conferma la tua Parola d'ordine",
             "confirm_password_placeholder": "Reinserisci la Parola d'ordine del tuo account",
+            "login_button": "Accedi con un altro account",
             "submit_button": "Invia il link per la reimpostazione della password"
         },
         "create_account_form": {
@@ -62,5 +72,8 @@
             "github_tooltip": "Controlla il mio profilo Github",
             "linkedin_tooltip": "Controlla il mio profilo Linkedin"
         }
+    },
+    "home_page": {
+        "page_title": "Pannello di controllo"
     }
 }
