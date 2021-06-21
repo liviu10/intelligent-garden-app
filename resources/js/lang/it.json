@@ -81,5 +81,10 @@
         "section_notifications": {
             "title": "Zona notifiche"
         }
+    },
+    "equipment_list_page": {
+        "page_title": "Elenco attrezzature",
+        "first_paragraph": "Questa pagina rappresenta un elenco di tutte le apparecchiature collegate al sistema hardware.",
+        "second_paragraph": "Qui puoi aggiungere, modificare o eliminare un'attrezzatura."
     }
 }
