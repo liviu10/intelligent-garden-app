@@ -118,5 +118,8 @@
             "first_paragraph": "Vous trouverez ici toutes les lectures que la pompe de nutriments a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
             "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
         }
+    },
+    "about_us_page": {
+        "page_title": "À propos de nous"
     }
 }

@@ -119,6 +119,9 @@
       "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
     }
   },
+  "about_us_page": {
+    "page_title": "About us"
+  },
   "ok": "Ok",
   "cancel": "Cancel",
   "error_alert_title": "Oops...",

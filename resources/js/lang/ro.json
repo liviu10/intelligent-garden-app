@@ -118,5 +118,8 @@
             "first_paragraph": "Aici vei găsi toate citirile pe care Pompa de Nutrienti le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
             "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
         }
+    },
+    "about_us_page": {
+        "page_title": "Despre Noi"
     }
 }
