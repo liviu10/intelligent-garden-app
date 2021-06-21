@@ -86,7 +86,7 @@
         "page_title": "Elenco attrezzature",
         "first_paragraph": "Questa pagina rappresenta un elenco di tutte le apparecchiature collegate al sistema hardware.",
         "second_paragraph": "Qui puoi aggiungere, modificare o eliminare un'attrezzatura."
-    }
+    },
     "equipment_records_page": {
         "ph_sensor": {
             "page_title": "Registrazioni del sensore di pH",

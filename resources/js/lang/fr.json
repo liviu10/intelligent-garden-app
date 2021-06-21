@@ -86,7 +86,7 @@
         "page_title": "Liste d'équipement",
         "first_paragraph": "Cette page représente une liste de tous les équipements connectés au système matériel.",
         "second_paragraph": "Ici, vous pouvez ajouter, modifier ou supprimer un équipement."
-    }
+    },
     "equipment_records_page": {
         "ph_sensor": {
             "page_title": "Enregistrements des capteurs de pH",

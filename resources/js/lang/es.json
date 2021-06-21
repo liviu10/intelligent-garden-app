@@ -86,7 +86,7 @@
         "page_title": "Lista de Equipo",
         "first_paragraph": "Esta página representa una lista de todos los equipos que están conectados al sistema de hardware.",
         "second_paragraph": "Aquí puede agregar, modificar o eliminar un equipo."
-    }
+    },
     "equipment_records_page": {
         "ph_sensor": {
             "page_title": "Registros del sensor de pH",
