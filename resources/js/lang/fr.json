@@ -73,7 +73,7 @@
             "linkedin_tooltip": "Vérifier mon profil Linkedin"
         }
     },
-    "home_page": {
+    "dashboard_page": {
         "page_title": "Tableau de bord"
     }
 }

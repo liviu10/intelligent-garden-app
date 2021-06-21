@@ -4,7 +4,7 @@ function page (path) {
 
 export default [
   // The route to the home page will redirect the user to the login form
-  { path: '/', name: 'home', component: page('home.vue') },
+  { path: '/', name: 'dashboard', component: page('dashboard.vue') },
 
   // The routes to the login and registration system
   { path: '/login', name: 'login', component: page('auth/login.vue') },
