@@ -81,5 +81,37 @@
         "section_notifications": {
             "title": "Zone de notifications"
         }
+    },
+    "equipment_records_page": {
+        "ph_sensor": {
+            "page_title": "Enregistrements des capteurs de pH",
+            "first_paragraph": "Vous trouverez ici toutes les lectures que pH Sensor a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
+            "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
+        },
+        "ec_sensor": {
+            "page_title": "Enregistrements des capteurs de EC",
+            "first_paragraph": "Vous trouverez ici toutes les lectures que EC Sensor a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
+            "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
+        },
+        "level_sensor": {
+            "page_title": "Capteur de niveau Enregistrements",
+            "first_paragraph": "Vous trouverez ici toutes les lectures que le capteur de niveau a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
+            "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
+        },
+        "pump1": {
+            "page_title": "Enregistrements de la pompe pH--",
+            "first_paragraph": "Vous trouverez ici toutes les lectures que la pompe pH-- a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
+            "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
+        },
+        "pump2": {
+            "page_title": "Enregistrements de la pompe pH++",
+            "first_paragraph": "Vous trouverez ici toutes les lectures que la pompe pH++ a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
+            "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
+        },
+        "pump3": {
+            "page_title": "Archives de la pompe à nutriments",
+            "first_paragraph": "Vous trouverez ici toutes les lectures que la pompe de nutriments a enregistrées et transmises à cette application Web via l'API. Le graphique représente l'évolution des lectures au cours des dernières 24 heures. Le tableau affiche tous les enregistrements, par ordre décroissant en fonction de la date d'ajout.",
+            "second_paragraph": "Vous pouvez ajouter, modifier ou supprimer un enregistrement ; exporter au format CSV / PDF et voir quelques statistiques de cet équipement."
+        }
     }
 }
