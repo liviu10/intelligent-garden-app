@@ -86,6 +86,38 @@
     "page_title": "Equipment List",
     "first_paragraph": "This page represents a list of all equipment that are connected to the hardware system.",
     "second_paragraph": "Here you can add, modify or delete an equipment."
+  }
+  "equipment_records_page": {
+    "ph_sensor": {
+      "page_title": "pH Sensor Records",
+      "first_paragraph": "Here you will find all the readings that pH Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "ec_sensor": {
+      "page_title": "EC Sensor Records",
+      "first_paragraph": "Here you will find all the readings that EC Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "level_sensor": {
+      "page_title": "Level Sensor Records",
+      "first_paragraph": "Here you will find all the readings that Level Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "pump1": {
+      "page_title": "pH-- Pump Records",
+      "first_paragraph": "Here you will find all the readings that pH-- Pump has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "pump2": {
+      "page_title": "pH++ Pump Records",
+      "first_paragraph": "Here you will find all the readings that pH++ Pump has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "pump3": {
+      "page_title": "Nutrients Pump Records",
+      "first_paragraph": "Here you will find all the readings that Nutrients Pump has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    }
   },
   "ok": "Ok",
   "cancel": "Cancel",
