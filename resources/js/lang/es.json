@@ -118,5 +118,8 @@
             "first_paragraph": "Aquí encontrará todas las lecturas que la bomba de nutrientes ha registrado y transmitido a esta aplicación web a través de la API. El gráfico representa la evolución de las lecturas en las últimas 24 horas. La tabla muestra todos los registros, en orden descendente según la fecha agregada.",
             "second_paragraph": "Puede agregar, modificar o eliminar un registro; exportar a CSV / PDF y ver algunas estadísticas de este equipo."
         }
+    },
+    "about_us_page": {
+        "page_title": "Acerca de mí"
     }
 }

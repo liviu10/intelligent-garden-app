@@ -118,5 +118,8 @@
             "first_paragraph": "Qui troverai tutte le letture che la pompa nutrienti ha registrato e trasmesso a questa applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
             "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
         }
+    },
+    "about_us_page": {
+        "page_title": "Chi siamo"
     }
 }
