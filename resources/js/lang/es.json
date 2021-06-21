@@ -73,7 +73,7 @@
             "linkedin_tooltip": "Consultar mi perfil de Linkedin"
         }
     },
-    "home_page": {
+    "dashboard_page": {
         "page_title": "Tablero"
     }
 }
