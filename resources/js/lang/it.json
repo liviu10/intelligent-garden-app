@@ -74,6 +74,12 @@
         }
     },
     "dashboard_page": {
-        "page_title": "Pannello di controllo"
+        "page_title": "Pannello di controllo",
+        "section_charts": {
+            "title": "Rappresentazione grafica"
+        },
+        "section_notifications": {
+            "title": "Zona notifiche"
+        }
     }
 }
