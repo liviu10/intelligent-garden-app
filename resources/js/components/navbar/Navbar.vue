@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
       <!-- NAVBAR BRAND SECTION START -->
-      <router-link :to="{ name: 'home' }" class="navbar-brand">
+      <router-link :to="{ name: 'dashboard' }" class="navbar-brand">
         <div class="text-uppercase">
           {{ $t('app_name') }}
         </div>

@@ -74,6 +74,12 @@
         }
     },
     "dashboard_page": {
-        "page_title": "Tablero"
+        "page_title": "Tablero",
+        "section_charts": {
+            "title": "Representación grafica"
+        },
+        "section_notifications": {
+            "title": "Zona de notificaciones"
+        }
     }
 }

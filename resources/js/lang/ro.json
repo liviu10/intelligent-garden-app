@@ -74,6 +74,12 @@
         }
     },
     "dashboard_page": {
-        "page_title": "Panou de bord"
+        "page_title": "Panou de bord",
+        "section_charts": {
+            "title": "Reprezentări grafice"
+        },
+        "section_notifications": {
+            "title": "Zonă de notificări"
+        }
     }
 }

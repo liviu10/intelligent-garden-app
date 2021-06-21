@@ -2,7 +2,6 @@
   <footer class="footer-content">
     <p class="footer-content-paragraph">
       {{ $t('footer_section.first_paragraph.title') }}
-      <a href="https://getbootstrap.com/docs/4.6/content/" :title="$t('footer_section.first_paragraph.bootstrap_tooltip')" taget="_blank">Bootstrap v4.6</a>,
       <a href="https://vuejs.org/v2/guide/" :title="$t('footer_section.first_paragraph.vuejs_tooltip')" taget="_blank">VueJs v2</a> and
       <a href="https://laravel.com/docs/8.x/releases" :title="$t('footer_section.first_paragraph.laravel_tooltip')" taget="_blank">Laravel v8</a>
     </p>
