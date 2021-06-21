@@ -74,7 +74,13 @@
     }
   },
   "dashboard_page": {
-    "page_title": "Dashboard"
+    "page_title": "Dashboard",
+    "section_charts": {
+      "title": "Graphic representations"
+    },
+    "section_notifications": {
+      "title": "Notifications zone"
+    }
   },
   "ok": "Ok",
   "cancel": "Cancel",

@@ -74,6 +74,12 @@
         }
     },
     "dashboard_page": {
-        "page_title": "Tableau de bord"
+        "page_title": "Tableau de bord",
+        "section_charts": {
+            "title": "Représentation graphique"
+        },
+        "section_notifications": {
+            "title": "Zone de notifications"
+        }
     }
 }
