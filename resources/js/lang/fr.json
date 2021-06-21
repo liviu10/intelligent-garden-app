@@ -81,5 +81,10 @@
         "section_notifications": {
             "title": "Zone de notifications"
         }
+    },
+    "equipment_list_page": {
+        "page_title": "Liste d'équipement",
+        "first_paragraph": "Cette page représente une liste de tous les équipements connectés au système matériel.",
+        "second_paragraph": "Ici, vous pouvez ajouter, modifier ou supprimer un équipement."
     }
 }
