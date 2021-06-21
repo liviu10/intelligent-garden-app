@@ -82,6 +82,11 @@
       "title": "Notifications zone"
     }
   },
+  "equipment_list_page": {
+    "page_title": "Equipment List",
+    "first_paragraph": "This page represents a list of all equipment that are connected to the hardware system.",
+    "second_paragraph": "Here you can add, modify or delete an equipment."
+  }
   "equipment_records_page": {
     "ph_sensor": {
       "page_title": "pH Sensor Records",

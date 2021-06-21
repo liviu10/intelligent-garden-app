@@ -82,6 +82,11 @@
             "title": "Zonă de notificări"
         }
     },
+    "equipment_list_page": {
+        "page_title": "Listă de Echipamente",
+        "first_paragraph": "Această pagină prezintă o listă a tuturor echipamentelor conectate la sistemul hardware.",
+        "second_paragraph": "Aici vei putea adăuga, modifica sau șterge un echipament."
+    }
     "equipment_records_page": {
         "ph_sensor": {
             "page_title": "Înregistrări Senzor pH",
