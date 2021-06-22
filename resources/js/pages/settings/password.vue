@@ -1,34 +1,37 @@
 <template>
-  <card :title="$t('your_password')">
+  <card :title="$t('settings_page.your_password')">
     <form @submit.prevent="update" @keydown="form.onKeydown($event)">
-      <alert-success :form="form" :message="$t('password_updated')" />
+      <alert-success :form="form" :message="$t('settings_page.password_updated')" />
 
-      <!-- Password -->
+      <!-- PASSWORD CONTAINER SECTION START -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('new_password') }}</label>
+        <label class="col-md-3 col-form-label text-md-right">{{ $t('settings_page.new_password') }}</label>
         <div class="col-md-7">
           <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
           <has-error :form="form" field="password" />
         </div>
       </div>
+      <!-- PASSWROD CONTAINER SECTION START -->
 
-      <!-- Password Confirmation -->
+      <!-- PASSWORD CONFIRMATION CONTAINER SECTION START -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
+        <label class="col-md-3 col-form-label text-md-right">{{ $t('settings_page.confirm_password') }}</label>
         <div class="col-md-7">
           <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
           <has-error :form="form" field="password_confirmation" />
         </div>
       </div>
+      <!-- PASSWORD CONFIRMATION CONTAINER SECTION END -->
 
-      <!-- Submit Button -->
+      <!-- SUBMIT BUTTON CONTAINER SECTION START -->
       <div class="form-group row">
         <div class="col-md-9 ml-md-auto">
           <v-button :loading="form.busy" type="success">
-            {{ $t('update') }}
+            {{ $t('settings_page.update') }}
           </v-button>
         </div>
       </div>
+      <!-- SUBMIT BUTTON CONTAINER SECTION END -->
     </form>
   </card>
 </template>
@@ -37,11 +40,8 @@
 import Form from 'vform'
 
 export default {
+  name: 'Password',
   scrollToTop: false,
-
-  metaInfo () {
-    return { title: this.$t('settings') }
-  },
 
   data: () => ({
     form: new Form({

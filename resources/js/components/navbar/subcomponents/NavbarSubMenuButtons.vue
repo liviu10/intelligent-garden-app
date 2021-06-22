@@ -10,7 +10,7 @@
         <fa icon="book-open" fixed-width />
         {{ $t('navigation_bar.documentation_button') }}
       </router-link>
-      <router-link :to="{ name: 'settings.profile' }" class="dropdown-item pl-3 py-2">
+      <router-link :to="{ name: 'settings.update-profile' }" class="dropdown-item pl-3 py-2">
         <fa icon="cog" fixed-width />
         {{ $t('navigation_bar.settings_button') }}
       </router-link>

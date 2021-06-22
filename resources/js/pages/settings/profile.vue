@@ -1,34 +1,37 @@
 <template>
-  <card :title="$t('your_info')">
+  <card :title="$t('settings_page.your_info')">
     <form @submit.prevent="update" @keydown="form.onKeydown($event)">
-      <alert-success :form="form" :message="$t('info_updated')" />
+      <alert-success :form="form" :message="$t('settings_page.info_updated')" />
 
-      <!-- Name -->
+      <!-- NAME CONTAINER SECTION START -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+        <label class="col-md-3 col-form-label text-md-right">{{ $t('settings_page.name') }}</label>
         <div class="col-md-7">
           <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
           <has-error :form="form" field="name" />
         </div>
       </div>
+      <!-- NAME CONTAINER SECTION END -->
 
-      <!-- Email -->
+      <!-- EMAIL CONTAINER SECTION START -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+        <label class="col-md-3 col-form-label text-md-right">{{ $t('settings_page.email') }}</label>
         <div class="col-md-7">
-          <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+          <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email" disabled="isDisabled()">
           <has-error :form="form" field="email" />
         </div>
       </div>
+      <!-- EMAIL CONTAINER SECTION END -->
 
-      <!-- Submit Button -->
+      <!-- SUBMIT BUTTON CONTAINER SECTION START -->
       <div class="form-group row">
         <div class="col-md-9 ml-md-auto">
           <v-button :loading="form.busy" type="success">
-            {{ $t('update') }}
+            {{ $t('settings_page.update') }}
           </v-button>
         </div>
       </div>
+      <!-- SUBMIT BUTTON CONTAINER SECTION END -->
     </form>
   </card>
 </template>
@@ -38,11 +41,8 @@ import Form from 'vform'
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'Profile',
   scrollToTop: false,
-
-  metaInfo () {
-    return { title: this.$t('settings') }
-  },
 
   data: () => ({
     form: new Form({

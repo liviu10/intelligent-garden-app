@@ -29,15 +29,7 @@ export default [
   { path: '/about-us', name: 'about-us', component: page('about-us/about-us.vue') },
 
   // The routes to the settings section: profile and password
-  {
-    path: '/settings',
-    component: page('settings/index.vue'),
-    children: [
-      { path: '', redirect: { name: 'settings.profile' } },
-      { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
-      { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
-    ]
-  },
+  { path: '/update-profile', name: 'settings.update-profile', component: page('settings/update-profile.vue') },
 
   // The route to the documents section
   { path: '/documents/how-to-use-this-app', name: 'documents.documentation', component: page('documents/documentation.vue') },

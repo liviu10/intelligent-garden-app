@@ -81,5 +81,61 @@
         "section_notifications": {
             "title": "Zonă de notificări"
         }
+    },
+    "equipment_list_page": {
+        "page_title": "Listă de Echipamente",
+        "first_paragraph": "Această pagină prezintă o listă a tuturor echipamentelor conectate la sistemul hardware.",
+        "second_paragraph": "Aici vei putea adăuga, modifica sau șterge un echipament."
+    },
+    "equipment_records_page": {
+        "ph_sensor": {
+            "page_title": "Înregistrări Senzor pH",
+            "first_paragraph": "Aici vei găsi toate citirile pe care Senzorul pH le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
+            "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
+        },
+        "ec_sensor": {
+            "page_title": "Înregistrări Senzor EC",
+            "first_paragraph": "Aici vei găsi toate citirile pe care Senzorul EC le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
+            "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
+        },
+        "level_sensor": {
+            "page_title": "Înregistrări Senzor Nivel",
+            "first_paragraph": "Aici vei găsi toate citirile pe care Senzorul de Nivel le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
+            "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
+        },
+        "pump1": {
+            "page_title": "Înregistrări Pompa pH--",
+            "first_paragraph": "Aici vei găsi toate citirile pe care Pompa pH-- le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
+            "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
+        },
+        "pump2": {
+            "page_title": "Înregistrări Pompa pH++",
+            "first_paragraph": "Aici vei găsi toate citirile pe care Pompa pH++ le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
+            "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
+        },
+        "pump3": {
+            "page_title": "Înregistrări Pompa Nutrienti",
+            "first_paragraph": "Aici vei găsi toate citirile pe care Pompa de Nutrienti le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",
+            "second_paragraph": "Vei putea adăuga, modifica sau șterge o înregistrare; exporta în CSV / PDF și vei vedea câteva statistici ale acestui echipament."
+        }
+    },
+    "about_us_page": {
+        "page_title": "Despre Noi"
+    },
+    "documentation_page": {
+        "page_title": "Documentație",
+        "first_paragraph": "Învață cum să folosești această aplicație web"
+    },
+    "settings_page": {
+        "page_title": "Actualizează-ți informațiile personale",
+        "your_info": "Informațiile contului tău",
+        "info_updated": "Informațiile contului tău au fost actualizate",
+        "name": "Nume",
+        "email": "Adresă email",
+        "update": "Actualizează informații",
+        "your_password": "Parola contului tău",
+        "password_updated": "Parola contului tău a fost actualizată",
+        "new_password": "Parolă nouă",
+        "confirm_password": "Confirmă parolă"
     }
 }

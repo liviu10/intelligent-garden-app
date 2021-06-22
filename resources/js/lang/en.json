@@ -82,6 +82,62 @@
       "title": "Notifications zone"
     }
   },
+  "equipment_list_page": {
+    "page_title": "Equipment List",
+    "first_paragraph": "This page represents a list of all equipment that are connected to the hardware system.",
+    "second_paragraph": "Here you can add, modify or delete an equipment."
+  },
+  "equipment_records_page": {
+    "ph_sensor": {
+      "page_title": "pH Sensor Records",
+      "first_paragraph": "Here you will find all the readings that pH Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "ec_sensor": {
+      "page_title": "EC Sensor Records",
+      "first_paragraph": "Here you will find all the readings that EC Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "level_sensor": {
+      "page_title": "Level Sensor Records",
+      "first_paragraph": "Here you will find all the readings that Level Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "pump1": {
+      "page_title": "pH-- Pump Records",
+      "first_paragraph": "Here you will find all the readings that pH-- Pump has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "pump2": {
+      "page_title": "pH++ Pump Records",
+      "first_paragraph": "Here you will find all the readings that pH++ Pump has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    },
+    "pump3": {
+      "page_title": "Nutrients Pump Records",
+      "first_paragraph": "Here you will find all the readings that Nutrients Pump has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
+      "second_paragraph": "You can add, modify or delete a record; export to CSV / PDF and see some statistics of this equipment."
+    }
+  },
+  "about_us_page": {
+    "page_title": "About us"
+  },
+  "documentation_page": {
+    "page_title": "Documentation",
+    "first_paragraph": "Learn how to use this Web Application"
+  },
+  "settings_page": {
+    "page_title": "Update your personal information",
+    "your_info": "Account's information",
+    "info_updated": "Your account's information has been updated",
+    "name": "Name",
+    "email": "Email address",
+    "update": "Update information",
+    "your_password": "Account's password",
+    "password_updated": "Your account's password has been updated",
+    "new_password": "New password",
+    "confirm_password": "Confirm password"
+  },
   "ok": "Ok",
   "cancel": "Cancel",
   "error_alert_title": "Oops...",
@@ -93,12 +149,9 @@
   "page_not_found": "Page Not Found",
   "go_home": "Go Home",
   "logout": "Logout",
-  "email": "Email",
   "remember_me": "Remember Me",
   "password": "Password",
   "forgot_password": "Forgot Your Password?",
-  "confirm_password": "Confirm Password",
-  "name": "Name",
   "toggle_navigation": "Toggle navigation",
   "home": "Home",
   "you_are_logged_in": "You are logged in!",
@@ -106,12 +159,6 @@
   "send_password_reset_link": "Send Password Reset Link",
   "settings": "Settings",
   "profile": "Profile",
-  "your_info": "Your Info",
-  "info_updated": "Your info has been updated!",
-  "update": "Update",
-  "your_password": "Your Password",
-  "password_updated": "Your password has been updated!",
-  "new_password": "New Password",
   "login_with": "Login with",
   "register_with": "Register with",
   "verify_email": "Verify Email",

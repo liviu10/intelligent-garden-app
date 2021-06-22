@@ -81,5 +81,61 @@
         "section_notifications": {
             "title": "Zona notifiche"
         }
+    },
+    "equipment_list_page": {
+        "page_title": "Elenco attrezzature",
+        "first_paragraph": "Questa pagina rappresenta un elenco di tutte le apparecchiature collegate al sistema hardware.",
+        "second_paragraph": "Qui puoi aggiungere, modificare o eliminare un'attrezzatura."
+    },
+    "equipment_records_page": {
+        "ph_sensor": {
+            "page_title": "Registrazioni del sensore di pH",
+            "first_paragraph": "Qui troverai tutte le letture che pH Sensor ha registrato e trasmesso a questa applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
+            "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
+        },
+        "ec_sensor": {
+            "page_title": "Registrazioni del sensore di EC",
+            "first_paragraph": "Qui troverai tutte le letture che EC Sensor ha registrato e trasmesso a questa applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
+            "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
+        },
+        "level_sensor": {
+            "page_title": "Registrazioni del sensore di livello",
+            "first_paragraph": "Qui troverai tutte le letture che il sensore di livello ha registrato e trasmesso a questa Applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
+            "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
+        },
+        "pump1": {
+            "page_title": "Registrazioni della pompa di pH--",
+            "first_paragraph": "Qui troverai tutte le letture che la pompa pH-- ha registrato e trasmesso a questa applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
+            "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
+        },
+        "pump2": {
+            "page_title": "Registrazioni della pompa di pH++",
+            "first_paragraph": "Qui troverai tutte le letture che la pompa pH++ ha registrato e trasmesso a questa applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
+            "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
+        },
+        "pump3": {
+            "page_title": "Registrazioni della pompa di nutrienti",
+            "first_paragraph": "Qui troverai tutte le letture che la pompa nutrienti ha registrato e trasmesso a questa applicazione Web tramite l'API. Il grafico rappresenta l'evoluzione delle letture nelle ultime 24 ore. La tabella mostra tutti i record, in ordine decrescente in base alla data aggiunta.",
+            "second_paragraph": "Puoi aggiungere, modificare o eliminare un record; esporta in CSV / PDF e visualizza alcune statistiche di questa apparecchiatura."
+        }
+    },
+    "about_us_page": {
+        "page_title": "Chi siamo"
+    },
+    "documentation_page": {
+        "page_title": "Documentazione",
+        "first_paragraph": "Impara come usare questa applicazione web"
+    },
+    "settings_page": {
+        "page_title": "Aggiorna le tue informazioni personali",
+        "your_info": "Informazioni sull'account",
+        "info_updated": "Le informazioni del tuo account sono state aggiornate",
+        "name": "Nome",
+        "email": "Indirizzo email",
+        "update": "Aggiorna informazioni",
+        "your_password": "Parola d'ordine dell'account",
+        "password_updated": "La parola d'ordine del tuo account è stata aggiornata",
+        "new_password": "Nuova parola d'ordine",
+        "confirm_password": "Conferma parola d'ordine"
     }
 }
