@@ -122,6 +122,10 @@
   "about_us_page": {
     "page_title": "About us"
   },
+  "documentation_page": {
+    "page_title": "Documentation",
+    "first_paragraph": "Learn how to use this Web Application"
+  },
   "ok": "Ok",
   "cancel": "Cancel",
   "error_alert_title": "Oops...",
