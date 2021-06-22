@@ -125,5 +125,17 @@
     "documentation_page": {
         "page_title": "Documentație",
         "first_paragraph": "Învață cum să folosești această aplicație web"
+    },
+    "settings_page": {
+        "page_title": "Actualizează-ți informațiile personale",
+        "your_info": "Informațiile contului tău",
+        "info_updated": "Informațiile contului tău au fost actualizate",
+        "name": "Nume",
+        "email": "Adresă email",
+        "update": "Actualizează informații",
+        "your_password": "Parola contului tău",
+        "password_updated": "Parola contului tău a fost actualizată",
+        "new_password": "Parolă nouă",
+        "confirm_password": "Confirmă parolă"
     }
 }

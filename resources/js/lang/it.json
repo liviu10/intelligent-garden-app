@@ -125,5 +125,17 @@
     "documentation_page": {
         "page_title": "Documentazione",
         "first_paragraph": "Impara come usare questa applicazione web"
+    },
+    "settings_page": {
+        "page_title": "Aggiorna le tue informazioni personali",
+        "your_info": "Informazioni sull'account",
+        "info_updated": "Le informazioni del tuo account sono state aggiornate",
+        "name": "Nome",
+        "email": "Indirizzo email",
+        "update": "Aggiorna informazioni",
+        "your_password": "Parola d'ordine dell'account",
+        "password_updated": "La parola d'ordine del tuo account è stata aggiornata",
+        "new_password": "Nuova parola d'ordine",
+        "confirm_password": "Conferma parola d'ordine"
     }
 }

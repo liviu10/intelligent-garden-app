@@ -125,5 +125,17 @@
     "documentation_page": {
         "page_title": "Documentación",
         "first_paragraph": "Aprenda a utilizar esta aplicación web"
+    },
+    "settings_page": {
+        "page_title": "Actualice su información personal",
+        "your_info": "Información de la cuenta",
+        "info_updated": "Se actualizó la información de su cuenta",
+        "name": "Nombre",
+        "email": "Dirección de correo electrónico",
+        "update": "Actualizar información",
+        "your_password": "Contraseña de la cuenta",
+        "password_updated": "Se actualizó la contraseña de su cuenta",
+        "new_password": "Nueva contraseña",
+        "confirm_password": "Confirmar Contraseña"
     }
 }
