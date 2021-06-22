@@ -121,5 +121,9 @@
     },
     "about_us_page": {
         "page_title": "Acerca de mí"
+    },
+    "documentation_page": {
+        "page_title": "Documentación",
+        "first_paragraph": "Aprenda a utilizar esta aplicación web"
     }
 }
