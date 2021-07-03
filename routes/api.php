@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArduinoListOfEquipmentApiController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\OAuthController;
@@ -44,3 +45,5 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('oauth/{driver}', [OAuthController::class, 'redirect']);
     Route::get('oauth/{driver}/callback', [OAuthController::class, 'handleCallback'])->name('oauth.callback');
 });
+
+Route::apiResource('list-of-equipments', ArduinoListOfEquipmentApiController::class);

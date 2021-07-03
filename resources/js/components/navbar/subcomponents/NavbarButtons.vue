@@ -1,7 +1,7 @@
 <template>
   <ul v-if="user" class="navbar-nav">
     <li class="nav-item">
-      <router-link :to="{ name: 'equipments.index' }" class="nav-link">
+      <router-link :to="{ name: 'equipment-list.index' }" class="nav-link">
         {{ $t('navigation_bar.equipments_button') }}
       </router-link>
     </li>
