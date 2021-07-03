@@ -15,7 +15,7 @@ export default [
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
   // The routes to the "List of Equipments" page
-  { path: '/equipment-list/index', name: 'equipments.index', component: page('equipments/index.vue') },
+  { path: '/equipment-list/index', name: 'equipment-list.index', component: page('equipment-list/index.vue') },
 
   // The routes to the "Equipment Records" page
   { path: '/equipment-records/ph-sensor/index', name: 'equipment-records.ph-sensor.index', component: page('equipment-records/ph-sensor/index.vue') },
