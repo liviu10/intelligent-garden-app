@@ -28,11 +28,14 @@ export default [
   // The routes to the "About us" page
   { path: '/about-us', name: 'about-us', component: page('about-us/about-us.vue') },
 
+  // The route to the documents section
+  { path: '/documents/how-to-use-this-app', name: 'documents.documentation', component: page('documents/documentation.vue') },
+
   // The routes to the settings section: profile and password
   { path: '/update-profile', name: 'settings.update-profile', component: page('settings/update-profile.vue') },
 
-  // The route to the documents section
-  { path: '/documents/how-to-use-this-app', name: 'documents.documentation', component: page('documents/documentation.vue') },
+  // The route to the application settings
+  { path: '/application-settings', name: 'application-settings', component: page('application-settings/index.vue') },
 
   // The route to display error message if the user is requesting for a resource that do not exist
   { path: '*', component: page('errors/404.vue') }

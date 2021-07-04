@@ -11,8 +11,12 @@
         {{ $t('navigation_bar.documentation_button') }}
       </router-link>
       <router-link :to="{ name: 'settings.update-profile' }" class="dropdown-item pl-3 py-2">
-        <fa icon="cog" fixed-width />
+        <fa icon="user" fixed-width />
         {{ $t('navigation_bar.settings_button') }}
+      </router-link>
+      <router-link :to="{ name: 'application-settings' }" class="dropdown-item pl-3 py-2">
+        <fa icon="cog" fixed-width />
+        {{ $t('navigation_bar.application_settings_button') }}
       </router-link>
       <div class="dropdown-divider my-0" />
       <a href="#" class="dropdown-item pl-3 py-2" @click.prevent="logout">
