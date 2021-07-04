@@ -14,6 +14,7 @@
         "about_us_button": "À propos de nous",
         "documentation_button": "Documentation",
         "settings_button": "Paramètres utilisateur",
+        "application_settings_button": "Paramètres de l'application",
         "logout_button": "Se déconnecter",
         "login_button": "Connexion",
         "register_button": "S'inscrire"
@@ -137,5 +138,9 @@
         "password_updated": "Le mot de passe de votre compte a été mis à jour",
         "new_password": "Nouveau mot de passe",
         "confirm_password": "Confirmez le mot de passe"
+    },
+    "application_settings_page": {
+        "page_title": "Paramètres de l'application",
+        "first_paragraph": "Cette page présente une liste de tous les paramètres qui peuvent être utilisés pour configurer cette application Web."
     }
 }

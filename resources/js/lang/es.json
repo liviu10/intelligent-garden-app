@@ -14,6 +14,7 @@
         "about_us_button": "Acerca de mí",
         "documentation_button": "Documentación",
         "settings_button": "Ajustes de usuario",
+        "application_settings_button": "Configuraciones de la aplicación",
         "logout_button": "Cerrar sesión",
         "login_button": "Iniciar sesión",
         "register_button": "Registrarse"
@@ -137,5 +138,9 @@
         "password_updated": "Se actualizó la contraseña de su cuenta",
         "new_password": "Nueva contraseña",
         "confirm_password": "Confirmar Contraseña"
+    },
+    "application_settings_page": {
+        "page_title": "Configuraciones de la aplicación",
+        "first_paragraph": "Esta página presenta una lista de todas las configuraciones que se pueden usar para configurar esta aplicación web."
     }
 }

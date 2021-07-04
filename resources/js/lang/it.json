@@ -14,6 +14,7 @@
         "about_us_button": "Chi siamo",
         "documentation_button": "Documentazione",
         "settings_button": "Impostazioni utente",
+        "application_settings_button": "Impostazioni dell'applicazione",
         "logout_button": "Disconnettersi",
         "login_button": "Accesso",
         "register_button": "Registrati"
@@ -137,5 +138,9 @@
         "password_updated": "La parola d'ordine del tuo account è stata aggiornata",
         "new_password": "Nuova parola d'ordine",
         "confirm_password": "Conferma parola d'ordine"
+    },
+    "application_settings_page": {
+        "page_title": "Impostazioni dell'applicazione",
+        "first_paragraph": "Questa pagina presenta un elenco di tutte le impostazioni che possono essere utilizzate per configurare questa applicazione Web."
     }
 }
