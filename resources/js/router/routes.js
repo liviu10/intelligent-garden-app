@@ -32,7 +32,7 @@ export default [
   { path: '/documents/how-to-use-this-app', name: 'documents.documentation', component: page('documents/documentation.vue') },
 
   // The routes to the settings section: profile and password
-  { path: '/update-profile', name: 'settings.update-profile', component: page('settings/update-profile.vue') },
+  { path: '/update-profile', name: 'settings.update-profile', component: page('user-settings/update-profile.vue') },
 
   // The route to the application settings
   { path: '/application-settings', name: 'application-settings', component: page('application-settings/index.vue') },

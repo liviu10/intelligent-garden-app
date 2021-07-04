@@ -12,6 +12,29 @@
         {{ $t('application_settings_page.first_paragraph') }}
       </p>
     </div>
+    <div class="application-settings--body">
+      <div class="application-settings--body-card">
+        <card :title="$t('application_settings_page.first_card.card_title')">
+          <div>
+            This is a test
+          </div>
+        </card>
+      </div>
+      <div class="application-settings--body-card">
+        <card :title="$t('application_settings_page.second_card.card_title')">
+          <div>
+            This is a test
+          </div>
+        </card>
+      </div>
+      <div class="application-settings--body-card">
+        <card :title="$t('application_settings_page.third_card.card_title')">
+          <div>
+            This is a test
+          </div>
+        </card>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,6 +81,23 @@ export default {
     flex-direction: column !important;
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+  &--body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    &-card {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      & .card {
+        width: 600px;
+        & .card-body {
+          color: red;
+        }
+      }
+    }
   }
 }
 </style>

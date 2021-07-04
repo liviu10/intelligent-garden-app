@@ -141,6 +141,15 @@
     },
     "application_settings_page": {
         "page_title": "Configuraciones de la aplicación",
-        "first_paragraph": "Esta página presenta una lista de todas las configuraciones que se pueden usar para configurar esta aplicación web."
+        "first_paragraph": "Esta página presenta una lista de todas las configuraciones que se pueden usar para configurar esta aplicación web.",
+        "first_card": {
+            "card_title": "Configurar lista de equipos"
+        },
+        "second_card": {
+            "card_title": "Configurar lista de errores"
+        },
+        "third_card": {
+            "card_title": "Configurar roles y listas de usuarios"
+        }
     }
 }

@@ -141,6 +141,15 @@
     },
     "application_settings_page": {
         "page_title": "Setări aplicație",
-        "first_paragraph": "Această pagină prezintă o listă a tuturor setărilor care pot fi utilizate în configurarea aplicației web."
+        "first_paragraph": "Această pagină prezintă o listă a tuturor setărilor care pot fi utilizate în configurarea aplicației web.",
+        "first_card": {
+            "card_title": "Configurare Listă de Echipamente"
+        },
+        "second_card": {
+            "card_title": "Configurare Listă de Erori"
+        },
+        "third_card": {
+            "card_title": "Configurare Listă Utilizatori și Roluri"
+        }
     }
 }
