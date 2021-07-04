@@ -141,6 +141,15 @@
     },
     "application_settings_page": {
         "page_title": "Paramètres de l'application",
-        "first_paragraph": "Cette page présente une liste de tous les paramètres qui peuvent être utilisés pour configurer cette application Web."
+        "first_paragraph": "Cette page présente une liste de tous les paramètres qui peuvent être utilisés pour configurer cette application Web.",
+        "first_card": {
+            "card_title": "Configurer la liste des équipements"
+        },
+        "second_card": {
+            "card_title": "Configurer la liste d'erreurs"
+        },
+        "third_card": {
+            "card_title": "Configurer les listes d'utilisateurs et les rôles"
+        }
     }
 }

@@ -141,6 +141,15 @@
     },
     "application_settings_page": {
         "page_title": "Impostazioni dell'applicazione",
-        "first_paragraph": "Questa pagina presenta un elenco di tutte le impostazioni che possono essere utilizzate per configurare questa applicazione Web."
+        "first_paragraph": "Questa pagina presenta un elenco di tutte le impostazioni che possono essere utilizzate per configurare questa applicazione Web.",
+        "first_card": {
+            "card_title": "Configura l'elenco delle attrezzature"
+        },
+        "second_card": {
+            "card_title": "Configura l'elenco degli errori"
+        },
+        "third_card": {
+            "card_title": "Configura elenchi utenti e ruoli"
+        }
     }
 }

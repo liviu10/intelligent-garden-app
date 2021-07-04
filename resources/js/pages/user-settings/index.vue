@@ -31,12 +31,12 @@ export default {
         {
           icon: 'user',
           name: this.$t('profile'),
-          route: 'settings.profile'
+          route: 'user-settings.profile'
         },
         {
           icon: 'lock',
           name: this.$t('password'),
-          route: 'settings.password'
+          route: 'user-settings.password'
         }
       ]
     }

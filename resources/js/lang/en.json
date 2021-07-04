@@ -141,7 +141,16 @@
   },
   "application_settings_page": {
     "page_title": "Application settings",
-    "first_paragraph": "This page presents a list of all the settings that can be used to configure this Web Application."
+    "first_paragraph": "This page presents a list of all the settings that can be used to configure this Web Application.",
+    "first_card": {
+      "card_title": "Configure Equipment List"
+    },
+    "second_card": {
+      "card_title": "Configure Error List"
+    },
+    "third_card": {
+      "card_title": "Configure User Lists and Roles"
+    }
   },
   "ok": "Ok",
   "cancel": "Cancel",
