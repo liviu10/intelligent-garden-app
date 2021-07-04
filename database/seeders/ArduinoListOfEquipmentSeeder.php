@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\ArduinoListOfEquipment;
+use Illuminate\Support\Facades\DB;
 
 class ArduinoListOfEquipmentSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class ArduinoListOfEquipmentSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         ArduinoListOfEquipment::truncate();
         $records = [
             [
@@ -66,5 +68,6 @@ class ArduinoListOfEquipmentSeeder extends Seeder
             ],
         ];
         ArduinoListOfEquipment::insert($records);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
