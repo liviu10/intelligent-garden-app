@@ -33,18 +33,18 @@ class ArduinoListOfEquipmentApiController extends Controller
             if ($apiDisplayAllRecords->isEmpty()) 
             {
                 return response([
-                    'HTTP Response Code'        => 404,
-                    'HTTP Response Description' => 'Not Found',
-                    'Interpretation'            => 'This means that the table does not have any records to show'
+                    'Notification Code'               => 'WARN_1',
+                    'Notification Short Description'  => 'The table you are looking for does not have any records to display.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 404);
             }
             else 
             {
                 return response([
-                    'HTTP Response Code'        => 201,
-                    'HTTP Response Description' => 'Created',
-                    'Message'                   => 'The list of equipments was successfully fetched from the database which contains ' . $apiDisplayAllRecords->count() . ' record(s).',
-                    'Equipment List'            => new ArduinoListOfEquipmentResource($apiDisplayAllRecords),
+                    'Notification Code'               => 'INFO_1',
+                    'Notification Short Description'  => 'The equipment record list (' . $apiDisplayAllRecords->count() . ' record(s)) was successfully fetched from the database which contains.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
+                    'Equipment List'                  => new ArduinoListOfEquipmentResource($apiDisplayAllRecords),
                 ], 201);
             }
         }
@@ -53,9 +53,9 @@ class ArduinoListOfEquipmentApiController extends Controller
             if ($mysqlError->getCode() === '42S02') 
             {
                 return response([
-                    'HTTP Response Code'        => 500,
-                    'HTTP Response Description' => 'Internal Server Error',
-                    'Interpretation'            => 'This means that the table you are looking for does not exist in the database. Please contact the site owner!',
+                    'Notification Code'               => 'ERR_1',
+                    'Notification Short Description'  => 'The table you are looking for does not exist in the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 500);
             }
         }
@@ -73,10 +73,10 @@ class ArduinoListOfEquipmentApiController extends Controller
         {
             $apiInsertSingleRecord = $this->modelName->create($request->all());
             return response([
-                'HTTP Response Code'        => 201,
-                'HTTP Response Description' => 'Created',
-                'Message'                   => 'The equipment ID: ' . $apiInsertSingleRecord->equipment_id . ' was successfully saved in the database',
-                'Equipment List'            => new ArduinoListOfEquipmentResource($apiInsertSingleRecord),
+                'Notification Code'               => 'INFO_2',
+                'Notification Short Description'  => 'The equipment ' . $apiInsertSingleRecord->equipment_id . ' was successfully inserted in the database.',
+                'Notification Reference'          => '!!! Insert documentation link here !!!',
+                'Equipment List'                  => new ArduinoListOfEquipmentResource($apiInsertSingleRecord),
             ], 201);
         }
         catch (\Illuminate\Database\QueryException $mysqlError)
@@ -86,37 +86,34 @@ class ArduinoListOfEquipmentApiController extends Controller
                 if (empty($apiInsertSingleRecord->equipment_id) OR empty($apiInsertSingleRecord->equipment_description) OR empty($apiInsertSingleRecord->equipment_notes))
                 {
                     return response([
-                        'HTTP Response Code'        => 406,
-                        'HTTP Response Description' => 'Not Acceptable',
-                        'Interpretation'            => 'This means that one or more fields does not contain any information',
-                        'More information'          => 'Please check the documentation Arduino API  - List Of Equipments',
+                        'Notification Code'               => 'ERR_2',
+                        'Notification Short Description'  => 'One or more field does not contain any information.',
+                        'Notification Reference'          => '!!! Insert documentation link here !!!',
                     ], 406);
                 }
             }
             elseif ($mysqlError->getCode() === '42S02') 
             {
                 return response([
-                    'HTTP Response Code'        => 500,
-                    'HTTP Response Description' => 'Internal Server Error',
-                    'Interpretation'            => 'This means that the table you are looking for does not exist in the database. Please contact the site owner!',
+                    'Notification Code'               => 'ERR_1',
+                    'Notification Short Description'  => 'The table you are looking for does not exist in the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 500);
             }
             elseif ($mysqlError->getCode() === 'HY000') 
             {
                 return response([
-                    'HTTP Response Code'        => 406,
-                    'HTTP Response Description' => 'Not Acceptable',
-                    'Interpretation'            => 'This means that one or more fields are missing from the JSON object',
-                    'More information'          => 'Please check the documentation Arduino API  - List Of Equipments',
+                    'Notification Code'               => 'ERR_3',
+                    'Notification Short Description'  => 'One or more field are missing from the JSON object.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 406);
             }
             elseif ($mysqlError->getCode() === '22001') 
             {
                 return response([
-                    'HTTP Response Code'        => 406,
-                    'HTTP Response Description' => 'Not Acceptable',
-                    'Interpretation'            => 'This means that the field equipment_id must have a maximum of 15 characters',
-                    'More information'          => 'Please check the documentation Arduino API  - List Of Equipments',
+                    'Notification Code'               => 'ERR_4',
+                    'Notification Short Description'  => 'The field equipment_id must have a maximum of 15 characters.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 406);
             }
         }
@@ -137,26 +134,26 @@ class ArduinoListOfEquipmentApiController extends Controller
             if ($apiDisplayAllRecords->isEmpty()) 
             {
                 return response([
-                    'HTTP Response Code'        => 404,
-                    'HTTP Response Description' => 'Not Found',
-                    'Interpretation'            => 'This means that the table does not have any records'
+                    'Notification Code'               => 'WARN_1',
+                    'Notification Short Description'  => 'The table you are looking for does not have any records to display.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 404);
             }
             elseif (is_null($apiDisplaySingleRecord)) 
             {
                 return response([
-                    'HTTP Response Code'        => 404,
-                    'HTTP Response Description' => 'Not Found',
-                    'Interpretation'            => 'This means that the equipment you are looking for does not exist'
+                    'Notification Code'               => 'WARN_2',
+                    'Notification Short Description'  => 'The equipment you are looking for does not exist.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 404);
             }
             else 
             {
                 return response([
-                    'HTTP Response Code'        => 201,
-                    'HTTP Response Description' => 'Created',
-                    'Message'                   => 'The equipment ID: ' . $apiDisplaySingleRecord->equipment_id . ' was successfully fetched from the database',
-                    'Equipment List'            => new ArduinoListOfEquipmentResource($apiDisplaySingleRecord),
+                    'Notification Code'               => 'INFO_1',
+                    'Notification Short Description'  => 'The details of equipment ID ' . $apiDisplaySingleRecord->equipment_id . ' was successfully fetched from the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
+                    'Equipment List'                  => new ArduinoListOfEquipmentResource($apiDisplaySingleRecord),
                 ], 201);
             }
         }
@@ -165,9 +162,9 @@ class ArduinoListOfEquipmentApiController extends Controller
             if ($mysqlError->getCode() === '42S02') 
             {
                 return response([
-                    'HTTP Response Code'        => 500,
-                    'HTTP Response Description' => 'Internal Server Error',
-                    'Interpretation'            => 'This means that the table you are looking for does not exist in the database. Please contact the site owner!',
+                    'Notification Code'               => 'ERR_1',
+                    'Notification Short Description'  => 'The table you are looking for does not exist in the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 500);
             }
         }
@@ -187,10 +184,10 @@ class ArduinoListOfEquipmentApiController extends Controller
             $apiUpdateSingleRecord = $this->modelName->find($id);
             $apiUpdateSingleRecord->update($request->all());
             return response([
-                'HTTP Response Code'        => 201,
-                'HTTP Response Description' => 'Created',
-                'Message'                   => 'The equipment ID: ' . $apiUpdateSingleRecord->equipment_id . ' was successfully updated in the database',
-                'Equipment List'            => new ArduinoListOfEquipmentResource($apiUpdateSingleRecord),
+                'Notification Code'              => 'INFO_2',
+                'Notification Short Description' => 'The equipment ' . $apiUpdateSingleRecord->equipment_id . ' was successfully updated in the database',
+                'Notification Reference'         => '!!! Insert documentation link here !!!',
+                'Equipment List'                 => new ArduinoListOfEquipmentResource($apiUpdateSingleRecord),
             ], 201);
         }
         catch (\Illuminate\Database\QueryException $mysqlError) 
@@ -200,37 +197,34 @@ class ArduinoListOfEquipmentApiController extends Controller
                 if (empty($apiUpdateSingleRecord->equipment_id) OR empty($apiUpdateSingleRecord->equipment_description) OR empty($apiUpdateSingleRecord->equipment_notes))
                 {
                     return response([
-                        'HTTP Response Code'        => 406,
-                        'HTTP Response Description' => 'Not Acceptable',
-                        'Interpretation'            => 'This means that one or more fields does not contain any information',
-                        'More information'          => 'Please check the documentation Arduino API  - List Of Equipments',
+                        'Notification Code'               => 'ERR_2',
+                        'Notification Short Description'  => 'One or more field does not contain any information.',
+                        'Notification Reference'          => '!!! Insert documentation link here !!!',
                     ], 406);
                 }
             }
             elseif ($mysqlError->getCode() === '42S02') 
             {
                 return response([
-                    'HTTP Response Code'        => 500,
-                    'HTTP Response Description' => 'Internal Server Error',
-                    'Interpretation'            => 'This means that the table you are looking for does not exist in the database. Please contact the site owner!',
+                    'Notification Code'               => 'ERR_1',
+                    'Notification Short Description'  => 'The table you are looking for does not exist in the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 500);
             }
             elseif ($mysqlError->getCode() === 'HY000') 
             {
                 return response([
-                    'HTTP Response Code'        => 406,
-                    'HTTP Response Description' => 'Not Acceptable',
-                    'Interpretation'            => 'This means that one or more fields are missing from the JSON object',
-                    'More information'          => 'Please check the documentation Arduino API  - List Of Equipments',
+                    'Notification Code'               => 'ERR_3',
+                    'Notification Short Description'  => 'One or more field are missing from the JSON object.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 406);
             }
             elseif ($mysqlError->getCode() === '22001') 
             {
                 return response([
-                    'HTTP Response Code'        => 406,
-                    'HTTP Response Description' => 'Not Acceptable',
-                    'Interpretation'            => 'This means that the field equipment_id must have a maximum of 15 characters',
-                    'More information'          => 'Please check the documentation Arduino API  - List Of Equipments',
+                    'Notification Code'               => 'ERR_4',
+                    'Notification Short Description'  => 'The field equipment_id must have a maximum of 15 characters.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 406);
             }
         }
@@ -251,27 +245,27 @@ class ArduinoListOfEquipmentApiController extends Controller
             if ($apiDisplayAllRecords->isEmpty()) 
             {
                 return response([
-                    'HTTP Response Code'        => 404,
-                    'HTTP Response Description' => 'Not Found',
-                    'Interpretation'            => 'This means that the table does not have any records'
+                    'Notification Code'               => 'WARN_1',
+                    'Notification Short Description'  => 'The table you are looking for does not have any records to display.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 404);
             }
             elseif (is_null($apiDisplaySingleRecord)) 
             {
                 return response([
-                    'HTTP Response Code'        => 404,
-                    'HTTP Response Description' => 'Not Found',
-                    'Interpretation'            => 'This means that the equipment you are looking for does not exist'
+                    'Notification Code'               => 'WARN_2',
+                    'Notification Short Description'  => 'The equipment you are looking for does not exist.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 404);
             }
             else 
             {
                 $apiDeleteSingleRecord = $this->modelName->find($id)->delete();
                 return response([
-                    'HTTP Response Code'        => 200,
-                    'HTTP Response Description' => 'OK',
-                    'Message'                   => 'The equipment you have selected was successfully deleted from the database',
-                    'Equipment List'            => $apiDisplaySingleRecord,
+                    'Notification Code'               => 'INFO_1',
+                    'Notification Short Description'  => 'The equipment you have selected was successfully deleted from the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
+                    'Deleted Equipment'               => new ArduinoListOfEquipmentResource($apiDisplaySingleRecord),
                 ], 200);
             }
         }
@@ -280,9 +274,9 @@ class ArduinoListOfEquipmentApiController extends Controller
             if ($mysqlError->getCode() === '42S02') 
             {
                 return response([
-                    'HTTP Response Code'        => 500,
-                    'HTTP Response Description' => 'Internal Server Error',
-                    'Interpretation'            => 'This means that the table you are looking for does not exist in the database. Please contact the site owner!',
+                    'Notification Code'               => 'ERR_1',
+                    'Notification Short Description'  => 'The table you are looking for does not exist in the database.',
+                    'Notification Reference'          => '!!! Insert documentation link here !!!',
                 ], 500);
             }
         }
