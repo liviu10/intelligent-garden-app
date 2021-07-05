@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArduinoListOfEquipmentApiController;
 use App\Http\Controllers\ArduinoEquipmentRecordApiController;
+use App\Http\Controllers\ArduinoListOfErrorApiController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\OAuthController;
@@ -49,3 +50,4 @@ Route::group(['middleware' => 'guest:api'], function () {
 
 Route::apiResource('list-of-equipments', ArduinoListOfEquipmentApiController::class);
 Route::apiResource('equipment-records', ArduinoEquipmentRecordApiController::class);
+Route::apiResource('list-of-errors', ArduinoListOfErrorApiController::class);
