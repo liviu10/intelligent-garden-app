@@ -86,7 +86,16 @@
   "equipment_list_page": {
     "page_title": "Equipment List",
     "first_paragraph": "This page represents a list of all equipment that are connected to the hardware system.",
-    "second_paragraph": "Here you can add, modify or delete an equipment."
+    "second_paragraph": "Here you can add, modify or delete an equipment.",
+    "cards_settings": {
+      "title": "Equipment Details",
+      "equipment_id_label": "Equipment ID",
+      "equipment_description_label": "Equipment Description",
+      "equipment_notes_label": "Equipment Notes",
+      "created_at_label": "Created At",
+      "updated_at_label": "Updated At",
+      "see_more_details": "See more"
+    }
   },
   "equipment_records_page": {
     "ph_sensor": {
