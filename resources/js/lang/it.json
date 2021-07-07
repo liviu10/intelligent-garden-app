@@ -86,7 +86,16 @@
     "equipment_list_page": {
         "page_title": "Elenco attrezzature",
         "first_paragraph": "Questa pagina rappresenta un elenco di tutte le apparecchiature collegate al sistema hardware.",
-        "second_paragraph": "Qui puoi aggiungere, modificare o eliminare un'attrezzatura."
+        "second_paragraph": "Qui puoi aggiungere, modificare o eliminare un'attrezzatura.",
+        "cards_settings": {
+            "title": "Dettagli attrezzatura",
+            "equipment_id_label": "ID attrezzatura",
+            "equipment_description_label": "Descrizione dell'attrezzatura",
+            "equipment_notes_label": "Note sull'attrezzatura",
+            "created_at_label": "Creato alle",
+            "updated_at_label": "Aggiornato alle",
+            "see_more_details": "Vedi di più"
+        }
     },
     "equipment_records_page": {
         "ph_sensor": {

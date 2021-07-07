@@ -86,7 +86,16 @@
     "equipment_list_page": {
         "page_title": "Listă de Echipamente",
         "first_paragraph": "Această pagină prezintă o listă a tuturor echipamentelor conectate la sistemul hardware.",
-        "second_paragraph": "Aici vei putea adăuga, modifica sau șterge un echipament."
+        "second_paragraph": "Aici vei putea adăuga, modifica sau șterge un echipament.",
+        "cards_settings": {
+            "title": "Detalii Echipament",
+            "equipment_id_label": "ID Echipament",
+            "equipment_description_label": "Descriere Echipament",
+            "equipment_notes_label": "Note Echipament",
+            "created_at_label": "Dată Creare",
+            "updated_at_label": "Dată Actualizare",
+            "see_more_details": "Mai mult"
+        }
     },
     "equipment_records_page": {
         "ph_sensor": {
