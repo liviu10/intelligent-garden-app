@@ -59,16 +59,28 @@ class ArduinoEquipmentRecordApiController extends Controller
                                         )
                                         ->get();
                 return response([
+                    "links"                           => [
+                        "pagination"       => [
+                            "total"        => 50,
+                            "per_page"     => 15,
+                            "current_page" => 1,
+                            "last_page"    => 4,
+                            "next_page_url"=> "",
+                            "prev_page_url"=> "",
+                            "from"         => 1,
+                            "to"           => 15,
+                        ]
+                    ],
+                    'data'                            => new ArduinoEquipmentRecordResource($apiDisplayAllRecords),
                     'Notification Code'               => 'INFO_1',
                     'Notification Short Description'  => 'The equipment record list (' . $apiDisplayAllRecords->count() . ' record(s)) was successfully fetched from the database which contains.',
                     'Notification Reference'          => '!!! Insert documentation link here !!!',
-                    'Equipment List'                  => new ArduinoEquipmentRecordResource($apiDisplayAllRecords),
                 ], 201);
             }
         }
         catch (\Illuminate\Database\QueryException $mysqlError)
         {
-            if ($mysqlError->getCode() === '42S02') 
+            if ($mysqlError->getCode() === '42S02')
             {
                 return response([
                     'Notification Code'               => 'ERR_1',
@@ -120,7 +132,7 @@ class ArduinoEquipmentRecordApiController extends Controller
                     'Notification Code'               => 'INFO_2',
                     'Notification Short Description'  => 'The equipment ' . $apiInsertSingleRecord->equipment_id . ' with the value: ' . $request->equipment_value . ' was successfully inserted in the database.',
                     'Notification Reference'          => '!!! Insert documentation link here !!!',
-                    'Equipment List'                  => new ArduinoEquipmentRecordResource($apiInsertSingleRecord),
+                    'data'                            => new ArduinoEquipmentRecordResource($apiInsertSingleRecord),
                 ], 201);
             }
         }
@@ -214,7 +226,7 @@ class ArduinoEquipmentRecordApiController extends Controller
                     'Notification Code'               => 'INFO_1',
                     'Notification Short Description'  => 'The details of equipment ID ' . $apiDisplaySingleRecord['equipment_id'] . ' was successfully fetched from the database.',
                     'Notification Reference'          => '!!! Insert documentation link here !!!',
-                    'Equipment List'                  => new ArduinoEquipmentRecordResource($apiDisplaySingleRecord),
+                    'data'                            => new ArduinoEquipmentRecordResource($apiDisplaySingleRecord),
                 ], 201);
             }
         }
@@ -274,7 +286,7 @@ class ArduinoEquipmentRecordApiController extends Controller
                     'Notification Code'              => 'INFO_2',
                     'Notification Short Description' => 'The equipment ' . $apiUpdateSingleRecord->equipment_id . ' with the value: ' . $request->equipment_value . ' was successfully updated in the database',
                     'Notification Reference'         => '!!! Insert documentation link here !!!',
-                    'Equipment List'                 => new ArduinoEquipmentRecordResource($apiUpdateSingleRecord),
+                    'data'                           => new ArduinoEquipmentRecordResource($apiUpdateSingleRecord),
                 ], 201);
             }
         }
