@@ -16,45 +16,105 @@
       </p>
     </div>
     <div class="equipment-records--body">
-      <vuetable ref="vuetable"
-                api-url="http://127.0.0.1:8000/api/equipment-records"
-                :fields="equipmentRecordsColumns"
-      />
+      <vue-good-table
+        slot="table-actions"
+        :columns="columns"
+        :rows="rows"
+        :line-numbers="true"
+        :pagination-options="{
+          enabled: true,
+          mode: 'records',
+          perPage: 5,
+          position: 'bottom',
+          perPageDropdown: [10, 20, 30],
+          dropdownAllowAll: true,
+          setCurrentPage: 1,
+          nextLabel: $t('equipment_records_page.table_settings.next'),
+          prevLabel: $t('equipment_records_page.table_settings.previous'),
+          rowsPerPageLabel: $t('equipment_records_page.table_settings.rows_per_page'),
+          ofLabel: $t('equipment_records_page.table_settings.of_label'),
+          pageLabel: 'page',
+          allLabel: $t('equipment_records_page.table_settings.all_label'),
+        }"
+        :search-options="{
+          enabled: true,
+          trigger: 'enter',
+          skipDiacritics: false,
+          placeholder: $t('equipment_records_page.table_settings.search_placeholder'),
+        }"
+        @on-row-click="onRowClick"
+      >
+        <div slot="table-actions">
+          <button type="button" class="btn btn-primary">
+            {{ $t('equipment_records_page.table_settings.export_options_button') }}
+          </button>
+          <button type="button" class="btn btn-info">
+            {{ $t('equipment_records_page.table_settings.table_settings_button') }}
+          </button>
+        </div>
+      </vue-good-table>
     </div>
   </div>
 </template>
 
 <script>
-import Vuetable from 'vuetable-2'
+import 'vue-good-table/dist/vue-good-table.css'
+import { VueGoodTable } from 'vue-good-table'
+import axios from 'axios'
 
 export default {
   components: {
-    Vuetable
+    VueGoodTable
   },
   middleware: 'auth',
   metaInfo () {
-    return { title: this.$t('equipment_records_page.pump1.page_title') }
+    return { title: this.$t('equipment_records_page.ec_sensor.page_title') }
   },
   data: function () {
     return {
-      equipmentRecordsColumns: [
+      columns: [
         {
-          name: 'id',
-          title: '#'
+          label: this.$t('equipment_records_page.table_settings.equipment_id_label'),
+          field: 'equipment_id',
+          type: 'string'
         },
         {
-          name: 'equipment_value',
-          title: 'Pump pH-- Value'
+          label: this.$t('equipment_records_page.table_settings.equipment_value_label'),
+          field: 'equipment_value',
+          type: 'number'
         },
         {
-          name: 'created_at',
-          title: 'Date read'
+          label: this.$t('equipment_records_page.table_settings.created_at_label'),
+          field: 'created_at',
+          type: 'date',
+          dateInputFormat: 'yyyy-MM-dd\'T\'HH:mm:ss.SSSSSS\'Z\'',
+          dateOutputFormat: 'dd.MM.yyyy HH:mm'
         }
-      ]
+      ],
+      rows: []
     }
   },
-  mounted () {},
-  methods: {}
+  mounted () {
+    this.displayAllRecords()
+  },
+  methods: {
+    onPaginationData (paginationData) {
+      this.$refs.pagination.setPaginationData(paginationData)
+      this.$refs.paginationInfo.setPaginationData(paginationData)
+    },
+    onChangePage (page) {
+      this.$refs.vuetable.changePage(page)
+    },
+    onRowClick (params) {},
+    displayAllRecords: function () {
+      axios
+        .get('http://127.0.0.1:8000/api/equipment-records')
+        .then(response => {
+          console.log('>>>>> List of Equipments API: Equipment Records', response.data.data)
+          this.rows = response.data.data
+        })
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

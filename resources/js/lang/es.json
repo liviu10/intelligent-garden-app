@@ -98,6 +98,19 @@
         }
     },
     "equipment_records_page": {
+        "table_settings": {
+            "search_placeholder": "Buscar esta tabla",
+            "export_options_button": "Opciones de exportacion",
+            "table_settings_button": "Configuración de la mesa",
+            "equipment_id_label": "ID de equipo",
+            "equipment_value_label": "Valor del equipo",
+            "created_at_label": "Fecha de lectura",
+            "rows_per_page": "Filas por página",
+            "next": "Próximo",
+            "previous": "Anterior",
+            "of_label": "de",
+            "all_label": "Todas"
+        },
         "ph_sensor": {
             "page_title": "Registros del sensor de pH",
             "first_paragraph": "Aquí encontrará todas las lecturas que el sensor de pH ha registrado y transmitido a esta aplicación web a través de la API. El gráfico representa la evolución de las lecturas en las últimas 24 horas. La tabla muestra todos los registros, en orden descendente según la fecha agregada.",

@@ -98,6 +98,19 @@
     }
   },
   "equipment_records_page": {
+    "table_settings": {
+      "search_placeholder": "Search this table",
+      "export_options_button": "Export Options",
+      "table_settings_button": "Table Settings",
+      "equipment_id_label": "Equipment ID",
+      "equipment_value_label": "Equipment Value",
+      "created_at_label": "Date Read",
+      "rows_per_page": "Rows per page",
+      "next": "Next",
+      "previous": "Previous",
+      "of_label": "of",
+      "all_label": "All"
+    },
     "ph_sensor": {
       "page_title": "pH Sensor Records",
       "first_paragraph": "Here you will find all the readings that pH Sensor has recorded and transmitted to this Web Application via the API. The chart represents the readings evolution in the last 24 hours. The table is displaying all the records, in descending order based on the added date.",
