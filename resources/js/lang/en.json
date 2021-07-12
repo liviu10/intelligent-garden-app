@@ -164,33 +164,48 @@
   "application_settings_page": {
     "page_title": "Application settings",
     "first_paragraph": "This page presents a list of all the settings that can be used to configure this Web Application.",
+    "table_details": "Table Details",
+    "go_back_button": "Go Back to Application Settings",
+    "export_button": "Export table (CSV, XLSX or PDF)",
     "first_card": {
       "card_title": "Configure Equipment List",
-      "card_content": "",
-      "table_details": "Table details",
-      "table_export": "Table Export",
-      "table_structure": "Table Structure"
+      "card_content": {
+        "paragraph": "This card will let you interact with the table \"Equipment List\"",
+        "item_1": "\"Table Details\" button will give you access to view, modify or delete certain records based on it's database ID;"
+      }
     },
     "second_card": {
       "card_title": "Configure Equipment Records",
-      "card_content": "",
-      "table_details": "Table details",
-      "table_export": "Table Export",
-      "table_structure": "Table Structure"
+      "card_content": {
+        "paragraph": "This card will let you interact with the table \"Equipment List\"",
+        "item_1": "\"Table Details\" button will give you access to view, modify or delete certain records based on it's database ID;"
+      }
     },
     "third_card": {
       "card_title": "Configure Error List",
-      "card_content": "",
-      "table_details": "Table details",
-      "table_export": "Table Export",
-      "table_structure": "Table Structure"
+      "card_content": {
+        "paragraph": "This card will let you interact with the table \"Equipment List\"",
+        "item_1": "\"Table Details\" button will give you access to view, modify or delete certain records based on it's database ID;"
+      }
     },
     "forth_card": {
       "card_title": "Configure User Lists and Roles",
-      "card_content": "",
-      "table_details": "Table details",
-      "table_export": "Table Export",
-      "table_structure": "Table Structure"
+      "card_content": {
+        "paragraph": "This card will let you interact with the table \"Equipment List\"",
+        "item_1": "\"Table Details\" button will give you access to view, modify or delete certain records based on it's database ID;"
+      }
+    },
+    "equipment_list": {
+      "page_title": "Equipment List"
+    },
+    "equipment_records": {
+      "page_title": "Equipment Records"
+    },
+    "error_list": {
+      "page_title": "Error List"
+    },
+    "user_list_and_roles": {
+      "page_title": "Users List and Roles"
     }
   },
   "ok": "Ok",

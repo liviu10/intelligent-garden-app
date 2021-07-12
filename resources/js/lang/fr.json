@@ -164,33 +164,48 @@
     "application_settings_page": {
         "page_title": "Paramètres de l'application",
         "first_paragraph": "Cette page présente une liste de tous les paramètres qui peuvent être utilisés pour configurer cette application Web.",
+        "table_details": "Détails du Tableau",
+        "go_back_button": "Revenir aux paramètres de l'application",
+        "export_button": "Exporter le tableau (CSV, XLSX ou PDF)",
         "first_card": {
             "card_title": "Configurer la liste des équipements",
-            "card_content": "",
-            "table_details": "Détails du Tableau",
-            "table_export": "Exportation de Tableaux",
-            "table_structure": "Structure des Tableaux"
+            "card_content": {
+                "paragraph": "Cette carte vous permettra d'interagir avec le tableau \"Liste des équipements\"",
+                "item_1": "Le bouton \"Détails de la table\" vous donnera accès à l'affichage, à la modification ou à la suppression de certains enregistrements en fonction de son ID de base de données;"
+            }
         },
         "second_card": {
             "card_title": "Configurer les enregistrements d'équipement",
-            "card_content": "",
-            "table_details": "Détails du Tableau",
-            "table_export": "Exportation de Tableaux",
-            "table_structure": "Structure des Tableaux"
+            "card_content": {
+                "paragraph": "Cette carte vous permettra d'interagir avec le tableau \"Fichiers d'équipement\"",
+                "item_1": "Le bouton \"Détails de la table\" vous donnera accès à l'affichage, à la modification ou à la suppression de certains enregistrements en fonction de son ID de base de données;"
+            }
         },
         "third_card": {
             "card_title": "Configurer la liste d'erreurs",
-            "card_content": "",
-            "table_details": "Détails du Tableau",
-            "table_export": "Exportation de Tableaux",
-            "table_structure": "Structure des Tableaux"
+            "card_content": {
+                "paragraph": "Cette carte vous permettra d'interagir avec le tableau \"Liste d'erreurs\"",
+                "item_1": "Le bouton \"Détails de la table\" vous donnera accès à l'affichage, à la modification ou à la suppression de certains enregistrements en fonction de son ID de base de données;"
+            }
         },
         "forth_card": {
             "card_title": "Configurer les listes d'utilisateurs et les rôles",
-            "card_content": "",
-            "table_details": "Détails du Tableau",
-            "table_export": "Exportation de Tableaux",
-            "table_structure": "Structure des Tableaux"
+            "card_content": {
+                "paragraph": "Cette carte vous permettra d'interagir avec le tableau \"Liste des utilisateurs et rôles\"",
+                "item_1": "Le bouton \"Détails de la table\" vous donnera accès à l'affichage, à la modification ou à la suppression de certains enregistrements en fonction de son ID de base de données;"
+            }
+        },
+        "equipment_list": {
+            "page_title": "Liste d'équipement"
+        },
+        "equipment_records": {
+            "page_title": "Dossiers d'équipement"
+        },
+        "error_list": {
+            "page_title": "Liste d'erreurs"
+        },
+        "user_list_and_roles": {
+            "page_title": "Liste des utilisateurs et rôles"
         }
     }
 }
