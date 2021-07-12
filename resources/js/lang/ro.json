@@ -164,33 +164,48 @@
     "application_settings_page": {
         "page_title": "Setări aplicație",
         "first_paragraph": "Această pagină prezintă o listă a tuturor setărilor care pot fi utilizate în configurarea aplicației web.",
+        "table_details": "Detalii Tabel",
+        "go_back_button": "Întoarce-te înapoi la Setări Aplicație",
+        "export_button": "Exportă Tabe; (CSV, XLSX or PDF)",
         "first_card": {
             "card_title": "Configurare Listă de Echipamente",
-            "card_content": "",
-            "table_details": "Detalii Tabel",
-            "table_export": "Exportare Tabel",
-            "table_structure": "Structură Tabel"
+            "card_content": {
+                "paragraph": "Acest card îți permite să interacționezi cu tabelul \"Listă de Echipamente\"",
+                "item_1": "Butonul \"Detalii Tabel\" îți va permite să vizualizezi, modifici sau să ștergi anumite înregistrări în funcție de ID-ul din baza de date;"
+            }
         },
         "second_card": {
             "card_title": "Configurare Înregistrări Echipamente",
-            "card_content": "",
-            "table_details": "Detalii Tabel",
-            "table_export": "Exportare Tabel",
-            "table_structure": "Structură Tabel"
+            "card_content": {
+                "paragraph": "Acest card îți permite să interacționezi cu tabelul \"Înregistrări Echipamente\"",
+                "item_1": "Butonul \"Detalii Tabel\" îți va permite să vizualizezi, modifici sau să ștergi anumite înregistrări în funcție de ID-ul din baza de date;"
+            }
         },
         "third_card": {
             "card_title": "Configurare Listă de Erori",
-            "card_content": "",
-            "table_details": "Detalii Tabel",
-            "table_export": "Exportare Tabel",
-            "table_structure": "Structură Tabel"
+            "card_content": {
+                "paragraph": "Acest card îți permite să interacționezi cu tabelul \"Listă Erori\"",
+                "item_1": "Butonul \"Detalii Tabel\" îți va permite să vizualizezi, modifici sau să ștergi anumite înregistrări în funcție de ID-ul din baza de date;"
+            }
         },
         "forth_card": {
             "card_title": "Configurare Listă Utilizatori și Roluri",
-            "card_content": "",
-            "table_details": "Detalii Tabel",
-            "table_export": "Exportare Tabel",
-            "table_structure": "Structură Tabel"
+            "card_content": {
+                "paragraph": "Acest card îți permite să interacționezi cu tabelul \"Lista Utilizatori și Roluri\"",
+                "item_1": "Butonul \"Detalii Tabel\" îți va permite să vizualizezi, modifici sau să ștergi anumite înregistrări în funcție de ID-ul din baza de date;"
+            }
+        },
+        "equipment_list": {
+            "page_title": "Listă de Echipamente"
+        },
+        "equipment_records": {
+            "page_title": "Înregistrări Echipamente"
+        },
+        "error_list": {
+            "page_title": "Listă de Erori"
+        },
+        "user_list_and_roles": {
+            "page_title": "Listă Utilizatori și Roluri"
         }
     }
 }

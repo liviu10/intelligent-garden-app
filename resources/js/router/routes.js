@@ -36,6 +36,10 @@ export default [
 
   // The route to the application settings
   { path: '/application-settings', name: 'application-settings', component: page('application-settings/index.vue') },
+  { path: '/application-settings/equipment-list', name: 'application-settings.equipment-list.index', component: page('application-settings/equipment-list/index.vue') },
+  { path: '/application-settings/equipment-records', name: 'application-settings.equipment-records.index', component: page('application-settings/equipment-records/index.vue') },
+  { path: '/application-settings/error-list', name: 'application-settings.error-list.index', component: page('application-settings/error-list/index.vue') },
+  { path: '/application-settings/users-and-roles', name: 'application-settings.users-and-roles.index', component: page('application-settings/users-and-roles/index.vue') },
 
   // The route to display error message if the user is requesting for a resource that do not exist
   { path: '*', component: page('errors/404.vue') }

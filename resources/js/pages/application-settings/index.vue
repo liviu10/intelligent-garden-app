@@ -16,68 +16,64 @@
       <div class="application-settings--body-card">
         <card :title="$t('application_settings_page.first_card.card_title')">
           <div class="application-settings--body-card-content">
-            <!-- {{ $t('application_settings_page.first_card.card_content') }} -->
-            <p>This card will let you interact with the table "Equipment List"</p>
-            <ul>
-              <li>by pressing on "Table Details" you can view, modify or delete certain records based on it's database ID;</li>
-              <li>by pressing on "Table Export" you can export the table's records in a certain format (CSV, XLS or PDF);</li>
-              <li>by pressing on "Table Structure" you gain access to the table's structure and can modify column names;</li>
+            <p class="application-settings--body-card-content-paragraph">
+              {{ $t('application_settings_page.first_card.card_content.paragraph') }}
+            </p>
+            <ul class="application-settings--body-card-content-list">
+              <li>{{ $t('application_settings_page.first_card.card_content.item_1') }}</li>
             </ul>
           </div>
           <div class="d-flex justify-content-center align-items-center application-settings--body-card-buttons">
-            <a href="" class="btn btn-info">{{ $t('application_settings_page.first_card.table_details') }}</a>
-            <a href="" class="btn btn-success">{{ $t('application_settings_page.first_card.table_export') }}</a>
-            <a href="" class="btn btn-warning">{{ $t('application_settings_page.first_card.table_structure') }}</a>
+            <router-link to="/application-settings/equipment-list" class="btn btn-info">
+              {{ $t('application_settings_page.table_details') }}
+            </router-link>
           </div>
         </card>
         <card :title="$t('application_settings_page.second_card.card_title')">
           <div class="application-settings--body-card-content">
-            <!-- {{ $t('application_settings_page.second_card.card_content') }} -->
-            <p>This card will let you interact with the table "Equipment Records"</p>
-            <ul>
-              <li>by pressing on "Table Details" you can view, modify or delete certain records based on it's database ID;</li>
-              <li>by pressing on "Table Export" you can export the table's records in a certain format (CSV, XLS or PDF);</li>
-              <li>by pressing on "Table Structure" you gain access to the table's structure and can modify column names;</li>
+            <p class="application-settings--body-card-content-paragraph">
+              {{ $t('application_settings_page.second_card.card_content.paragraph') }}
+            </p>
+            <ul class="application-settings--body-card-content-list">
+              <li>{{ $t('application_settings_page.second_card.card_content.item_1') }}</li>
             </ul>
           </div>
           <div class="d-flex justify-content-center align-items-center application-settings--body-card-buttons">
-            <a href="" class="btn btn-info">{{ $t('application_settings_page.second_card.table_details') }}</a>
-            <a href="" class="btn btn-success">{{ $t('application_settings_page.second_card.table_export') }}</a>
-            <a href="" class="btn btn-warning">{{ $t('application_settings_page.second_card.table_structure') }}</a>
+            <router-link to="/application-settings/equipment-records" class="btn btn-info">
+              {{ $t('application_settings_page.table_details') }}
+            </router-link>
           </div>
         </card>
       </div>
       <div class="application-settings--body-card">
         <card :title="$t('application_settings_page.third_card.card_title')">
           <div class="application-settings--body-card-content">
-            <!-- {{ $t('application_settings_page.third_card.card_content') }} -->
-            <p>This card will let you interact with the table "Error List"</p>
-            <ul>
-              <li>by pressing on "Table Details" you can view, modify or delete certain records based on it's database ID;</li>
-              <li>by pressing on "Table Export" you can export the table's records in a certain format (CSV, XLS or PDF);</li>
-              <li>by pressing on "Table Structure" you gain access to the table's structure and can modify column names;</li>
+            <p class="application-settings--body-card-content-paragraph">
+              {{ $t('application_settings_page.third_card.card_content.paragraph') }}
+            </p>
+            <ul class="application-settings--body-card-content-list">
+              <li>{{ $t('application_settings_page.third_card.card_content.item_1') }}</li>
             </ul>
           </div>
           <div class="d-flex justify-content-center align-items-center application-settings--body-card-buttons">
-            <a href="" class="btn btn-info">{{ $t('application_settings_page.third_card.table_details') }}</a>
-            <a href="" class="btn btn-success">{{ $t('application_settings_page.third_card.table_export') }}</a>
-            <a href="" class="btn btn-warning">{{ $t('application_settings_page.third_card.table_structure') }}</a>
+            <router-link to="/application-settings/error-list" class="btn btn-info">
+              {{ $t('application_settings_page.table_details') }}
+            </router-link>
           </div>
         </card>
         <card :title="$t('application_settings_page.forth_card.card_title')">
           <div class="application-settings--body-card-content">
-            <!-- {{ $t('application_settings_page.forth_card.card_content') }} -->
-            <p>This card will let you interact with the table "User Lists and Roles"</p>
-            <ul>
-              <li>by pressing on "Table Details" you can view, modify or delete certain records based on it's database ID;</li>
-              <li>by pressing on "Table Export" you can export the table's records in a certain format (CSV, XLS or PDF);</li>
-              <li>by pressing on "Table Structure" you gain access to the table's structure and can modify column names;</li>
+            <p class="application-settings--body-card-content-paragraph">
+              {{ $t('application_settings_page.forth_card.card_content.paragraph') }}
+            </p>
+            <ul class="application-settings--body-card-content-list">
+              <li>{{ $t('application_settings_page.forth_card.card_content.item_1') }}</li>
             </ul>
           </div>
           <div class="d-flex justify-content-center align-items-center application-settings--body-card-buttons">
-            <a href="" class="btn btn-info">{{ $t('application_settings_page.forth_card.table_details') }}</a>
-            <a href="" class="btn btn-success">{{ $t('application_settings_page.forth_card.table_export') }}</a>
-            <a href="" class="btn btn-warning">{{ $t('application_settings_page.forth_card.table_structure') }}</a>
+            <router-link to="/application-settings/users-and-roles" class="btn btn-info">
+              {{ $t('application_settings_page.table_details') }}
+            </router-link>
           </div>
         </card>
       </div>
@@ -145,9 +141,18 @@ export default {
         margin-left: 1rem;
         margin-right: 1rem;
         width: 500px;
+        height: 300px;
+      }
+      &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 150px;
       }
       &-buttons {
         margin-top: 1rem;
+        height: 50px;
         & .btn {
           margin: 0.15rem;
           border-radius: 0rem;

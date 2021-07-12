@@ -164,33 +164,48 @@
     "application_settings_page": {
         "page_title": "Impostazioni dell'applicazione",
         "first_paragraph": "Questa pagina presenta un elenco di tutte le impostazioni che possono essere utilizzate per configurare questa applicazione Web.",
+        "table_details": "Dettagli Tabella",
+        "go_back_button": "Torna alle impostazioni dell'applicazione",
+        "export_button": "Esporta tabella (CSV, XLSX o PDF)",
         "first_card": {
             "card_title": "Configura l'elenco delle attrezzature",
-            "card_content": "",
-            "table_details": "Dettagli Tabella",
-            "table_export": "Esportazione Tabella",
-            "table_structure": "Struttura del Tavolo"
+            "card_content": {
+                "paragraph": "Questa scheda ti permetterà di interagire con il tavolo \"Elenco attrezzature\"",
+                "item_1": "Il pulsante \"Dettagli tabella\" ti consentirà di visualizzare, modificare o eliminare determinati record in base all'ID del database;"
+            }
         },
         "second_card": {
             "card_title": "Configura i record dell'attrezzatura",
-            "card_content": "",
-            "table_details": "Dettagli Tabella",
-            "table_export": "Esportazione Tabella",
-            "table_structure": "Struttura del Tavolo"
+            "card_content": {
+                "paragraph": "Questa scheda ti permetterà di interagire con il tavolo \"Registri attrezzature\"",
+                "item_1": "Il pulsante \"Dettagli tabella\" ti consentirà di visualizzare, modificare o eliminare determinati record in base all'ID del database;"
+            }
         },
         "third_card": {
             "card_title": "Configura l'elenco degli errori",
-            "card_content": "",
-            "table_details": "Dettagli Tabella",
-            "table_export": "Esportazione Tabella",
-            "table_structure": "Struttura del Tavolo"
+            "card_content": {
+                "paragraph": "Questa scheda ti permetterà di interagire con il tavolo \"Elenco errori\"",
+                "item_1": "Il pulsante \"Dettagli tabella\" ti consentirà di visualizzare, modificare o eliminare determinati record in base all'ID del database;"
+            }
         },
         "forth_card": {
             "card_title": "Configura elenchi utenti e ruoli",
-            "card_content": "",
-            "table_details": "Dettagli Tabella",
-            "table_export": "Esportazione Tabella",
-            "table_structure": "Struttura del Tavolo"
+            "card_content": {
+                "paragraph": "Questa scheda ti permetterà di interagire con il tavolo \"Elenco utenti e ruoli\"",
+                "item_1": "Il pulsante \"Dettagli tabella\" ti consentirà di visualizzare, modificare o eliminare determinati record in base all'ID del database;"
+            }
+        },
+        "equipment_list": {
+            "page_title": "Elenco attrezzature"
+        },
+        "equipment_records": {
+            "page_title": "Registri dell'attrezzatura"
+        },
+        "error_list": {
+            "page_title": "Elenco errori Error"
+        },
+        "user_list_and_roles": {
+            "page_title": "Elenco utenti e ruoli"
         }
     }
 }

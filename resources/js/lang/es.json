@@ -164,33 +164,48 @@
     "application_settings_page": {
         "page_title": "Configuraciones de la aplicación",
         "first_paragraph": "Esta página presenta una lista de todas las configuraciones que se pueden usar para configurar esta aplicación web.",
+        "table_details": "Detalles de la Tabla",
+        "go_back_button": "Volver a la configuración de la aplicación",
+        "export_button": "Exportar tabla (CSV, XLSX o PDF)",
         "first_card": {
             "card_title": "Configurar lista de equipos",
-            "card_content": "",
-            "table_details": "Detalles de la Tabla",
-            "table_export": "Exportación de Tablas",
-            "table_structure": "Estructura de la tabla"
+            "card_content": {
+                "paragraph": "Esta tarjeta te permitirá interactuar con la mesa \"Lista de Equipo\"",
+                "item_1": "El botón \"Detalles de la Tabla\" le dará acceso para ver, modificar o eliminar ciertos registros según su ID de base de datos;"
+            }
         },
         "second_card": {
             "card_title": "Configurar registros de equipos",
-            "card_content": "",
-            "table_details": "Detalles de la Tabla",
-            "table_export": "Exportación de Tablas",
-            "table_structure": "Estructura de la tabla"
+            "card_content": {
+                "paragraph": "Esta tarjeta te permitirá interactuar con la mesa \"Registros de Equipo\"",
+                "item_1": "El botón \"Detalles de la Tabla\" le dará acceso para ver, modificar o eliminar ciertos registros según su ID de base de datos;"
+            }
         },
         "third_card": {
             "card_title": "Configurar lista de errores",
-            "card_content": "",
-            "table_details": "Detalles de la Tabla",
-            "table_export": "Exportación de Tablas",
-            "table_structure": "Estructura de la tabla"
+            "card_content": {
+                "paragraph": "Esta tarjeta te permitirá interactuar con la mesa \"Lista de Errores\"",
+                "item_1": "El botón \"Detalles de la Tabla\" le dará acceso para ver, modificar o eliminar ciertos registros según su ID de base de datos;"
+            }
         },
         "forth_card": {
             "card_title": "Configurar roles y listas de usuarios",
-            "card_content": "",
-            "table_details": "Detalles de la Tabla",
-            "table_export": "Exportación de Tablas",
-            "table_structure": "Estructura de la tabla"
+            "card_content": {
+                "paragraph": "Esta tarjeta te permitirá interactuar con la mesa \"Roles y Listas de Usuarios\"",
+                "item_1": "El botón \"Detalles de la Tabla\" le dará acceso para ver, modificar o eliminar ciertos registros según su ID de base de datos;"
+            }
+        },
+        "equipment_list": {
+            "page_title": "Lista de equipo"
+        },
+        "equipment_records": {
+            "page_title": "Registros de equipos"
+        },
+        "error_list": {
+            "page_title": "Lista de errores"
+        },
+        "user_list_and_roles": {
+            "page_title": "Lista de usuarios y roles"
         }
     }
 }
