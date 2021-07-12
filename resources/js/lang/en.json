@@ -165,13 +165,32 @@
     "page_title": "Application settings",
     "first_paragraph": "This page presents a list of all the settings that can be used to configure this Web Application.",
     "first_card": {
-      "card_title": "Configure Equipment List"
+      "card_title": "Configure Equipment List",
+      "card_content": "",
+      "table_details": "Table details",
+      "table_export": "Table Export",
+      "table_structure": "Table Structure"
     },
     "second_card": {
-      "card_title": "Configure Error List"
+      "card_title": "Configure Equipment Records",
+      "card_content": "",
+      "table_details": "Table details",
+      "table_export": "Table Export",
+      "table_structure": "Table Structure"
     },
     "third_card": {
-      "card_title": "Configure User Lists and Roles"
+      "card_title": "Configure Error List",
+      "card_content": "",
+      "table_details": "Table details",
+      "table_export": "Table Export",
+      "table_structure": "Table Structure"
+    },
+    "forth_card": {
+      "card_title": "Configure User Lists and Roles",
+      "card_content": "",
+      "table_details": "Table details",
+      "table_export": "Table Export",
+      "table_structure": "Table Structure"
     }
   },
   "ok": "Ok",

@@ -165,13 +165,32 @@
         "page_title": "Configuraciones de la aplicación",
         "first_paragraph": "Esta página presenta una lista de todas las configuraciones que se pueden usar para configurar esta aplicación web.",
         "first_card": {
-            "card_title": "Configurar lista de equipos"
+            "card_title": "Configurar lista de equipos",
+            "card_content": "",
+            "table_details": "Detalles de la Tabla",
+            "table_export": "Exportación de Tablas",
+            "table_structure": "Estructura de la tabla"
         },
         "second_card": {
-            "card_title": "Configurar lista de errores"
+            "card_title": "Configurar registros de equipos",
+            "card_content": "",
+            "table_details": "Detalles de la Tabla",
+            "table_export": "Exportación de Tablas",
+            "table_structure": "Estructura de la tabla"
         },
         "third_card": {
-            "card_title": "Configurar roles y listas de usuarios"
+            "card_title": "Configurar lista de errores",
+            "card_content": "",
+            "table_details": "Detalles de la Tabla",
+            "table_export": "Exportación de Tablas",
+            "table_structure": "Estructura de la tabla"
+        },
+        "forth_card": {
+            "card_title": "Configurar roles y listas de usuarios",
+            "card_content": "",
+            "table_details": "Detalles de la Tabla",
+            "table_export": "Exportación de Tablas",
+            "table_structure": "Estructura de la tabla"
         }
     }
 }
