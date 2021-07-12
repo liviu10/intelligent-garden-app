@@ -165,13 +165,32 @@
         "page_title": "Impostazioni dell'applicazione",
         "first_paragraph": "Questa pagina presenta un elenco di tutte le impostazioni che possono essere utilizzate per configurare questa applicazione Web.",
         "first_card": {
-            "card_title": "Configura l'elenco delle attrezzature"
+            "card_title": "Configura l'elenco delle attrezzature",
+            "card_content": "",
+            "table_details": "Dettagli Tabella",
+            "table_export": "Esportazione Tabella",
+            "table_structure": "Struttura del Tavolo"
         },
         "second_card": {
-            "card_title": "Configura l'elenco degli errori"
+            "card_title": "Configura i record dell'attrezzatura",
+            "card_content": "",
+            "table_details": "Dettagli Tabella",
+            "table_export": "Esportazione Tabella",
+            "table_structure": "Struttura del Tavolo"
         },
         "third_card": {
-            "card_title": "Configura elenchi utenti e ruoli"
+            "card_title": "Configura l'elenco degli errori",
+            "card_content": "",
+            "table_details": "Dettagli Tabella",
+            "table_export": "Esportazione Tabella",
+            "table_structure": "Struttura del Tavolo"
+        },
+        "forth_card": {
+            "card_title": "Configura elenchi utenti e ruoli",
+            "card_content": "",
+            "table_details": "Dettagli Tabella",
+            "table_export": "Esportazione Tabella",
+            "table_structure": "Struttura del Tavolo"
         }
     }
 }

@@ -165,13 +165,32 @@
         "page_title": "Setări aplicație",
         "first_paragraph": "Această pagină prezintă o listă a tuturor setărilor care pot fi utilizate în configurarea aplicației web.",
         "first_card": {
-            "card_title": "Configurare Listă de Echipamente"
+            "card_title": "Configurare Listă de Echipamente",
+            "card_content": "",
+            "table_details": "Detalii Tabel",
+            "table_export": "Exportare Tabel",
+            "table_structure": "Structură Tabel"
         },
         "second_card": {
-            "card_title": "Configurare Listă de Erori"
+            "card_title": "Configurare Înregistrări Echipamente",
+            "card_content": "",
+            "table_details": "Detalii Tabel",
+            "table_export": "Exportare Tabel",
+            "table_structure": "Structură Tabel"
         },
         "third_card": {
-            "card_title": "Configurare Listă Utilizatori și Roluri"
+            "card_title": "Configurare Listă de Erori",
+            "card_content": "",
+            "table_details": "Detalii Tabel",
+            "table_export": "Exportare Tabel",
+            "table_structure": "Structură Tabel"
+        },
+        "forth_card": {
+            "card_title": "Configurare Listă Utilizatori și Roluri",
+            "card_content": "",
+            "table_details": "Detalii Tabel",
+            "table_export": "Exportare Tabel",
+            "table_structure": "Structură Tabel"
         }
     }
 }

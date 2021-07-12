@@ -165,13 +165,32 @@
         "page_title": "Paramètres de l'application",
         "first_paragraph": "Cette page présente une liste de tous les paramètres qui peuvent être utilisés pour configurer cette application Web.",
         "first_card": {
-            "card_title": "Configurer la liste des équipements"
+            "card_title": "Configurer la liste des équipements",
+            "card_content": "",
+            "table_details": "Détails du Tableau",
+            "table_export": "Exportation de Tableaux",
+            "table_structure": "Structure des Tableaux"
         },
         "second_card": {
-            "card_title": "Configurer la liste d'erreurs"
+            "card_title": "Configurer les enregistrements d'équipement",
+            "card_content": "",
+            "table_details": "Détails du Tableau",
+            "table_export": "Exportation de Tableaux",
+            "table_structure": "Structure des Tableaux"
         },
         "third_card": {
-            "card_title": "Configurer les listes d'utilisateurs et les rôles"
+            "card_title": "Configurer la liste d'erreurs",
+            "card_content": "",
+            "table_details": "Détails du Tableau",
+            "table_export": "Exportation de Tableaux",
+            "table_structure": "Structure des Tableaux"
+        },
+        "forth_card": {
+            "card_title": "Configurer les listes d'utilisateurs et les rôles",
+            "card_content": "",
+            "table_details": "Détails du Tableau",
+            "table_export": "Exportation de Tableaux",
+            "table_structure": "Structure des Tableaux"
         }
     }
 }
