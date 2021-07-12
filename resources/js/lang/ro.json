@@ -98,6 +98,19 @@
         }
     },
     "equipment_records_page": {
+        "table_settings": {
+            "search_placeholder": "Căutați în acest tabel",
+            "export_options_button": "Opțiuni Exportare",
+            "table_settings_button": "Setări Tabel",
+            "equipment_id_label": "ID Echipament",
+            "equipment_value_label": "Valoare Echipament",
+            "created_at_label": "Dată citire",
+            "rows_per_page": "Rânduri pe pagină",
+            "next": "Următorul",
+            "previous": "Anterior",
+            "of_label": "din",
+            "all_label": "Toate"
+        },
         "ph_sensor": {
             "page_title": "Înregistrări Senzor pH",
             "first_paragraph": "Aici vei găsi toate citirile pe care Senzorul pH le-a înregistrat și le-a transmis acestei aplicații web prin intermediul API-ului. Graficul reprezintă evoluția înregistrărilor în ultimele 24 de ore. Tabelul afișează toate înregistrările, în ordine descrescătoare pe baza datei de adăugare.",

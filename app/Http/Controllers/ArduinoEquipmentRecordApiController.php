@@ -8,7 +8,6 @@ use App\Models\ArduinoListOfEquipment;
 use App\Http\Resources\ArduinoEquipmentRecordResource;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
-
 class ArduinoEquipmentRecordApiController extends Controller
 {
     protected $modelName;
@@ -59,18 +58,6 @@ class ArduinoEquipmentRecordApiController extends Controller
                                         )
                                         ->get();
                 return response([
-                    "links"                           => [
-                        "pagination"       => [
-                            "total"        => 50,
-                            "per_page"     => 15,
-                            "current_page" => 1,
-                            "last_page"    => 4,
-                            "next_page_url"=> "",
-                            "prev_page_url"=> "",
-                            "from"         => 1,
-                            "to"           => 15,
-                        ]
-                    ],
                     'data'                            => new ArduinoEquipmentRecordResource($apiDisplayAllRecords),
                     'Notification Code'               => 'INFO_1',
                     'Notification Short Description'  => 'The equipment record list (' . $apiDisplayAllRecords->count() . ' record(s)) was successfully fetched from the database which contains.',
