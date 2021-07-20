@@ -24,7 +24,7 @@
         :pagination-options="{
           enabled: true,
           mode: 'records',
-          perPage: 5,
+          perPage: 10,
           position: 'bottom',
           perPageDropdown: [10, 20, 30],
           dropdownAllowAll: true,
@@ -42,15 +42,21 @@
           skipDiacritics: false,
           placeholder: $t('equipment_records_page.table_settings.search_placeholder'),
         }"
+        :sort-options="{
+          enabled: true,
+          initialSortBy: {field: 'created_at', type: 'desc'}
+        }"
         @on-row-click="onRowClick"
       >
         <div slot="table-actions">
-          <button type="button" class="btn btn-primary">
-            {{ $t('equipment_records_page.table_settings.export_options_button') }}
-          </button>
-          <button type="button" class="btn btn-info">
+          <button type="button" class="btn btn-info mr-2" @click="goToTableSettings()">
             {{ $t('equipment_records_page.table_settings.table_settings_button') }}
           </button>
+        </div>
+        <div slot="emptystate">
+          <p class="text-center my-2">
+            {{ $t('equipment_records_page.table_settings.no_search_results') }}
+          </p>
         </div>
       </vue-good-table>
     </div>
@@ -68,7 +74,7 @@ export default {
   },
   middleware: 'auth',
   metaInfo () {
-    return { title: this.$t('equipment_records_page.ec_sensor.page_title') }
+    return { title: this.$t('equipment_records_page.pump1.page_title') }
   },
   data: function () {
     return {
@@ -105,13 +111,16 @@ export default {
     onChangePage (page) {
       this.$refs.vuetable.changePage(page)
     },
+    goToTableSettings () {
+      this.$router.push({ path: '/application-settings/equipment-records' })
+    },
     onRowClick (params) {},
     displayAllRecords: function () {
       axios
         .get('http://127.0.0.1:8000/api/equipment-records')
         .then(response => {
           console.log('>>>>> List of Equipments API: Equipment Records', response.data.data)
-          this.rows = response.data.data
+          this.rows = response.data.data.filter(activeFilter => activeFilter.equipment_id === 'POMPA_1')
         })
     }
   }

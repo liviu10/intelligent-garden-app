@@ -100,10 +100,10 @@
     "equipment_records_page": {
         "table_settings": {
             "search_placeholder": "Buscar esta tabla",
-            "export_options_button": "Opciones de exportacion",
             "table_settings_button": "Configuración de la mesa",
+            "no_search_results": "¡La búsqueda no arrojó ningún registro!",
             "equipment_id_label": "ID de equipo",
-            "equipment_value_label": "Valor del equipo",
+            "equipment_value_label": "Leer Valor",
             "created_at_label": "Fecha de lectura",
             "rows_per_page": "Filas por página",
             "next": "Próximo",
