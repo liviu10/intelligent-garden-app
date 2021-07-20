@@ -100,10 +100,10 @@
     "equipment_records_page": {
         "table_settings": {
             "search_placeholder": "Rechercher dans ce tableau",
-            "export_options_button": "Options d'exportation",
             "table_settings_button": "Paramètres du tableau",
+            "no_search_results": "La recherche n'a renvoyé aucun enregistrement!",
             "equipment_id_label": "Identifiant de l'équipement",
-            "equipment_value_label": "Valeur de l'équipement",
+            "equipment_value_label": "Lire la Valeur",
             "created_at_label": "Date de lecture",
             "rows_per_page": "Lignes par page",
             "next": "Suivant",

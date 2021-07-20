@@ -100,10 +100,10 @@
     "equipment_records_page": {
         "table_settings": {
             "search_placeholder": "Căutați în acest tabel",
-            "export_options_button": "Opțiuni Exportare",
             "table_settings_button": "Setări Tabel",
+            "no_search_results": "Căutarea nu a returnat nici un rezultat!",
             "equipment_id_label": "ID Echipament",
-            "equipment_value_label": "Valoare Echipament",
+            "equipment_value_label": "Valoare Citită",
             "created_at_label": "Dată citire",
             "rows_per_page": "Rânduri pe pagină",
             "next": "Următorul",
