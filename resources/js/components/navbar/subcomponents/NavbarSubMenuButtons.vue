@@ -26,21 +26,6 @@
     </div>
   </li>
   <!-- SPECIFIC BUTTONS IF USER IS LOGGED IN SECTION END -->
-
-  <!-- LOGIN & REGISTER BUTTONS IF USER IS NOT LOGGED IN SECTION START -->
-  <div v-else class="login-register-buttons">
-    <li class="nav-item">
-      <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
-        {{ $t('navigation_bar.login_button') }}
-      </router-link>
-    </li>
-    <li class="nav-item">
-      <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
-        {{ $t('navigation_bar.register_button') }}
-      </router-link>
-    </li>
-  </div>
-  <!-- LOGIN & REGISTER BUTTONS IF USER IS NOT LOGGED IN SECTION END -->
 </template>
 
 <script>
@@ -69,18 +54,5 @@ export default {
     width: 2rem;
     height: 2rem;
     margin: -.375rem 0;
-  }
-  .login-register-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media screen and (max-width: 991.98px) {
-      flex-direction: column;
-    }
-    & .nav-item {
-      @media screen and (max-width: 991.98px) {
-        width: 100%;
-      }
-    }
   }
 </style>

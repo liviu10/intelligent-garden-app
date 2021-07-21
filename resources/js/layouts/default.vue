@@ -6,7 +6,8 @@
       <child />
     </div>
 
-    <div class="container">
+    <div v-if="$route.name === 'login' || $route.name === 'register' || $route.name === 'password.request' || $route.name === 'password.reset' || $route.name === 'verification.verify' || $route.name === 'verification.resend'" />
+    <div v-else class="container">
       <Footer />
     </div>
   </div>
