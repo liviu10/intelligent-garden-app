@@ -30,7 +30,8 @@
           <div class="form-group row">
             <label class="col-md-12 col-form-label">{{ $t('login_system.login_form.password_label') }}</label>
             <div class="col-md-12">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password" :placeholder="$t('login_system.login_form.password_placeholder')">
+              <input id="password-field" v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password" :placeholder="$t('login_system.login_form.password_placeholder')">
+              <fa icon="eye" class="field-icon toggle-password" fixed-width @click="displayPassword()" />
               <has-error :form="form" field="password" />
             </div>
           </div>
@@ -91,30 +92,32 @@ export default {
       email: '',
       password: ''
     }),
-    remember: false
+    remember: null
   }),
-
   methods: {
+    displayPassword () {
+      const x = document.getElementById('password-field')
+      if (x.type === 'password') {
+        x.type = 'text'
+      } else {
+        x.type = 'password'
+      }
+    },
     async login () {
       // Submit the form.
       const { data } = await this.form.post('/api/login')
-
       // Save the token.
       this.$store.dispatch('auth/saveToken', {
         token: data.token,
         remember: this.remember
       })
-
       // Fetch the user.
       await this.$store.dispatch('auth/fetchUser')
-
       // Redirect home.
       this.redirect()
     },
-
     redirect () {
       const intendedUrl = Cookies.get('intended_url')
-
       if (intendedUrl) {
         Cookies.remove('intended_url')
         this.$router.push({ path: intendedUrl })
@@ -157,5 +160,13 @@ export default {
         border-radius: 0px;
       }
     }
+  }
+  .field-icon {
+    float: right;
+    margin-top: -26px;
+    margin-right: 30px;
+    margin-left: -25px;
+    position: relative;
+    z-index: 2;
   }
 </style>
