@@ -21,7 +21,7 @@
     "chart.js": "^3.4.1",
     "jquery": "^3.5.1",
     "js-cookie": "^2.2.1",
-    "node-notifier": "^5.4.5",
+    "node-notifier": "^8.0.1",
     "popper.js": "^1.16.1",
     "postcss": "^7.0.36",
     "sweetalert2": "^10.9.0",
