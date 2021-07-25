@@ -1,0 +1,56 @@
+@import '../../functions/_global_functions';
+
+@mixin all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left) {
+    @if 
+    $var_padding_top != 0px and ($var_padding_right == 0px and $var_padding_bottom == 0px and $var_padding_left == 0px) {
+        padding#{-top}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+        padding#{-bottom}: rem-convertor(0px);
+    }
+    @else if 
+    $var_padding_right != 0px and ($var_padding_top == 0px and $var_padding_bottom == 0px and $var_padding_left == 0px) {
+        padding#{-right}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+        padding#{-top}: rem-convertor(0px);
+        padding#{-bottom}: rem-convertor(0px);
+    }
+    @else if 
+    $var_padding_bottom != 0px and ($var_padding_right == 0px and $var_padding_top == 0px and $var_padding_left == 0px) {
+        padding#{-bottom}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+        padding#{-top}: rem-convertor(0px);
+    }
+    @else if 
+    $var_padding_left != 0px and ($var_padding_right == 0px and $var_padding_bottom == 0px and $var_padding_top == 0px) {
+        padding#{-left}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+        padding#{-top}: rem-convertor(0px);
+        padding#{-bottom}: rem-convertor(0px);
+    }
+    @else if 
+    $var_padding_top == 0px and $var_padding_right == 0px and $var_padding_bottom == 0px and $var_padding_left == 0px {
+        padding: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+    }
+    @else if 
+    $var_padding_top != $var_padding_bottom and $var_padding_right != $var_padding_left {
+        padding: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+    }
+    @else if
+    ($var_padding_top != 0px and $var_padding_bottom != 0 and $var_padding_right != 0 and $var_padding_left != 0) and
+    ($var_padding_top == $var_padding_bottom and $var_padding_top == $var_padding_right and $var_padding_top == $var_padding_left)  {
+        padding: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+    }
+}
+@mixin horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left) {
+    @if 
+    ($var_padding_top == $var_padding_bottom and $var_padding_top != 0px and $var_padding_bottom != 0px) and 
+    ($var_padding_right == $var_padding_left and $var_padding_right != 0px and $var_padding_left != 0px) {
+        padding: horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+    }
+    @else if
+    ($var_padding_top == $var_padding_bottom and $var_padding_top == 0px and $var_padding_bottom == 0px) and
+    ($var_padding_right == $var_padding_left and $var_padding_right != 0px and $var_padding_left != 0px) {
+        padding: horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+    }
+    @else if
+    ($var_padding_top == $var_padding_bottom and $var_padding_top != 0px and $var_padding_bottom != 0px) and
+    ($var_padding_right == $var_padding_left and $var_padding_right == 0px and $var_padding_left == 0px) {
+        padding: horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+    }
+}

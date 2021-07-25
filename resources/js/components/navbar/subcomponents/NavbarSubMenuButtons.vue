@@ -6,20 +6,21 @@
       {{ user.name }}
     </a>
     <div class="dropdown-menu py-0">
-      <router-link :to="{ name: 'documents.documentation' }" class="dropdown-item pl-3 py-2">
+      <a class="dropdown-item pl-2 py-2 dropdown-profile" href="" />
+      <router-link :to="{ name: 'documents.documentation' }" class="dropdown-item pl-2 py-2">
         <fa icon="book-open" fixed-width />
         {{ $t('navigation_bar.documentation_button') }}
       </router-link>
-      <router-link :to="{ name: 'settings.update-profile' }" class="dropdown-item pl-3 py-2">
+      <router-link :to="{ name: 'settings.update-profile' }" class="dropdown-item pl-2 py-2">
         <fa icon="user" fixed-width />
         {{ $t('navigation_bar.settings_button') }}
       </router-link>
-      <router-link :to="{ name: 'application-settings' }" class="dropdown-item pl-3 py-2">
+      <router-link :to="{ name: 'application-settings' }" class="dropdown-item pl-2 py-2">
         <fa icon="cog" fixed-width />
         {{ $t('navigation_bar.application_settings_button') }}
       </router-link>
       <div class="dropdown-divider my-0" />
-      <a href="#" class="dropdown-item pl-3 py-2" @click.prevent="logout">
+      <a href="#" class="dropdown-item pl-2 py-2" @click.prevent="logout">
         <fa icon="sign-out-alt" fixed-width />
         {{ $t('navigation_bar.logout_button') }}
       </a>
@@ -48,11 +49,16 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .profile-photo {
-    width: 2rem;
-    height: 2rem;
-    margin: -.375rem 0;
+<style lang="scss">
+  .navbar {
+    &-nav {
+      & .nav-item {
+        & .dropdown-menu {
+          & .dropdown-profile {
+            margin-bottom: -0.25rem !important;
+          }
+        }
+      }
+    }
   }
 </style>

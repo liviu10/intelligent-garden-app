@@ -1,0 +1,14 @@
+@import '../../global_functions/_global_functions';
+@import '../../variables/_base_dimensions';
+@import '../../box_model/_global_box_model';
+@import '_standard-typography';
+
+@mixin p-typography {
+    @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    width: 100%;
+    @include height (18px);
+    @include standard-typography();
+    font-size: font-size(16px);
+    text-indent: text-indent(0px);
+}

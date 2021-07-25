@@ -1,0 +1,22 @@
+@import '../../variables/_base_dimensions.scss';
+
+@function width($var_width) {
+    @if $var_width == 0px#{"px"} {
+      @return 
+        ($var_width / $base_font_size) * 1rem;
+    }
+    @else if $var_width != 0#{"px"} {
+      @return 
+        ($var_width / $base_font_size) * 1rem;
+    }
+}
+@function height($var_height) {
+    @if $var_height == 0px#{"px"} {
+      @return 
+        ($var_height / $base_font_size) * 1rem;
+    }
+    @else if $var_height != 0#{"px"} {
+      @return 
+        ($var_height / $base_font_size) * 1rem;
+    }
+}

@@ -1,0 +1,12 @@
+@import '../../functions/_global_functions';
+@import '../../variables/_base_dimensions.scss';
+@import '../../mixin/_global_mixin.scss';
+@import '_standard-typography';
+
+@mixin btn-typography {
+    @include standard-typography();
+    font-size: font-size(16px);
+    letter-spacing: letter-spacing(2px);
+    text-indent: text-indent(0px);
+    user-select: none;
+}

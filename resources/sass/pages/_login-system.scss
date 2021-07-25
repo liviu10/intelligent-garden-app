@@ -1,0 +1,134 @@
+@import '../utilities/functions/_global_functions.scss';
+@import '../utilities/mixin/_global_mixin.scss';
+
+.container-login-form {
+    @include all-border(1px, 1px, 1px, 1px);
+    @include border-radius(5px, 5px, 5px, 5px);
+    background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+    border-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+    @media (max-width: 575.99px) {
+        @include all-border(0px, 0px, 0px, 0px);
+    }
+    &__header {
+        @include horizontal-vertical-margin(20px, 0px, 20px, 0px);
+        & h1 {
+            margin-bottom: rem-convertor(0px);
+            user-select: none;
+        }
+    }
+    &__body {
+        @include horizontal-vertical-margin(40px, 0px, 40px, 0px);
+        & .form-group {
+            & .col-form-label {
+                font-family: 'PT Serif Bold';
+                font-size: font-size(20px);
+                user-select: none;
+            }
+            & .form-control {
+                height: rem-convertor(50px);
+                border-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                &::placeholder {
+                    font-style: italic;
+                }
+                &::selection {
+                    background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                    color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_heathered_gray);
+                }
+            }
+            & .field-icon {
+                float: right;
+                margin-top: rem-convertor(-32px);
+                margin-right: rem-convertor(30px);
+                margin-left: rem-convertor(-25px);
+                position: relative;
+                z-index: 2;
+            }
+            & .custom-control {
+                user-select: none;
+                &-label {
+                    font-size: font-size(20px);
+                    &::before {
+                        border-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia) !important;
+                        box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent;
+                        outline: 0 none;
+                        top: rem-convertor(7.2px);
+                    }
+                    &::after {
+                        top: rem-convertor(7.2px);
+                    }
+                }
+            }
+            & a {
+                color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black) !important;
+                font-size: font-size(20px);
+                user-select: none;
+            }
+        }
+        & input[type="email"]:focus, input[type="password"]:focus {
+            border-color: transparent;
+            box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent;
+            outline: 0 none;
+        }
+    }
+    &__footer {
+        @include horizontal-vertical-margin(40px, 0px, 40px, 0px);
+        & .login-btn {
+            background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn);
+            border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn);
+            color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+            letter-spacing: letter-spacing(1px);
+            font-weight: bold;
+            &:active {
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn) !important;
+                border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn) !important;
+                color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black) !important;
+            }
+        }
+        & .register-btn {
+            background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_register_btn);
+            border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_register_btn);
+            color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+            letter-spacing: letter-spacing(1px);
+            font-weight: bold;
+            &:active {
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_register_btn) !important;
+                border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_register_btn) !important;
+                color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black) !important;
+            }
+        }
+        & .back-to-login-btn {
+            background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_back_to_login_btn);
+            border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_back_to_login_btn);
+            color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+            letter-spacing: letter-spacing(1px);
+            font-weight: bold;
+            &:active {
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_back_to_login_btn) !important;
+                border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_back_to_login_btn) !important;
+                color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black) !important;
+            }
+        }
+        & .reset-password-btn {
+            background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_reset_password_btn);
+            border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_reset_password_btn);
+            color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+            letter-spacing: letter-spacing(1px);
+            font-weight: bold;
+            &:active {
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_reset_password_btn) !important;
+                border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_reset_password_btn) !important;
+                color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black) !important;
+            }
+        }
+        & .btn {
+            @include horizontal-vertical-margin(0px, 10px, 0px, 10px);
+            @include width(200px);
+            @include border-radius(0px, 0px, 0px, 0px);
+            &:focus {
+                border-color: transparent !important;
+                box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent !important;
+                outline: 0 none !important;
+            }
+        }
+    }
+}
