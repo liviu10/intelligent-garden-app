@@ -4,7 +4,7 @@
       <form @submit.prevent="login" @keydown="form.onKeydown($event)">
         <!-- HEADER SECTION START -->
         <div class="form-group row">
-          <div class="col-md-12 container-login-form-header">
+          <div class="col-md-12 container-login-form__header">
             <h1 class="text-center">
               {{ $t('login_system.login_form.form_title') }}
             </h1>
@@ -15,7 +15,7 @@
         </div>
         <!-- HEADER SECTION END -->
 
-        <div class="container-login-form-body">
+        <div class="container-login-form__body">
           <!-- EMAIL CONTAINER SECTION START -->
           <div class="form-group row">
             <label class="col-md-12 col-form-label">{{ $t('login_system.login_form.email_label') }}</label>
@@ -38,7 +38,7 @@
           <!-- PASSWORD CONTAINER SECTION END -->
         </div>
 
-        <div class="container-login-form-body">
+        <div class="container-login-form__body">
           <!-- REMEMBER ME & FORGOT PASSWORD CONTAINER SECTION START -->
           <div class="form-group row">
             <div class="col-md-8 d-flex justify-content-around m-auto">
@@ -53,16 +53,16 @@
           <!-- REMEMBER ME & FORGOT PASSWORD CONTAINER SECTION END -->
         </div>
 
-        <div class="container-login-form-footer">
+        <div class="container-login-form__footer">
           <!-- LOGIN & CREATE ACCOUNT BUTTON CONTAINER SECTION START -->
           <div class="form-group row">
             <div class="col-md-8 d-flex justify-content-around m-auto">
               <!-- LOGIN BUTTON -->
-              <v-button :loading="form.busy">
+              <v-button :loading="form.busy" class="login-btn">
                 {{ $t('login_system.login_form.login_button') }}
               </v-button>
               <!-- CREATE ACCOUNT BUTTON -->
-              <router-link :to="{ name: 'register' }" class="btn btn-success">
+              <router-link :to="{ name: 'register' }" class="btn btn-success register-btn">
                 {{ $t('login_system.login_form.register_button') }}
               </router-link>
             </div>
@@ -128,45 +128,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-  .container-login-form {
-    border: 1px solid #6c757d;
-    border-radius: 5px;
-    @media (max-width: 575.98px) {
-      border: 0px;
-    }
-    &-header {
-      margin: 20px 0px !important;
-      & h1 {
-        margin-bottom: 0px !important;
-        user-select: none;
-      }
-    }
-    &-body {
-      margin: 40px 0px !important;
-      & label {
-        font-size: 18px;
-        font-weight: bold;
-      }
-      & a {
-        font-size: 18px;
-      }
-    }
-    &-footer {
-      margin: 40px 0px !important;
-      & .btn {
-        margin: 0px 10px;
-        width: 200px;
-        border-radius: 0px;
-      }
-    }
-  }
-  .field-icon {
-    float: right;
-    margin-top: -26px;
-    margin-right: 30px;
-    margin-left: -25px;
-    position: relative;
-    z-index: 2;
-  }
-</style>

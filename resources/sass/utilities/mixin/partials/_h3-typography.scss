@@ -1,0 +1,15 @@
+@import '../../functions/_global_functions';
+@import '../../variables/_base_dimensions.scss';
+@import '../../mixin/_global_mixin.scss';
+@import '_standard-typography';
+
+@mixin h3-typography {
+    @include horizontal-vertical-margin(9px, 0px, 9px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    width: 100%;
+    @include height(20px);
+    @include standard-typography();
+    font-size: font-size(18px);
+    text-align: center;
+    text-indent: text-indent(0px);
+}

@@ -6,6 +6,7 @@
       <span class="small font-italic">({{ locales[locale].lang_name }})</span>
     </a>
     <div class="dropdown-menu py-0">
+      <a class="dropdown-item py-2 d-flex justify-content-start align-items-center pl-2 dropdown-locale" href="" />
       <a v-for="(value, key) in locales" :key="key" class="dropdown-item py-2 d-flex justify-content-start align-items-center pl-2" href="#" @click.prevent="setLocale(key)">
         <country-flag :country="value.lang_code" size="normal" />
         {{ value.lang_code }} <span class="small font-italic" style="margin-left: 4px"> ({{ value.lang_name }}) </span>
@@ -39,10 +40,16 @@ export default {
   }
 }
 </script>
-<style lang="css" scoped>
-  span.flag.f-ro.normal-flag, span.flag.f-usa.normal-flag,
-  span.flag.f-es.normal-flag, span.flag.f-fr.normal-flag,
-  span.flag.f-it.normal-flag {
-    margin-right: 0.5px;
+<style lang="scss">
+  .navbar {
+    &-nav {
+      & .nav-item {
+        & .dropdown-menu {
+          & .dropdown-locale {
+            margin-bottom: -0.1875rem !important;
+          }
+        }
+      }
+    }
   }
 </style>

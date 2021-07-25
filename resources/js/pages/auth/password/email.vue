@@ -5,7 +5,7 @@
         <alert-success :form="form" :message="status" />
         <!-- HEADER SECTION START -->
         <div class="form-group row">
-          <div class="col-md-12 container-login-form-header">
+          <div class="col-md-12 container-login-form__header">
             <h1 class="text-center">
               {{ $t('login_system.reset_password_form.form_title') }}
             </h1>
@@ -13,7 +13,7 @@
         </div>
         <!-- HEADER SECTION END -->
 
-        <div class="container-login-form-body">
+        <div class="container-login-form__body">
           <!-- EMAIL CONTAINER SECTION START -->
           <div class="form-group row">
             <label class="col-md-12 col-form-label">{{ $t('login_system.reset_password_form.email_label') }}</label>
@@ -25,14 +25,14 @@
           <!-- EMAIL CONTAINER SECTION END -->
         </div>
 
-        <div class="container-login-form-footer">
+        <div class="container-login-form__footer">
           <!-- SUBMIT BUTTON SECTION START -->
           <div class="form-group row">
             <div class="col-md-8 d-flex justify-content-around m-auto">
-              <router-link :to="{ name: 'login' }" class="btn btn-success">
+              <router-link :to="{ name: 'login' }" class="btn btn-success back-to-login-btn">
                 {{ $t('login_system.reset_password_form.login_button') }}
               </router-link>
-              <v-button :loading="form.busy">
+              <v-button :loading="form.busy" class="reset-password-btn">
                 {{ $t('login_system.reset_password_form.submit_button') }}
               </v-button>
             </div>
@@ -72,34 +72,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-  .container-login-form {
-    border: 1px solid #6c757d;
-    border-radius: 5px;
-    @media (max-width: 575.98px) {
-      border: 0px;
-    }
-    &-header {
-      margin: 20px 0px !important;
-      & h1 {
-        margin-bottom: 0px !important;
-        user-select: none;
-      }
-    }
-    &-body {
-      margin: 40px 0px !important;
-      & label {
-        font-size: 18px;
-        font-weight: bold;
-      }
-    }
-    &-footer {
-      margin: 40px 0px !important;
-      & .btn {
-        margin: 0px 10px;
-        width: 200px;
-        border-radius: 0px;
-      }
-    }
-  }
-</style>

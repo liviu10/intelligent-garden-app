@@ -8,3 +8,22 @@
 @import 'elements/transitions';
 
 @import 'components/server-error';
+
+// Importing the CSS Styles for the application's theme and fonts
+@import 'utilities/themes/_close_to_nature_color_theme.scss';
+@import 'utilities/themes/_land_of_clean_color_theme.scss';
+@import 'utilities/themes/_minimal_yet_warm_color_theme.scss';
+@import 'utilities/fonts/font_open_sans_condensed/_open_sans_condensed.scss';
+@import 'utilities/fonts/font_pt_serif/_pt_serif.scss';
+@import 'utilities/fonts/font_roboto/_roboto.scss';
+
+// Importing the CSS Styles for the application's components
+@import 'components/_navbar.scss';
+
+// Importing the CSS Styles for the application's pages
+@import 'pages/_login-system.scss';
+
+body {
+    background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_narvik);
+    font-family: 'PT Serif Regular';
+}

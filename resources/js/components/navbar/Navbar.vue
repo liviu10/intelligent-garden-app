@@ -51,9 +51,3 @@ export default {
   })
 }
 </script>
-
-<style lang="css" scoped>
-  .navbar {
-    user-select: none;
-  }
-</style>

@@ -1,0 +1,48 @@
+@import '../utilities/functions/_global_functions.scss';
+@import '../utilities/mixin/_global_mixin.scss';
+
+.navbar {
+    background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia) !important;
+    user-select: none;
+    &-nav {
+        & .nav-item {
+            & .nav-link {
+                color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+                & span {
+                    color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+                    font-weight: bold;
+                }
+            }
+            & .dropdown-menu {
+                clip-path: polygon(50% 0%, 56% 7%, 100% 7%, 100% 100%, 0 100%, 0 7%, 42% 7%);
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                border-top: rem-convertor(0px) !important;
+                & .dropdown-item {
+                    color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+                    &:first-child {
+                        &:active, &:focus, &:hover {
+                            background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia) !important
+                        }
+                    }
+                    & span {
+                        color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+                        font-weight: bold;
+                    }
+                    &:active, &:focus, &:hover {
+                        background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_narvik) !important
+                    }
+                }
+            }
+        }
+    }
+}
+span.flag.f-ro.normal-flag, span.flag.f-usa.normal-flag,
+span.flag.f-es.normal-flag, span.flag.f-fr.normal-flag,
+span.flag.f-it.normal-flag {
+    margin-right: 0.5px;
+}
+.profile-photo {
+    width: 2rem;
+    height: 2rem;
+    margin: -.375rem 0;
+}
