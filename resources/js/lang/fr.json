@@ -61,12 +61,15 @@
     },
     "footer_section": {
         "first_paragraph": {
+            "title": "JARDIN INTELLIGENT | Tableau de bord des applications Web"
+        },
+        "second_paragraph": {
             "title": "Ce site a été réalisé avec",
             "bootstrap_tooltip": "En savoir plus sur la documentation du Bootrstrap Frontend Framework",
             "vuejs_tooltip": "En savoir plus sur la documentation du VueJS Backend Framework",
             "laravel_tooltip": "En savoir plus sur la documentation du Laravel Backend Framework"
         },
-        "second_paragraph": {
+        "third_paragraph": {
             "title": "Suivez-moi sur:",
             "github_tooltip": "Vérifier mon profil Github",
             "linkedin_tooltip": "Vérifier mon profil Linkedin"
