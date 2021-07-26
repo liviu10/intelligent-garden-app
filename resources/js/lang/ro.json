@@ -61,12 +61,15 @@
     },
     "footer_section": {
         "first_paragraph": {
+            "title": "GRĂDINA INTELIGENTĂ | Panou de Control Aplicație Web"
+        },
+        "second_paragraph": {
             "title": "Acest website a fost realizat cu",
             "bootstrap_tooltip": "Vezi mai multe despre documentația Bootstrap Frontend Framework",
             "vuejs_tooltip": "Vezi mai multe despre documentația VueJS Frontend Framework",
             "laravel_tooltip": "Vezi mai multe despre documentația Laravel Backend Framework"
         },
-        "second_paragraph": {
+        "third_paragraph": {
             "title": "Urmărește-mă pe:",
             "github_tooltip": "Vezi profilul meu de Github",
             "linkedin_tooltip": "Vezi profilul meu de Linkedin"
