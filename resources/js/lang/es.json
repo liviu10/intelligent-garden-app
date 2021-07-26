@@ -61,15 +61,12 @@
     },
     "footer_section": {
         "first_paragraph": {
-            "title": "JARDÍN INTELIGENTE | Panel de Aplicaciones Web"
-        },
-        "second_paragraph": {
             "title": "Este sitio web fue hecho con",
             "bootstrap_tooltip": "Consulte más sobre la documentación del marco de frontend de Bootstrap",
             "vuejs_tooltip": "Consulte más sobre la documentación del marco de interfaz de VueJS",
             "laravel_tooltip": "Consulte más sobre la documentación del marco de backend de Laravel"
         },
-        "third_paragraph": {
+        "second_paragraph": {
             "title": "Sigueme en:",
             "github_tooltip": "Consultar mi perfil de Github",
             "linkedin_tooltip": "Consultar mi perfil de Linkedin"

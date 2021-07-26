@@ -61,15 +61,12 @@
   },
   "footer_section": {
     "first_paragraph": {
-      "title": "INTELLIGENT GARDEN | Web Application Dashboard"
-    },
-    "second_paragraph": {
       "title": "This website was made with",
       "bootstrap_tooltip": "Check more about the Bootstrap Frontend Framework Documentation",
       "vuejs_tooltip": "Check more about the VueJS Frontend Framework Documentation",
       "laravel_tooltip": "Check more about the Laravel Backend Framework Documentation"
     },
-    "third_paragraph": {
+    "second_paragraph": {
       "title": "Follow me on:",
       "github_tooltip": "Check my Github Profile",
       "linkedin_tooltip": "Check my Linkedin Profile"
