@@ -124,7 +124,7 @@ export default {
         },
         {
           label: 'Date Updated',
-          field: 'created_at',
+          field: 'updated_at',
           type: 'date',
           dateInputFormat: 'yyyy-MM-dd\'T\'HH:mm:ss.SSSSSS\'Z\'',
           dateOutputFormat: 'dd.MM.yyyy HH:mm',
