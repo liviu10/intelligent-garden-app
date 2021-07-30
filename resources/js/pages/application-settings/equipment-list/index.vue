@@ -44,25 +44,111 @@
           skipDiacritics: false,
           placeholder: 'Search this table',
         }"
-        :select-options="{
-          enabled: true,
-          selectOnCheckboxOnly: true,
-          selectionInfoClass: 'custom-class',
-          selectionText: 'rows selected',
-          clearSelectionText: 'clear',
-          disableSelectInfo: true,
-          selectAllByGroup: true,
-        }"
         @on-row-click="onRowClick"
-      />
+      >
+        <template slot="table-row" slot-scope="props">
+          <div v-if="props.column.field == 'after'" class="table-action-buttons">
+            <button class="btn btn-info" title="Show more information about this record" data-toggle="modal" data-target="#showModal">
+              <fa icon="eye" fixed-width />
+            </button>
+            <button class="btn btn-warning" title="Edit the current record" data-toggle="modal" data-target="#editModal">
+              <fa icon="edit" fixed-width />
+            </button>
+            <button class="btn btn-danger" title="Delete the current record">
+              <fa icon="trash" fixed-width />
+            </button>
+          </div>
+        </template>
+      </vue-good-table>
     </div>
+
+    <!-- SHOW SINGLE RECORD, CONTENT MODAL SECTION START -->
+    <div id="showModal" class="modal fade" tabindex="-1" aria-labelledby="showModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="showModalLabel" class="modal-title">
+              SHOW SINGLE RECORD MODAL
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p class="font-weight-bold">
+              {{ 'Equipment ID'.toUpperCase() }}:
+              <span class="font-weight-normal">...</span>
+            </p>
+            <p class="font-weight-bold">
+              {{ 'Equipment Description'.toUpperCase() }}:
+              <span class="font-weight-normal">...</span>
+            </p>
+            <p class="font-weight-bold">
+              {{ 'Equipment Notes'.toUpperCase() }}:
+              <span class="font-weight-normal">...</span>
+            </p>
+            <p class="font-weight-bold">
+              {{ 'Date Created'.toUpperCase() }}:
+              <span class="font-weight-normal">...</span>
+            </p>
+            <p class="font-weight-bold">
+              {{ 'Date Updated'.toUpperCase() }}:
+              <span class="font-weight-normal">...</span>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SHOW SINGLE RECORD, CONTENT MODAL SECTION END -->
+
+    <!-- EDIT SINGLE RECORD, CONTENT MODAL SECTION START -->
+    <div id="editModal" class="modal fade" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="editModalLabel" class="modal-title">
+              EDIT SINGLE RECORD MODAL
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="equipment_id">Equipment ID</label>
+                <input id="equipment_id" type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="equipment_description">Equipment Description</label>
+                <input id="equipment_description" type="text" class="form-control">
+              </div>
+              <div id="textarea_field" class="form-group">
+                <label for="equipment_notes">Equipment Notes</label>
+                <textarea-autosize id="equipment_notes" class="form-control" rows="2" :min-height="114" :max-height="380" />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Save changes
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EDIT SINGLE RECORD, CONTENT MODAL SECTION END -->
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
 import 'vue-good-table/dist/vue-good-table.css'
 import { VueGoodTable } from 'vue-good-table'
+import TextareaAutosize from 'vue-textarea-autosize'
 import axios from 'axios'
+
+Vue.use(TextareaAutosize)
 
 export default {
   components: {
@@ -103,11 +189,6 @@ export default {
           }
         },
         {
-          label: 'Equipment Notes',
-          field: 'equipment_notes',
-          type: 'string'
-        },
-        {
           label: 'Date Created',
           field: 'created_at',
           type: 'date',
@@ -136,6 +217,10 @@ export default {
             filterFn: this.columnFilterFn,
             trigger: 'enter'
           }
+        },
+        {
+          label: 'Actions',
+          field: 'after'
         }
       ],
       rows: []
@@ -205,5 +290,10 @@ export default {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+}
+.table-action-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 </style>
