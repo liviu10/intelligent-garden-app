@@ -148,7 +148,23 @@
   },
   "documentation_page": {
     "page_title": "Documentation",
-    "first_paragraph": "Learn how to use this Web Application"
+    "first_paragraph": "Learn how to use this Web Application",
+    "card_button": "Details",
+    "card_button_placeholder": "Show more details about",
+    "modal_title": "Equipment List and Records. Additional Information",
+    "modal_button": "Close",
+    "first_card": {
+      "card_title": "Section: Equipment List and Records",
+      "card_content": {
+        "paragraph": "The Smart Garden web application displays real-time information about the records that the six hardware devices have captured. These equipments are presented below:",
+        "item_1": "pH Sensor",
+        "item_2": "Electrical Conductivity Sensor",
+        "item_3": "Level Sensor",
+        "item_4": "Pump for decreasing pH Levels",
+        "item_5": "Pump for increasing pH Levels",
+        "item_6": "Nutrients pump"
+      }
+    }
   },
   "settings_page": {
     "page_title": "Update your personal information",

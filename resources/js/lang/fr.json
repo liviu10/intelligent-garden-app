@@ -148,7 +148,23 @@
     },
     "documentation_page": {
         "page_title": "Documentation",
-        "first_paragraph": "Apprenez à utiliser cette application Web"
+        "first_paragraph": "Apprenez à utiliser cette application Web",
+        "card_button": "Détails",
+        "card_button_placeholder": "Afficher plus de détails sur",
+        "modal_title": "Liste d'équipement et dossiers. Informations Complémentaires",
+        "modal_button": "Fermer",
+        "first_card": {
+            "card_title": "Section : Liste et dossiers d'équipement",
+            "card_content": {
+                "paragraph": "L'application Web jardin intelligent affiche des informations en temps réel sur les enregistrements que les six périphériques matériels ont capturés. Ces équipements sont présentés ci-dessous:",
+                "item_1": "Capteur de pH",
+                "item_2": "Capteur de conductivité électrique",
+                "item_3": "Capteur de niveau",
+                "item_4": "Pompe pour diminuer les niveaux de pH",
+                "item_5": "Pompe pour augmenter les niveaux de pH",
+                "item_6": "Pompe à nutriments"
+            }
+        }
     },
     "settings_page": {
         "page_title": "Mettre à jour vos informations personnelles",

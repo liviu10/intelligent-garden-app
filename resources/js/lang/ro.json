@@ -148,7 +148,23 @@
     },
     "documentation_page": {
         "page_title": "Documentație",
-        "first_paragraph": "Învață cum să folosești această aplicație web"
+        "first_paragraph": "Învață cum să folosești această aplicație web",
+        "card_button": "Detalii",
+        "card_button_placeholder": "Afișați mai multe detalii despre",
+        "modal_title": "Lista și înregistrări echipamente. Informatii suplimentare",
+        "modal_button": "Închide",
+        "first_card": {
+            "card_title": "Secțiune: Listă și Înregistrări Echipamente",
+            "card_content": {
+                "paragraph": "Aplicația Web Grădina Inteligentă afișează informații în timp real cu privire la înregistrările pe care cele șase echipamente hardware le-au captat. Aceste echipamente sunt prezentate mai jos:",
+                "item_1": "Senzor pH",
+                "item_2": "Senzor de conductivitate electrică",
+                "item_3": "Senzor de nivel",
+                "item_4": "Pompa pentru scăderea nivelului pH-ului",
+                "item_5": "Pompa pentru creșterea nivelului pH-ului",
+                "item_6": "Pompa nutrienți"
+            }
+        }
     },
     "settings_page": {
         "page_title": "Actualizează-ți informațiile personale",
