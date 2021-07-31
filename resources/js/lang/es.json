@@ -87,14 +87,13 @@
     "equipment_list_page": {
         "page_title": "Lista de Equipo",
         "first_paragraph": "Esta página representa una lista de todos los equipos que están conectados al sistema de hardware.",
-        "second_paragraph": "Aquí puede agregar, modificar o eliminar un equipo.",
         "cards_settings": {
             "title": "Detalles del equipo",
             "equipment_id_label": "ID de equipo",
             "equipment_description_label": "Descripción del equipo",
-            "equipment_notes_label": "Notas del equipo",
             "created_at_label": "Creado en",
             "updated_at_label": "Actualizado en",
+            "updated_at_days_ago": "hace {numberOfDays} días",
             "see_more_details": "Ver más"
         }
     },

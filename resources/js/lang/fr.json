@@ -87,14 +87,13 @@
     "equipment_list_page": {
         "page_title": "Liste d'équipement",
         "first_paragraph": "Cette page représente une liste de tous les équipements connectés au système matériel.",
-        "second_paragraph": "Ici, vous pouvez ajouter, modifier ou supprimer un équipement.",
         "cards_settings": {
             "title": "Détails de l'équipement",
             "equipment_id_label": "ID de l'équipement",
             "equipment_description_label": "Description de l'équipement",
-            "equipment_notes_label": "Notes sur l'équipement",
             "created_at_label": "Créé à",
             "updated_at_label": "Mise à jour à",
+            "updated_at_days_ago": "il ya {numberOfDays} jours",
             "see_more_details": "Voir plus"
         }
     },

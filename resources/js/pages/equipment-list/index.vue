@@ -8,42 +8,39 @@
       </h1>
     </div>
     <div class="equipment-list--paragraph">
-      <p class="mb-0">
+      <p>
         {{ $t('equipment_list_page.first_paragraph') }}
-      </p>
-      <p class="mb-0">
-        {{ $t('equipment_list_page.second_paragraph') }}
       </p>
     </div>
     <div class="equipment-list--body">
       <div v-for="key in displayListOfEquipments" :key="key.id">
         <card class="equipment-list--body-card">
           <div class="equipment-list--body-card-title">
-            <h4>#{{ key.id }}: {{ $t('equipment_list_page.cards_settings.title') }} | {{ key.equipment_description }}</h4>
-            <router-link :to="{ name: 'application-settings' }" target="_blank" class="btn btn-info">
+            <h4>#{{ key.id }}: {{ key.equipment_description }}</h4>
+            <button target="_blank"
+                    class="btn btn-info"
+                    :title="$t('equipment_list_page.cards_settings.title') + ': ' + key.equipment_description"
+                    @click="goToTableSettings()"
+            >
               {{ $t('equipment_list_page.cards_settings.see_more_details') }}
-            </router-link>
+            </button>
           </div>
           <div class="equipment-list--body-card-content">
-            <p class="font-weight-bold">
-              {{ $t('equipment_list_page.cards_settings.equipment_id_label').toUpperCase() }}:
-              <span class="font-weight-normal">{{ key.equipment_id }}</span>
+            <p>
+              {{ equipmentIdLabel }}: <span>{{ key.equipment_id }}</span>
             </p>
-            <p class="font-weight-bold">
-              {{ $t('equipment_list_page.cards_settings.equipment_description_label').toUpperCase() }}:
-              <span class="font-weight-normal">{{ key.equipment_description }}</span>
+            <p>
+              {{ equipmentDescriptionLabel }}: <span>{{ key.equipment_description }}</span>
             </p>
-            <p class="font-weight-bold">
-              {{ $t('equipment_list_page.cards_settings.equipment_notes_label').toUpperCase() }}:
-              <span class="font-weight-normal">{{ key.equipment_notes }}</span>
+            <p>
+              {{ equipmentDateCreatedLabel }}: <span>{{ new Date(key.created_at) | moment("DD.MM.YYYY hh:mm") }}</span>
             </p>
-            <p class="font-weight-bold">
-              {{ $t('equipment_list_page.cards_settings.created_at_label').toUpperCase() }}:
-              <span class="font-weight-normal">{{ new Date(key.created_at) | moment("DD.MM.YYYY hh:mm") }}</span>
-            </p>
-            <p class="font-weight-bold">
-              {{ $t('equipment_list_page.cards_settings.updated_at_label').toUpperCase() }}:
-              <span class="font-weight-normal">{{ new Date(key.updated_at) | moment("DD.MM.YYYY hh:mm") }}</span>
+            <p>
+              {{ equipmentDateUpdatedLabel }}:
+              <span>
+                {{ new Date(key.updated_at) | moment("DD.MM.YYYY hh:mm") }}
+                <i>({{ $t('equipment_list_page.cards_settings.updated_at_days_ago', {numberOfDays: Math.round((new Date(key.updated_at) - new Date(key.created_at))/86400000)}) }})</i>
+              </span>
             </p>
           </div>
         </card>
@@ -71,10 +68,27 @@ export default {
       httpResponseCode: null
     }
   },
+  computed: {
+    equipmentIdLabel () {
+      return this.$t('equipment_list_page.cards_settings.equipment_id_label').toUpperCase()
+    },
+    equipmentDescriptionLabel () {
+      return this.$t('equipment_list_page.cards_settings.equipment_description_label').toUpperCase()
+    },
+    equipmentDateCreatedLabel () {
+      return this.$t('equipment_list_page.cards_settings.created_at_label').toUpperCase()
+    },
+    equipmentDateUpdatedLabel () {
+      return this.$t('equipment_list_page.cards_settings.updated_at_label').toUpperCase()
+    }
+  },
   mounted () {
     this.displayAllRecords()
   },
   methods: {
+    goToTableSettings () {
+      this.$router.push({ path: '/application-settings/equipment-records' })
+    },
     displayAllRecords: function () {
       axios
         .get('http://127.0.0.1:8000/api/list-of-equipments')
@@ -88,59 +102,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.equipment-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column !important;
-  flex-wrap: wrap !important;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  @media only screen and (max-width: 576px) {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  &--header {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    & .display-6 {
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      margin-bottom: 0px;
-      height: 60px;
-      text-align: center !important;
-    }
-  }
-  &--paragraph {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: column !important;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  &--body {
-    &-card {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      &-title {
-        display: flex !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #E8ECED;
-        padding-bottom: 1rem;
-        & h4 {
-          width: 80%;
-        }
-        & a {
-          width: 20%;
-        }
-      }
-    }
-  }
-}
-</style>

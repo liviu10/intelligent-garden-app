@@ -1,0 +1,96 @@
+@import '../utilities/functions/_global_functions.scss';
+@import '../utilities/mixin/_global_mixin.scss';
+
+.equipment-list {
+    @include flex-center();
+    @include horizontal-vertical-padding(10px, 0px, 10px, 0px);
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 576px) {
+        padding-top: rem-convertor(0px);
+        padding-bottom: rem-convertor(0px);
+    }
+    &--header {
+        @include flex-center();
+        & .display-6 {
+            @include flex-center();
+            @include height(60px);
+            margin-bottom: rem-convertor(0px);
+            text-align: center;
+            &::selection {
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_flamingo);
+            }
+        }
+    }
+    &--paragraph {
+        @include flex-center();
+        @include horizontal-vertical-margin(32px, 0px, 32px, 0px);
+        flex-direction: column;
+        & p {
+            margin-bottom: rem-convertor(0px) !important;
+            &::selection {
+                background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_flamingo);
+            }
+        }
+    }
+    &--body {
+        &-card {
+            @include horizontal-vertical-margin(32px, 0px, 32px, 0px);
+            background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+            border-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+            &-title {
+                @include flex-center-left-center();
+                justify-content: space-between;
+                margin-bottom: rem-convertor(16px);
+                border-bottom: 1px solid #E8ECED;
+                padding-bottom: rem-convertor(8px);
+                & h4 {
+                    margin-bottom: rem-convertor(0px);
+                    width: 78%;
+                    line-height: normal;
+                    &::selection {
+                        background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                        color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_flamingo);
+                    }
+                }
+                & .btn {
+                    width: 22%;
+                    background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn);
+                    border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn);
+                    color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black);
+                    letter-spacing: letter-spacing(1px);
+                    font-weight: bold;
+                    &:active {
+                        background-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn) !important;
+                        border-color: map-get(map-get($minimal_yet_warm, index-to-key(2)), color_login_btn) !important;
+                        color: map-get(map-get($minimal_yet_warm, index-to-key(3)), color_black) !important;
+                    }
+                    &:focus {
+                        border-color: transparent !important;
+                        box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent !important;
+                        outline: 0 none !important;
+                    }
+                }
+            }
+            &-content {
+                & p {
+                    margin-bottom: rem-convertor(8px);
+                    font-weight: bold;
+                    &::selection {
+                        background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                        color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_flamingo);
+                    }
+                    & span, & i {
+                        font-weight: normal;
+                        &::selection {
+                            background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_raffia);
+                            color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_flamingo);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
