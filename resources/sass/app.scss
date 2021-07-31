@@ -22,6 +22,7 @@
 
 // Importing the CSS Styles for the application's pages
 @import 'pages/_login-system.scss';
+@import 'pages/_equipment-list.scss';
 
 body {
     background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_narvik);
