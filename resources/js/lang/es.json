@@ -148,7 +148,23 @@
     },
     "documentation_page": {
         "page_title": "Documentación",
-        "first_paragraph": "Aprenda a utilizar esta aplicación web"
+        "first_paragraph": "Aprenda a utilizar esta aplicación web",
+        "card_button": "Detalles",
+        "card_button_placeholder": "Mostrar más detalles sobre",
+        "modal_title": "Lista de equipos y registros. Información Adicional",
+        "modal_button": "Cerrar",
+        "first_card": {
+            "card_title": "Configure Equipment List",
+            "card_content": {
+                "paragraph": "La aplicación web jardín inteligente muestra información en tiempo real sobre los registros que han capturado los seis dispositivos de hardware. Estos equipos se presentan a continuación:",
+                "item_1": "Sensor de pH",
+                "item_2": "Sensor de conductividad eléctrica",
+                "item_3": "Sensor de nivel",
+                "item_4": "Bomba para disminuir los niveles de pH",
+                "item_5": "Bomba para aumentar los niveles de pH",
+                "item_6": "Bomba de nutrientes"
+            }
+        }
     },
     "settings_page": {
         "page_title": "Actualice su información personal",

@@ -148,7 +148,23 @@
     },
     "documentation_page": {
         "page_title": "Documentazione",
-        "first_paragraph": "Impara come usare questa applicazione web"
+        "first_paragraph": "Impara come usare questa applicazione web",
+        "card_button": "Dettagli",
+        "card_button_placeholder": "Mostra maggiori dettagli su",
+        "modal_title": "Elenco e registrazioni dell'attrezzatura. Informazioni aggiuntive",
+        "modal_button": "Chiudere",
+        "first_card": {
+            "card_title": "Sezione: Elenco e registri dell'attrezzatura",
+            "card_content": {
+                "paragraph": "L'applicazione Web giardino intelligente visualizza informazioni in tempo reale sui record acquisiti dai sei dispositivi hardware. Queste apparecchiature sono presentate di seguito:",
+                "item_1": "Sensore di pH",
+                "item_2": "Sensore di conducibilità elettrica",
+                "item_3": "Sensore di livello",
+                "item_4": "Pompa per diminuire i livelli di pH",
+                "item_5": "Pompa per aumentare i livelli di pH",
+                "item_6": "Pompa di nutrienti"
+            }
+        }
     },
     "settings_page": {
         "page_title": "Aggiorna le tue informazioni personali",
