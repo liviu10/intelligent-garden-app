@@ -1,5 +1,0 @@
-@import '../../functions/_global_functions';
-
-@mixin box-shadow ($var_h-offset, $var_v-offset, $var_blur, $var_color) {
-    box-shadow: box-shadow($var_h-offset, $var_v-offset, $var_blur, $var_color);
-}

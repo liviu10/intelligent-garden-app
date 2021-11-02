@@ -1,9 +1,0 @@
-@import '../../variables/_base_dimensions.scss';
-
-@function box-shadow($var_h-offset, $var_v-offset, $var_blur, $var_color) {
-    @return
-    ($var_h-offset / $base_font_size) * 1rem
-    ($var_v-offset / $base_font_size) * 1rem
-    ($var_blur / $base_font_size) * 1rem
-    $var_color;
-}

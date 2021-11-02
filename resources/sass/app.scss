@@ -1,30 +1,19 @@
-@import 'variables';
+/*
+    Each VueJs component has it's own CSS custom class, this can be lv-con-pg-home or lv-con-sect-home, where:
+    1. lv-con-pg-home refers to the home page container;
+    2. lv-con-sect-home refers to the home page section container;
+*/
+
 @import '~bootstrap/scss/bootstrap';
-@import '~sweetalert2/src/sweetalert2';
+@import '~sweetalert2/dist/sweetalert2';
+@import '~@fortawesome/fontawesome-svg-core/styles';
 
-@import 'elements/card';
-@import 'elements/navbar';
-@import 'elements/buttons';
-@import 'elements/transitions';
-
-@import 'components/server-error';
-
-// Importing the CSS Styles for the application's theme and fonts
-@import 'utilities/themes/_close_to_nature_color_theme.scss';
-@import 'utilities/themes/_land_of_clean_color_theme.scss';
-@import 'utilities/themes/_minimal_yet_warm_color_theme.scss';
-@import 'utilities/fonts/font_open_sans_condensed/_open_sans_condensed.scss';
-@import 'utilities/fonts/font_pt_serif/_pt_serif.scss';
-@import 'utilities/fonts/font_roboto/_roboto.scss';
-
-// Importing the CSS Styles for the application's components
-@import 'components/_navbar.scss';
-
-// Importing the CSS Styles for the application's pages
-@import 'pages/_login-system.scss';
-@import 'pages/_equipment-list.scss';
+/***** IMPORT CSS STYLES *****/
+@import 'components/_global.scss';
+@import 'pages/_global.scss';
+@import 'utilities/_global.scss';
 
 body {
-    background-color: map-get(map-get($minimal_yet_warm, index-to-key(1)), color_narvik);
+    background-color: map-get($color_theme3, "color_narvik");
     font-family: 'PT Serif Regular';
 }

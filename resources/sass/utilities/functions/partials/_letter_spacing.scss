@@ -1,5 +1,0 @@
-@import '_rem_convertor';
-
-@function letter-spacing($var_letter_spacing) {
-    @return rem-convertor($var_letter_spacing);
-}

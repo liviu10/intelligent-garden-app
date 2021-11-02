@@ -1,0 +1,16 @@
+/***** UTILITIES FUNCTIONS & MIXINS *****/
+/* 
+    Import here all the utilities functions and mixins.
+    Here you may include:
+    - flexbox;
+    - fonts;
+    - global functions (pixels to rem convertor);
+    - global variables (base padding and margin dimensions);
+    - themes
+*/
+
+@import 'flexbox/_global_flex_box.scss';
+@import 'fonts/_global_fonts.scss';
+@import 'global_functions/_global_functions.scss';
+@import 'global_variables/_global_variables.scss';
+@import 'themes/_global_themes.scss';

@@ -1,5 +1,0 @@
-@import '_rem_convertor';
-
-@function text-indent($var_text_indent) {
-    @return rem-convertor($var_text_indent);
-}

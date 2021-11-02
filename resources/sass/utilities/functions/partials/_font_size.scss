@@ -1,5 +1,0 @@
-@import '_rem_convertor';
-
-@function font-size($var_font_size) {
-    @return rem-convertor($var_font_size);
-}

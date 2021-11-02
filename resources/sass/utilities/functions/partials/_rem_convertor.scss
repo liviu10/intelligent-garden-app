@@ -1,5 +1,0 @@
-@import '../../variables/_base_dimensions.scss';
-
-@function rem-convertor($var_size) {
-    @return ($var_size / $base_font_size) * 1rem;
-}

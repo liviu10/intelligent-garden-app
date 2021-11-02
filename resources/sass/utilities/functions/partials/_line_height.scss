@@ -1,5 +1,0 @@
-@import '_rem_convertor';
-
-@function line-height($var_letter_height) {
-    @return rem-convertor($var_letter_height);
-}
