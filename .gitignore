@@ -5,13 +5,12 @@
 /vendor
 .env
 .env.backup
-.env.dusk.local
 .phpunit.result.cache
+docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-phpunit.dusk.xml
-/public/dist
-/public/build
-/public/mix-manifest.json
+/.idea
+/.vscode
+intelligent-garden-app.rar

@@ -20,13 +20,13 @@ return [
     | Application Owner
     |--------------------------------------------------------------------------
     |
-    | This value represents the application owner's name. This value is used on
-    | the frontend to display the application owner's name in different sections.
-    | For instance: in the page title meta-tag, footer section etc.
+    | This value is the owner name of your application. This value is used when the
+    | framework needs to place the application's name in a notification or
+    | any other location as required by the application or its packages.
     |
     */
 
-    'owner' => env('APP_OWNER', 'Laravel'),
+    'owner_name' => env('APP_OWNER', 'Admin'),
 
     /*
     |--------------------------------------------------------------------------
@@ -94,29 +94,6 @@ return [
     */
 
     'locale' => 'en',
-
-    'locales' => [
-        'ro' => [
-            'lang_code' => 'RO',
-            'lang_name' => 'română',
-        ],
-        'en' => [
-            'lang_code' => 'USA',
-            'lang_name' => 'english',
-        ],
-        'es' => [
-            'lang_code' => 'ES',
-            'lang_name' => 'español',
-        ],
-        'fr' => [
-            'lang_code' => 'FR',
-            'lang_name' => 'français',
-        ],
-        'it' => [
-            'lang_code' => 'IT',
-            'lang_name' => 'italiano',
-        ],
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -237,6 +214,7 @@ return [
         'Config' => Illuminate\Support\Facades\Config::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
+        'Date' => Illuminate\Support\Facades\Date::class,
         'DB' => Illuminate\Support\Facades\DB::class,
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
@@ -250,8 +228,9 @@ return [
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
+        'RateLimiter' => Illuminate\Support\Facades\RateLimiter::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
-        'Redis' => Illuminate\Support\Facades\Redis::class,
+        // 'Redis' => Illuminate\Support\Facades\Redis::class,
         'Request' => Illuminate\Support\Facades\Request::class,
         'Response' => Illuminate\Support\Facades\Response::class,
         'Route' => Illuminate\Support\Facades\Route::class,
