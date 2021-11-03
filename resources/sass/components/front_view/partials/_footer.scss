@@ -1,0 +1,18 @@
+.footer {
+    @include flex-center();
+    flex-direction: column !important;
+    &--container {
+        height: rem-convertor(150px);
+    }
+    &__title {
+        margin-bottom: rem-convertor(0px) !important;
+        font-size: rem-convertor(16px);
+        font-weight: bold;
+        text-align: center;
+    }
+    &__project-info, &__social-link, &__copyright {
+        margin-bottom: 0rem !important;
+        text-align: center;
+        font-size: rem-convertor(14px);
+    }
+}
