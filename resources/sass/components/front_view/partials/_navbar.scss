@@ -12,8 +12,9 @@
             }
             & .dropdown-menu {
                 clip-path: polygon(50% 0%, 56% 7%, 100% 7%, 100% 100%, 0 100%, 0 7%, 42% 7%);
+                padding: rem-convertor(16px) 0rem 0rem 0rem;
                 background-color: map-get($color_theme3, "color_raffia");
-                border-top: rem-convertor(0px) !important;
+                border-top: 0rem !important;
                 & .dropdown-item {
                     color: map-get($basic_colors, "color_black");
                     &:first-child {
@@ -32,14 +33,4 @@
             }
         }
     }
-}
-span.flag.f-ro.normal-flag, span.flag.f-usa.normal-flag,
-span.flag.f-es.normal-flag, span.flag.f-fr.normal-flag,
-span.flag.f-it.normal-flag {
-    margin-right: 0.5px;
-}
-.profile-photo {
-    width: 2rem;
-    height: 2rem;
-    margin: -.375rem 0;
 }
