@@ -1,0 +1,262 @@
+@mixin equipments-table() {
+    .container-table {
+        @media only screen and (max-width: 768px) {
+            @include flex-center();
+            flex-direction: column !important;
+        }
+        .table {
+            margin-bottom: 0rem;
+            width: rem-convertor(1200px);
+            @media only screen and (max-width: 1200px) {
+                width: rem-convertor(992px);
+            }
+            @media only screen and (max-width: 992px) {
+                width: rem-convertor(768px);
+            } 
+            @media only screen and (max-width: 768px) {
+                width: rem-convertor(556px);
+            }
+            @media only screen and (max-width: 576px) {
+                width: rem-convertor(405px);
+            }
+            @media only screen and (max-width: 425px) {
+                width: rem-convertor(355px);
+            }
+            @media only screen and (max-width: 375px) and (max-width: 320px) {
+                width: rem-convertor(310px);
+            }
+            &--standard {
+                border-collapse: collapse;
+                table-layout: fixed;
+            }
+            & .table-head, & .table-body {
+                padding: rem-convertor(6px);
+                border: rem-convertor(1px) solid #CCCCCC;
+                &__cell {
+                    padding-top: rem-convertor(2px);
+                    padding-right: rem-convertor(4px);
+                    padding-bottom: rem-convertor(2px);
+                    padding-left: rem-convertor(4px);
+                    height: rem-convertor(50px);
+                    @media only screen and (max-width: 1200px) {
+                        height: rem-convertor(80px);
+                    }  
+                    @media only screen and (max-width: 992px) {
+                        height: rem-convertor(100px);
+                    } 
+                }
+                &__typography {
+                    @include flex-center();
+                    margin-top: rem-convertor(8px);
+                    margin-right: 0rem;
+                    margin-bottom: rem-convertor(8px);
+                    margin-left: 0rem;
+                    padding: 0rem;
+                    height: rem-convertor(34px);
+                    width: 100%;
+                    font-size: rem-convertor(16px);
+                    text-indent: 0rem;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: normal;
+                    text-align: center;
+                    text-decoration: none;
+                    text-overflow: hidden;
+                    text-transform: normal;
+                    white-space: normal;
+                    word-break: normal;
+                    word-spacing: normal;
+                    @media only screen and (max-width: 1200px) {
+                        height: rem-convertor(64px);
+                    }  
+                    @media only screen and (max-width: 992px) {
+                        height: rem-convertor(84px);
+                    } 
+                }
+            }
+            & .table-head {
+                @media only screen and (max-width: 768px) {
+                    display: none !important;
+                }
+                &__cell {
+                    border: rem-convertor(1px) solid #808080;
+                    background-color: #333333;
+                    color: #FFFFFF;
+                    font-weight: bold;
+                }
+                &__typography {
+                    font-size: rem-convertor(18px);
+                    font-weight: bold;
+                }
+            }
+            & .table-body {
+                @media only screen and (max-width: 768px) {
+                    @include flex-center();
+                    display: block !important;
+                    border-width: 0rem;
+                    padding: 0rem;
+                }
+                &__cell {
+                    border: rem-convertor(1px) solid #808080;
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    &:before {
+                        @media only screen and (max-width: 768px) {
+                            @include flex-center();
+                            margin: 0rem;
+                            border-right-width: rem-convertor(1px);
+                            border-right-style: solid;
+                            border-right-color: #808080;
+                            padding-top: rem-convertor(2px);
+                            padding-bottom: rem-convertor(2px);
+                            height: rem-convertor(100px);
+                            width: 30%;
+                            text-align: center;
+                        }
+                        @media only screen and (max-width: 576px) {
+                            @include flex-center();
+                            margin-top: rem-convertor(8px);
+                            margin-bottom: rem-convertor(8px);
+                            width: 50%;
+                        }
+                    }
+                    &-empty {
+                        
+                    }
+                }
+                &__typography {
+                    height: rem-convertor(36px);
+                    font-size: rem-convertor(18px);
+                    font-weight: normal;
+                    @media only screen and (max-width: 1200px) {
+                        height: rem-convertor(64px);
+                    }  
+                    @media only screen and (max-width: 992px) {
+                        height: rem-convertor(84px);
+                    }  
+                    @media only screen and (max-width: 768px) {
+                        @include flex-center();
+                        margin: 0rem;
+                        padding-top: rem-convertor(2px);
+                        padding-bottom: rem-convertor(2px);
+                        height: rem-convertor(50px);
+                        width: 70%;
+                    }
+                    @media only screen and (max-width: 576px) {
+                        @include flex-center();
+                        width: 50%;
+                    }
+                    @media only screen and (max-width: 576px) {
+                        text-align: center;
+                    }
+                }
+                & .table-body-form {
+                    @include flex-center();
+                    margin-top: rem-convertor(8px) !important;
+                    margin-right: 0rem;
+                    margin-bottom: rem-convertor(8px) !important;
+                    margin-left: 0rem;
+                    height: auto;
+                    @media only screen and (max-width: 1200px) {
+                        @include flex-center();
+                        margin-top: rem-convertor(8px);
+                        margin-bottom: rem-convertor(8px);
+                        height: rem-convertor(64px);
+                    } 
+                    @media only screen and (max-width: 992px) {
+                        @include flex-center();
+                        margin-top: rem-convertor(8px);
+                        margin-bottom: rem-convertor(8px);
+                        height: rem-convertor(64px);
+                    } 
+                    @media only screen and (max-width: 768px) {
+                        @include flex-center();
+                        margin-top: rem-convertor(8px);
+                        margin-bottom: rem-convertor(8px);
+                        width: 70%;
+                    }
+                    @media only screen and (max-width: 576px) {
+                        @include flex-center();
+                        margin-top: rem-convertor(8px);
+                        margin-bottom: rem-convertor(8px);
+                        width: 50%;
+                    }
+                    &__actions {
+                        @include flex-center();
+                        height: rem-convertor(36px);
+                        &__btn {
+                            padding-top: rem-convertor(2px);
+                            padding-right: rem-convertor(4px);
+                            padding-bottom: rem-convertor(2px);
+                            padding-left: rem-convertor(4px);
+                            @include flex-center();
+                            width: rem-convertor(30px);
+                            height: rem-convertor(30px);
+                            &__text {
+                                font-size: rem-convertor(16px);
+                                letter-spacing: rem-convertor(2px);
+                                text-indent: 0rem;
+                                font-family: "Times New Roman", Times, serif;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: normal;
+                                text-align: left;
+                                text-decoration: none;
+                                text-overflow: hidden;
+                                text-transform: normal;
+                                white-space: normal;
+                                word-break: normal;
+                                word-spacing: normal;
+                                user-select: none;
+                            }
+                            &--success, &--warning, &--danger {
+                                border-width: 0rem;
+                                text-decoration: none;
+                            }
+                            &--success {
+                                color: #000000;
+                                background-color: #28A745;
+                                border-color: #28A745;
+                            }
+                            &--warning {
+                                color: #000000;
+                                background-color: #FFC107;
+                                border-color: #FFC107;
+                            }
+                            &--danger {
+                                color: #000000;
+                                background-color: #DC3545;
+                                border-color: #DC3545;
+                            }
+                        }
+                    }
+                }
+                & tr {
+                    & td {
+                        @media only screen and (max-width: 768px) {
+                            @include flex-center();
+                            &:nth-of-type(1):before {
+                                content: "EQUIPMENT ID";
+                            }
+                            &:nth-of-type(2):before { 
+                                content: "EQUIPMENT DESCRIPTION"; 
+                            }
+                            &:nth-of-type(3):before { 
+                                content: "EQUIPMENT DATE"; 
+                            }
+                            &:nth-of-type(4):before { 
+                                content: "ACTIONS"; 
+                            }
+                        }
+                    }
+                }
+            }
+            table, thead, tbody, th, td, tr {
+                @media only screen and (max-width: 768px) {
+                    @include flex-center();
+                    display: block !important;
+                }
+            }
+        }
+    }
+}

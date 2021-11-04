@@ -1,0 +1,68 @@
+@mixin equipments-create-record() {
+    &-description {
+        @include flex-center();
+        flex-direction: column !important;
+        padding-top: rem-convertor(12px);
+        padding-bottom: rem-convertor(12px);
+        &-title, &-paragraph {
+            margin: 0rem;
+            padding-top: rem-convertor(8px);
+            padding-bottom: rem-convertor(8px);
+            text-align: center;
+        }
+        &-paragraph {
+            width: 40%;
+            @media only screen and (max-width: 1200px) {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@mixin equipments-create-record-form() {
+    .input-group {
+        margin-bottom: rem-convertor(20px);
+        & .input-group-text {
+            @include flex-center();
+            width: 100%;
+            height: rem-convertor(50px);
+            font-weight: bold;
+            font-size: rem-convertor(18px);
+            padding: rem-convertor(4px);
+            border-radius: 0rem;
+        }
+        & .input-sensor-id, & .input-sensor-description, & .input-sensor-notes {
+            @include flex-center();
+            width: 100%;
+            height: rem-convertor(50px);
+        }
+        & .form-control {
+            margin-left: 0rem !important;
+            font-size: rem-convertor(18px);
+            height: rem-convertor(50px);
+            padding: rem-convertor(4px);
+            border-radius: 0rem;
+        }
+    }
+    .input-group-button {
+        @include flex-center();
+        padding-top: rem-convertor(12px);
+        padding-bottom: rem-convertor(12px);
+        & .btn {
+            @include flex-center();
+            width: 100%;
+            padding-left: rem-convertor(10px);
+            padding-right: rem-convertor(10px);
+            margin-top: rem-convertor(10px) !important;
+            margin-bottom: rem-convertor(10px) !important;
+            height: rem-convertor(50px);
+            font-size: rem-convertor(18px);
+            border-radius: 0rem;
+            & .fas {
+                margin-left: rem-convertor(5px);
+                margin-right: rem-convertor(5px);
+                font-size: rem-convertor(18px);
+            }
+        }
+    }
+}

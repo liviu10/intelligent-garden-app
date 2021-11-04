@@ -1,93 +1,78 @@
+/***** CSS PARTIAL STYLES FOR EQUIPMENT LIST PAGE *****/
+@import 'partials/_equipment_header.scss';
+@import 'partials/_equipment_table.scss';
+@import 'partials/_equipment_pagination.scss';
+@import 'partials/_equipment_create_new_record.scss';
+@import 'partials/_equipment_edit_record.scss';
+
 /***** CSS STYLES EQUIPMENT LIST PAGE *****/
-.equipment-list {
-    @include flex-center();
-    padding: rem-convertor(10px) 0rem;
-    flex-direction: column;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 576px) {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
+.equipments {
+    &__header {
+        @include equipments-header();
     }
-    &--header {
+    &__main-content {
         @include flex-center();
-        & .display-6 {
-            @include flex-center();
-            height: rem-convertor(60px);
-            margin-bottom: 0rem;
-            text-align: center;
-            &::selection {
-                background-color: map-get($color_theme3, "color_raffia");
-                color: map-get($color_theme3, "color_flamingo");
+        flex-direction: column !important;
+        @include equipments-table();
+        @include equipments-pagination();
+    }
+}
+.equipments-create-record {
+    &__header {
+        margin-top: rem-convertor(40px);
+        margin-bottom: rem-convertor(40px);
+        @include equipments-create-record();
+    }
+    &__form {
+        @include flex-center();
+        height: rem-convertor(450px);
+        @media only screen and (max-width: 320px) {
+            height: auto;
+        }
+        & .container-form {
+            width: rem-convertor(600px);
+            @include equipments-create-record-form();
+            @media only screen and (max-width: 576px) {
+                width: rem-convertor(465px);
+            }
+            @media only screen and (max-width: 475px) {
+                width: rem-convertor(415px);
+            }
+            @media only screen and (max-width: 375px) {
+                width: rem-convertor(310px);
+            }
+            @media only screen and (max-width: 320px) {
+                width: rem-convertor(300px);
             }
         }
     }
-    &--paragraph {
-        @include flex-center();
-        margin: rem-convertor(32px) 0rem;
-        flex-direction: column;
-        & p {
-            margin-bottom: 0rem !important;
-            &::selection {
-                background-color: map-get($color_theme3, "color_raffia");
-                color: map-get($color_theme3, "color_flamingo");
-            }
-        }
+}
+.equipments-edit-record {
+    &__header {
+        margin-top: rem-convertor(40px);
+        margin-bottom: rem-convertor(40px);
+        @include equipments-edit-record();
     }
-    &--body {
-        &-card {
-            margin: rem-convertor(32px) 0rem;
-            background-color: map-get($color_theme3, "color_raffia");
-            border-color: map-get($color_theme3, "color_raffia");
-            &-title {
-                @include flex-center-left-center();
-                justify-content: space-between;
-                margin-bottom: rem-convertor(16px);
-                border-bottom: rem-convertor(1px) solid #E8ECED;
-                padding-bottom: rem-convertor(8px);
-                & h4 {
-                    margin-bottom: 0rem;
-                    width: 78%;
-                    line-height: normal;
-                    &::selection {
-                        background-color: map-get($color_theme3, "color_raffia");
-                        color: map-get($color_theme3, "color_flamingo");
-                    }
-                }
-                & .btn {
-                    width: 22%;
-                    background-color: map-get($color_theme3, "color_login_btn");
-                    border-color: map-get($color_theme3, "color_login_btn");
-                    color: map-get($basic_colors, "color_black");
-                    letter-spacing: letter-spacing(1px);
-                    font-weight: bold;
-                    &:active {
-                        background-color: map-get($color_theme3, "color_login_btn") !important;
-                        border-color: map-get($color_theme3, "color_login_btn") !important;
-                        color: map-get($basic_colors, "color_black") !important;
-                    }
-                    &:focus {
-                        border-color: transparent !important;
-                        box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent !important;
-                        outline: 0 none !important;
-                    }
-                }
+    &__form {
+        @include flex-center();
+        height: rem-convertor(450px);
+        @media only screen and (max-width: 320px) {
+            height: auto;
+        }
+        & .container-form {
+            width: rem-convertor(600px);
+            @include equipments-edit-record-form();
+            @media only screen and (max-width: 576px) {
+                width: rem-convertor(465px);
             }
-            &-content {
-                & p {
-                    margin-bottom: rem-convertor(8px);
-                    font-weight: bold;
-                    &::selection {
-                        background-color: map-get($color_theme3, "color_raffia");
-                        color: map-get($color_theme3, "color_flamingo");
-                    }
-                    & span, & i {
-                        font-weight: normal;
-                        &::selection {
-                            background-color: map-get($color_theme3, "color_raffia");
-                            color: map-get($color_theme3, "color_flamingo");
-                        }
-                    }
-                }
+            @media only screen and (max-width: 475px) {
+                width: rem-convertor(415px);
+            }
+            @media only screen and (max-width: 375px) {
+                width: rem-convertor(310px);
+            }
+            @media only screen and (max-width: 320px) {
+                width: rem-convertor(300px);
             }
         }
     }

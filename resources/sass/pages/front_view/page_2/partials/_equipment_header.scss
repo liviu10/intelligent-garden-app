@@ -1,0 +1,47 @@
+@mixin equipments-header() {
+    &-description {
+        @include flex-center();
+        flex-direction: column !important;
+        padding-top: rem-convertor(12px);
+        padding-bottom: rem-convertor(12px);
+        &-title, &-paragraph {
+            margin: 0rem;
+            padding-top: rem-convertor(8px);
+            padding-bottom: rem-convertor(8px);
+            text-align: center;
+        }
+        &-paragraph {
+            width: 40%;
+            @media only screen and (max-width: 1200px) {
+                width: 80%;
+            }
+        }
+        &-button {
+            @include flex-center();
+            margin-top: rem-convertor(30px);
+            margin-bottom: rem-convertor(30px);
+            & .btn {
+                @include flex-center();
+                padding: rem-convertor(2px);
+                width: rem-convertor(200px);
+                height: rem-convertor(50px);
+                font-size: rem-convertor(18px);
+                border-radius: 0rem;
+                color: #FFFFFF;
+                @media only screen and (max-width: 768px) {
+                    width: rem-convertor(556px) / 3;
+                    font-size: rem-convertor(16px);
+                }
+                @media only screen and (max-width: 576px) {
+                    width: rem-convertor(230px);
+                }
+                & .fas {
+                    margin-left: rem-convertor(5px);
+                    margin-right: rem-convertor(5px);
+                    font-size: rem-convertor(18px);
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

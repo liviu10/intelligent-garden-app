@@ -21,11 +21,6 @@ class CreateArduinoEquipmentRecordsTable extends Migration
             $table->timestamps();
         });
         DB::unprepared('ALTER TABLE `intelligent_garden`.`arduino_equipment_records` CHANGE COLUMN `equipment_value` `equipment_value` FLOAT(8,2) NOT NULL;');
-        DB::unprepared(
-            'ALTER TABLE `intelligent_garden`.`arduino_equipment_records` 
-            ADD CONSTRAINT `EquipmentID` FOREIGN KEY (`equipment_id`)
-            REFERENCES `intelligent_garden`.`arduino_list_of_equipments` (`equipment_id`) ON DELETE RESTRICT ON UPDATE CASCADE;'
-        );
     }
 
     /**
