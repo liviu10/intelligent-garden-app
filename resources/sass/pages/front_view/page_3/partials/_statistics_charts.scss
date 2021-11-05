@@ -1,0 +1,30 @@
+@mixin statistics-charts() {
+    &-line-chart { 
+        @media only screen and (max-width: 1600px) {
+            @include flex-center();
+        }
+        #phLineChart {
+            width: rem-convertor(900px) !important;
+            @media only screen and (max-width: 992px) {
+                @include flex-center();
+                width: rem-convertor(768px) !important;
+            }
+            @media only screen and (max-width: 768px) {
+                @include flex-center();
+                width: rem-convertor(576px) !important;
+            }
+            @media only screen and (max-width: 576px) {
+                @include flex-center();
+                width: rem-convertor(425px) !important;
+            }
+            @media only screen and (max-width: 425px) {
+                @include flex-center();
+                width: rem-convertor(375px) !important;
+            }
+            @media only screen and (max-width: 375px) {
+                @include flex-center();
+                width: rem-convertor(325px) !important;
+            }
+        }
+    }
+}

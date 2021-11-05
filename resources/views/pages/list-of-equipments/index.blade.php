@@ -16,10 +16,15 @@
                         {{ __('list_of_equipments.page_info_2') }}
                     </p>
                     <div class="equipments__header-description-button">
-                        <a class="btn btn-success" href="{{ route('list-of-equipments.create') }}" title="{{ __('list_of_equipments.page_btn_add.title') }}">
+                        <button type="button"
+                                class="btn btn-success"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                title="{{ __('list_of_equipments.page_btn_add.title') }}"
+                        >
                             <i class="fas fa-plus"></i>
                             {{ strtoupper(__('list_of_equipments.page_btn_add.label')) }}
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

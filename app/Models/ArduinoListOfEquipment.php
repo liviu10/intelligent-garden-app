@@ -61,4 +61,14 @@ class ArduinoListOfEquipment extends Model
         'created_at',
         'updated_at'
     ];
+
+    /**
+     * Eloquent relationship between arduino_list_of_equipments and arduino_equipment_records.
+     * One arduino equipment may have one or more equipment records.
+     *
+     */
+    public function arduino_equipment_records()
+    {
+        return $this->hasMany('App\Models\ArduinoEquipmentRecord');
+    }
 }

@@ -14,7 +14,7 @@ class ArduinoEquipmentRecord extends Model
      * 
      * @var string
      */
-    protected $table = 'arduino_list_of_equipments';
+    protected $table = 'arduino_equipment_records';
 
     /**
      * The primary key associated with the table.
@@ -64,4 +64,13 @@ class ArduinoEquipmentRecord extends Model
         'created_at',
         'updated_at'
     ];
+
+    /**
+     * Eloquent relationship between arduino_equipment_records and arduino_list_of_equipments.
+     * One or many blog equipment record(s) may have only one arduino equipment.
+     */
+    public function arduino_list_of_equipment()
+    {
+        return $this->belongsTo('App\Models\ArduinoListOfEquipment');
+    }
 }

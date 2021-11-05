@@ -1,0 +1,65 @@
+@mixin statistics-add-new() {
+    & .modal-title {
+    }
+    & .modal-body {
+        & .lead, & .list {
+        }
+    }
+    & .container-form {
+        margin-top: rem-convertor(40px);
+        & .input-group {
+            @media only screen and (max-width: 768px) {
+                flex-direction: column !important;
+            }
+            & .input-group-text {
+                @include flex-center();
+                width: 100%;
+                height: rem-convertor(50px);
+                font-weight: bold;
+                font-size: rem-convertor(18px);
+                padding: rem-convertor(4px);
+                border-radius: 0rem;
+                @media only screen and (max-width: 992px) {
+                    width: 100% !important;
+                }
+            }
+            & .input-sensor-id, & .input-sensor-description {
+                @include flex-center();
+                width: 75%;
+                height: rem-convertor(50px);
+            }
+            & .form-control {
+                font-size: rem-convertor(18px);
+                margin-left: 0rem !important;
+                height: rem-convertor(50px);
+                padding: rem-convertor(4px);
+                border-radius: 0rem;
+                @media only screen and (max-width: 768px) {
+                    width: 100% !important;
+                    margin-left: 0rem !important;
+                }
+            }
+        }
+        & .input-group-button {
+            @include flex-center();
+            padding-top: rem-convertor(12px);
+            padding-bottom: rem-convertor(12px);
+            & .btn {
+                @include flex-center();
+                width: 100%;
+                padding-left: rem-convertor(10px);
+                padding-right: rem-convertor(10px);
+                margin-top: rem-convertor(10px) !important;
+                margin-bottom: rem-convertor(10px) !important;
+                height: rem-convertor(50px);
+                font-size: rem-convertor(18px);
+                border-radius: 0rem;
+                & .fas {
+                    margin-left: rem-convertor(5px);
+                    margin-right: rem-convertor(5px);
+                    font-size: rem-convertor(18px);
+                }
+            }
+        }
+    }
+}

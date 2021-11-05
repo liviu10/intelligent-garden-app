@@ -1,0 +1,35 @@
+@mixin statistics-table-buttons() {
+    &-table {
+        @media only screen and (max-width: 1400px) {
+            margin-top: rem-convertor(20px);
+        }
+        &__button {
+            @include flex-center();
+            @media only screen and (max-width: 576px) {
+                flex-direction: column !important;
+            }
+            & .btn {
+                @include flex-center();
+                padding: rem-convertor(2px);
+                width: rem-convertor(200px);
+                height: rem-convertor(50px);
+                font-size: rem-convertor(18px);
+                border-radius: 0rem;
+                color: #FFFFFF;
+                @media only screen and (max-width: 768px) {
+                    width: rem-convertor(556px) / 3;
+                    font-size: rem-convertor(16px);
+                }
+                @media only screen and (max-width: 576px) {
+                    width: rem-convertor(230px);
+                }
+                & .fas {
+                    margin-left: rem-convertor(5px);
+                    margin-right: rem-convertor(5px);
+                    font-size: rem-convertor(18px);
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

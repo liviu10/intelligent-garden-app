@@ -1,1 +1,57 @@
-/***** CSS STYLES EQUIPMENT RECORDS PAGE *****/
+/***** CSS PARTIAL STYLES FOR EQUIPMENT RECORDS PAGES *****/
+@import 'partials/_statistics_header.scss';
+@import 'partials/_statistics_charts.scss';
+@import 'partials/_statistics_table_buttons.scss';
+@import 'partials/_statistics_add_new.scss';
+@import 'partials/_statistics_table.scss';
+@import 'partials/_statistics_pagination.scss';
+@import 'partials/_statistics_edit_record.scss';
+
+/***** CSS STYLES EQUIPMENT RECORDS PAGES *****/
+.statistics {
+    &__header {
+        @include statistics-header();
+    }
+    &__main-content {
+        @include flex-center();
+        flex-direction: row !important;
+        @media only screen and (max-width: 1600px) {
+            flex-direction: column !important;
+        }
+        @include statistics-charts();
+        @include statistics-table-buttons();
+        @include statistics-add-new();
+        @include statistics-table();
+        @include statistics-pagination();
+    }
+}
+.statistics-edit-record {
+    &__header {
+        margin-top: rem-convertor(40px);
+        margin-bottom: rem-convertor(40px);
+        @include statistics-edit-record();
+    }
+    &__form {
+        @include flex-center();
+        height: rem-convertor(450px);
+        @media only screen and (max-width: 320px) {
+            height: auto;
+        }
+        & .container-form {
+            width: rem-convertor(600px);
+            @include statistics-edit-record-form();
+            @media only screen and (max-width: 576px) {
+                width: rem-convertor(465px);
+            }
+            @media only screen and (max-width: 475px) {
+                width: rem-convertor(415px);
+            }
+            @media only screen and (max-width: 375px) {
+                width: rem-convertor(310px);
+            }
+            @media only screen and (max-width: 320px) {
+                width: rem-convertor(300px);
+            }
+        }
+    }
+}

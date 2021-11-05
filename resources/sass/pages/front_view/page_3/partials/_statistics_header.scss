@@ -1,0 +1,20 @@
+@mixin statistics-header() {
+    &-description {
+        @include flex-center();
+        flex-direction: column !important;
+        padding-top: rem-convertor(12px);
+        padding-bottom: rem-convertor(12px);
+        &-title, &-paragraph {
+            margin: 0rem;
+            padding-top: rem-convertor(8px);
+            padding-bottom: rem-convertor(8px);
+            text-align: center;
+        }
+        &-paragraph {
+            width: 40%;
+            @media only screen and (max-width: 1200px) {
+                width: 80%;
+            }
+        }
+    }
+}

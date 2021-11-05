@@ -29,7 +29,7 @@ class ArduinoListOfEquipmentSeeder extends Seeder
             // ],
             [
                 'id'                    => '1',
-                'equipment_id'          => 'pH_SENSOR',
+                'equipment_id'          => 'PH_SENSOR',
                 'equipment_description' => 'pH Sensor',
                 'equipment_notes'       => 'The values of this equipment must be between 0.00 and 14.00',
                 'equipment_is_active'   => '1',
