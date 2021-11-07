@@ -1,42 +1,59 @@
 <?php
 
 return [
-    'page_title'   => 'Equipment List',
-    'page_info_1'  => 'Below is displayed a list of all the equipments that are connected to the informatics system.',
-    'page_info_2'  => 'The following actions are permitted: create, show, modify and delete equipments.',
-    'page_btn_add' => [
-        'label'    => 'New Equipment',
-        'title'    => 'Add a new equipment in the database',
+    'page_title'    => 'Equipment List',
+    'error_info'    => 'Your equipment details could not be save in the database!',
+    'page_header'   => [
+        'info_1'    => 'Below is displayed a list of all the equipments that are connected to the informatics system.',
+        'info_2'    => 'The following actions are permitted: create, show, modify and delete equipments.',
+        'btn_add'   => [
+            'label' => 'New Equipment',
+            'title' => 'Add a new equipment in the database',
+        ],
+    ],
+    'page_modal_new'=> [
+        'title'     => 'Information about the :sensorDescription',
+        'info_1'    => 'Create and save a new equipment in the database',
+        'form'      => [
+            'label_1' => 'Equipment Id',
+            'label_2' => 'Equipment Description',
+            'label_3' => 'Equipment Notes',
+            'label_4' => 'Equipment Date',
+        ],
+        'btn_save'  => [
+            'label' => 'SAVE',
+            'title' => 'Save the equipment in the database!',
+        ],
     ],
     'page_table'   => [
-        'column_1' => 'Equipment Id',
-        'column_2' => 'Equipment Description',
-        'column_3' => 'Equipment Notes',
-        'column_4' => 'Equipment Date',
-        'column_5' => [
+        'label_1'  => 'Equipment Id',
+        'label_2'  => 'Equipment Description',
+        'label_3'  => 'Equipment Notes',
+        'label_4'  => 'Equipment Date',
+        'label_5'  => [
             'title'      => 'Actions',
             'btn_show'   => 'View more details about :sensorDescription',
             'btn_edit'   => 'Edit :sensorDescription',
             'btn_delete' => 'Delete :sensorDescription',
         ],
-    ],
-    'page_modal'   => [
-        'title'    => 'Information about the :sensorDescription',
-    ],
-    'page_new_records' => [
-        'info_1'     => 'Create and save a new equipment in the database',
-        'error_info' => 'There was some problems with your input!',
-        'actions'    => [
-            'btn_save'  => 'SAVE',
-            'btn_title' => 'Save the equipment in the database!',
+        'empty' => [
+            'btn_save'  => [
+                'label' => 'Add Equipment',
+                'title' => 'Add your first equipment to the database!',
+            ],
         ],
     ],
-    'page_edit_records' => [
+    'page_modal_show'   => [
+        'title'    => 'Information about the :sensorDescription',
+        'info_1'   => 'Equipment name: :sensorDescription',
+        'info_2'   => 'Equipment information: :sensorInformation',
+        'info_3'   => 'Equipment date added: '
+    ],
+    'page_modal_edit' => [
         'info_1'     => 'Modify the details of an equipment',
-        'error_info' => 'There was some problems with your input!',
-        'actions'    => [
-            'btn_save'  => 'MODIFY',
-            'btn_title' => 'Save the equipment in the database!',
+        'btn_save'  => [
+            'label' => 'MODIFY',
+            'title' => 'Modify the equipment and save it in the database!',
         ],
     ],
 ];

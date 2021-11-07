@@ -1,8 +1,9 @@
 /***** CSS PARTIAL STYLES FOR EQUIPMENT LIST PAGE *****/
 @import 'partials/_equipment_header.scss';
+@import 'partials/_equipment_create_record.scss';
 @import 'partials/_equipment_table.scss';
 @import 'partials/_equipment_pagination.scss';
-@import 'partials/_equipment_create_new_record.scss';
+@import 'partials/_equipment_show_record.scss';
 @import 'partials/_equipment_edit_record.scss';
 
 /***** CSS STYLES EQUIPMENT LIST PAGE *****/
@@ -16,63 +17,74 @@
         @include equipments-table();
         @include equipments-pagination();
     }
-}
-.equipments-create-record {
-    &__header {
-        margin-top: rem-convertor(40px);
-        margin-bottom: rem-convertor(40px);
-        @include equipments-create-record();
+    &-create-record, &-show-record {
+        &__header {
+            &-description {
+                @include flex-center();
+                width: 100%;
+                &-title {
+                    margin: 0rem;
+                    text-align: center;
+                }
+                &-paragraph {
+                    text-align: center;
+                }
+            }
+            &__form, &__body {
+                @include flex-center();
+                flex-direction: column;
+                @media only screen and (max-width: 320px) {
+                    height: auto;
+                }
+            }
+        }
     }
-    &__form {
-        @include flex-center();
-        height: rem-convertor(450px);
-        @media only screen and (max-width: 320px) {
+    &-create-record {
+        &__form {
+            & .container-form {
+                @include equipments-create-record-form();
+                @media only screen and (max-width: 576px) {
+                    width: rem-convertor(465px);
+                }
+                @media only screen and (max-width: 475px) {
+                    width: rem-convertor(415px);
+                }
+                @media only screen and (max-width: 375px) {
+                    width: rem-convertor(310px);
+                }
+                @media only screen and (max-width: 320px) {
+                    width: rem-convertor(300px);
+                }
+            }
+        }
+    }
+    &-edit-record {
+        &__header {
+            margin-top: rem-convertor(40px);
+            margin-bottom: rem-convertor(40px);
+            @include equipments-edit-record();
+        }
+        &__form {
+            @include flex-center();
             height: auto;
-        }
-        & .container-form {
-            width: rem-convertor(600px);
-            @include equipments-create-record-form();
-            @media only screen and (max-width: 576px) {
-                width: rem-convertor(465px);
-            }
-            @media only screen and (max-width: 475px) {
-                width: rem-convertor(415px);
-            }
-            @media only screen and (max-width: 375px) {
-                width: rem-convertor(310px);
-            }
             @media only screen and (max-width: 320px) {
-                width: rem-convertor(300px);
+                height: auto;
             }
-        }
-    }
-}
-.equipments-edit-record {
-    &__header {
-        margin-top: rem-convertor(40px);
-        margin-bottom: rem-convertor(40px);
-        @include equipments-edit-record();
-    }
-    &__form {
-        @include flex-center();
-        height: rem-convertor(450px);
-        @media only screen and (max-width: 320px) {
-            height: auto;
-        }
-        & .container-form {
-            width: rem-convertor(600px);
-            @include equipments-edit-record-form();
-            @media only screen and (max-width: 576px) {
-                width: rem-convertor(465px);
-            }
-            @media only screen and (max-width: 475px) {
-                width: rem-convertor(415px);
-            }
-            @media only screen and (max-width: 375px) {
-                width: rem-convertor(310px);
-            }
-            @media only screen and (max-width: 320px) {
-                width: rem-convertor(300px);
+            & .container-form {
+                width: rem-convertor(600px);
+                @include equipments-edit-record-form();
+                @media only screen and (max-width: 576px) {
+                    width: rem-convertor(465px);
+                }
+                @media only screen and (max-width: 475px) {
+                    width: rem-convertor(415px);
+                }
+                @media only screen and (max-width: 375px) {
+                    width: rem-convertor(310px);
+                }
+                @media only screen and (max-width: 320px) {
+                    width: rem-convertor(300px);
+                }
             }
         }
     }

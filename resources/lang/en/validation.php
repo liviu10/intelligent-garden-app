@@ -134,6 +134,16 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'equipment_id' => [
+            'unique' => 'The :attribute you have inserted already exists in the database!',
+            'regex'  => 'The field :attribute only accepts letters (upper and lowercase) and numbers!',
+        ],
+        'equipment_description' => [
+            'regex'  => 'The field :attribute only accepts lower and capital letters!',
+        ],
+        'equipment_notes' => [
+            'regex'  => 'The field :attribute only accepts letters (upper and lowercase), numbers and symbols: + - / * = {} [] () !',
+        ],
     ],
 
     /*
@@ -147,6 +157,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'equipment_id' => 'Equipment Id',
+        'equipment_description' => 'Equipment Description',
+        'equipment_notes' => 'Equipment Notes',
+    ],
 
 ];

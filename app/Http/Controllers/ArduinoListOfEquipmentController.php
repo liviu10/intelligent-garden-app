@@ -55,8 +55,8 @@ class ArduinoListOfEquipmentController extends Controller
     {
         $request->validate([
             'equipment_id'          => 'required|regex:/^[a-zA-Z0-9_ ]+$/u|max:15|unique:arduino_list_of_equipments',
-            'equipment_description' => 'required|max:255',
-            'equipment_notes'       => 'required|max:255',
+            'equipment_description' => 'required|regex:/^[a-zA-Z ]+$/u|max:255',
+            'equipment_notes'       => 'required|regex:/^[a-zA-Z0-9_+-\/\*\=\{\}\[\]\(\) ]+$/u|max:255',
         ]);
         $insertSingleRecord = $this->modelName->create([
             'equipment_id'          => $request->get('equipment_id'),

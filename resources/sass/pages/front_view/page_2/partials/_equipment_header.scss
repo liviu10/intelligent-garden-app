@@ -10,12 +10,6 @@
             padding-bottom: rem-convertor(8px);
             text-align: center;
         }
-        &-paragraph {
-            width: 40%;
-            @media only screen and (max-width: 1200px) {
-                width: 80%;
-            }
-        }
         &-button {
             @include flex-center();
             margin-top: rem-convertor(30px);

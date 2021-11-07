@@ -35,6 +35,10 @@
             width: 100%;
             height: rem-convertor(50px);
         }
+        & .input-sensor-notes {
+            resize: none;
+            height: rem-convertor(250px) !important;
+        }
         & .form-control {
             margin-left: 0rem !important;
             font-size: rem-convertor(18px);
