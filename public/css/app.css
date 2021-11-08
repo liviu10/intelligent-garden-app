@@ -1002,8 +1002,8 @@
   }
 }
 
-/***** CSS PARTIAL STYLES FOR EQUIPMENT RECORDS PAGES *****/
-/***** CSS STYLES EQUIPMENT RECORDS PAGES *****/
+/***** CSS PARTIAL STYLES FOR EQUIPMENT RECORDS PAGE *****/
+/***** CSS STYLES EQUIPMENT RECORDS PAGE *****/
 .statistics__header-description {
   display: flex;
   justify-content: center;
@@ -1445,10 +1445,10 @@
     align-items: center;
   }
   .statistics__main-content .container-table .table .table-body tr td:nth-of-type(1):before {
-    content: "VALUE";
+    content: "EQUIPMENT VALUE";
   }
   .statistics__main-content .container-table .table .table-body tr td:nth-of-type(2):before {
-    content: "DATE READ";
+    content: "EQUIPMENT DATE";
   }
   .statistics__main-content .container-table .table .table-body tr td:nth-of-type(3):before {
     content: "ACTIONS";
@@ -1467,7 +1467,7 @@
 }
 .statistics__main-content .pagination .page-item {
   width: 2.884375rem;
-  border: 0.0625rem solid #FFFFFF;
+  border-style: 0rem solid #808080;
 }
 @media only screen and (max-width: 576px) {
   .statistics__main-content .pagination .page-item {
@@ -1488,7 +1488,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.0625rem solid #FFFFFF;
+  border: 0.0625rem solid #808080;
   color: #000000;
   font-weight: bold;
 }
@@ -1500,10 +1500,107 @@
 .statistics__main-content .pagination .page-item .page-link:hover {
   background-color: #9AC2FE;
 }
+.statistics__main-content .pagination .page-item .page-link {
+  border-radius: 0rem !important;
+}
 .statistics__main-content .pagination .page-item.active .page-link {
   color: #FFFFFF;
 }
-
+.statistics-create-record__header-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.statistics-create-record__header-description-title {
+  margin: 0rem;
+  text-align: center;
+}
+.statistics-create-record__header-description-paragraph {
+  text-align: center;
+}
+.statistics-create-record__header__form, .statistics-create-record__header__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 320px) {
+  .statistics-create-record__header__form, .statistics-create-record__header__body {
+    height: auto;
+  }
+}
+.statistics-create-record__form .container-form .input-group {
+  margin-bottom: 1.25rem;
+}
+.statistics-create-record__form .container-form .input-group .input-group-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3.125rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding: 0.25rem;
+  border-radius: 0rem;
+}
+.statistics-create-record__form .container-form .input-group .input-sensor-id, .statistics-create-record__form .container-form .input-group .input-sensor-description, .statistics-create-record__form .container-form .input-group .input-sensor-notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3.125rem;
+}
+.statistics-create-record__form .container-form .input-group .form-control {
+  margin-left: 0rem !important;
+  font-size: 1.125rem;
+  height: 3.125rem;
+  padding: 0.25rem;
+  border-radius: 0rem;
+}
+.statistics-create-record__form .container-form .input-group-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statistics-create-record__form .container-form .input-group-button .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  height: 3.125rem;
+  font-size: 1.125rem;
+  border-radius: 0rem;
+}
+.statistics-create-record__form .container-form .input-group-button .btn .fas {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+  font-size: 1.125rem;
+}
+@media only screen and (max-width: 576px) {
+  .statistics-create-record__form .container-form {
+    width: 29.0625rem;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .statistics-create-record__form .container-form {
+    width: 25.9375rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .statistics-create-record__form .container-form {
+    width: 19.375rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .statistics-create-record__form .container-form {
+    width: 18.75rem;
+  }
+}
 .statistics-edit-record__header {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -1534,7 +1631,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 28.125rem;
+  height: auto;
 }
 @media only screen and (max-width: 320px) {
   .statistics-edit-record__form {
@@ -1558,12 +1655,16 @@
   padding: 0.25rem;
   border-radius: 0rem;
 }
-.statistics-edit-record__form .container-form .input-group .input-sensor-id, .statistics-edit-record__form .container-form .input-group .input-sensor-description {
+.statistics-edit-record__form .container-form .input-group .input-sensor-id, .statistics-edit-record__form .container-form .input-group .input-sensor-description, .statistics-edit-record__form .container-form .input-group .input-sensor-notes {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 3.125rem;
+}
+.statistics-edit-record__form .container-form .input-group .input-sensor-notes {
+  resize: none;
+  height: 15.625rem !important;
 }
 .statistics-edit-record__form .container-form .input-group .form-control {
   margin-left: 0rem !important;

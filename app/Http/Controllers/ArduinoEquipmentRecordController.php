@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use App\Models\ArduinoEquipmentRecord;
+use App\Models\ArduinoListOfEquipment;
 
 class ArduinoEquipmentRecordController extends Controller
 {
     protected $modelName;
     protected $tableName;
     protected $tableAllColumns;
+
+    protected $modelNameListOfEquipment;
+    protected $tableNameListOfEquipment;
+    protected $tableAllColumnsListOfEquipment;
 
     /**
      * Defined the variables that will be used to
@@ -21,6 +26,10 @@ class ArduinoEquipmentRecordController extends Controller
         $this->modelName           = new ArduinoEquipmentRecord();
         $this->tableName           = $this->modelName->getTable();
         $this->tableAllColumns     = Schema::getColumnListing($this->tableName);
+
+        $this->modelNameListOfEquipment       = new ArduinoListOfEquipment();
+        $this->tableNameListOfEquipment       = $this->modelNameListOfEquipment->getTable();
+        $this->tableAllColumnsListOfEquipment = Schema::getColumnListing($this->tableNameListOfEquipment);
     }
 
     /**
@@ -30,8 +39,12 @@ class ArduinoEquipmentRecordController extends Controller
      */
     public function index()
     {
-        $displayAllRecords = $this->modelName->where('equipment_is_active', '=', 1)->paginate(6);
-        return view('pages.ph-records.index', compact('displayAllRecords'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $displayAllEquipments = $this->modelNameListOfEquipment->select('id', 'equipment_id', 'equipment_description')->get()->toArray();
+        $displayAllRecords = $this->modelName
+        //->where('equipment_is_active', '=', '')
+        ->paginate(20)
+        ->onEachSide(2);
+        return view('pages.equipment-records.index', compact('displayAllRecords', 'displayAllEquipments'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -42,7 +55,7 @@ class ArduinoEquipmentRecordController extends Controller
      */
     public function create()
     {
-        return view('pages.list-of-equipments.create');
+        return view('pages.equipment-records.create');
     }
 
     /**
@@ -54,17 +67,14 @@ class ArduinoEquipmentRecordController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'equipment_id'          => 'required|regex:/^[a-zA-Z0-9_ ]+$/u|max:15|unique:arduino_list_of_equipments',
-            'equipment_description' => 'required|max:255',
-            'equipment_notes'       => 'required|max:255',
+            //'arduino_list_of_equipment_id'  => 'required|regex:/^[0-9]+$/u',
+            'equipment_value'               => 'required|max:255',
         ]);
         $insertSingleRecord = $this->modelName->create([
-            'equipment_id'          => $request->get('equipment_id'),
-            'equipment_description' => $request->get('equipment_description'),
-            'equipment_notes'       => $request->get('equipment_notes'),
-            'equipment_is_active'   => '1',
+            //'arduino_list_of_equipment_id' => $request->get('arduino_list_of_equipment_id'),
+            'equipment_value'              => $request->get('equipment_value'),
         ]);
-        return redirect()->route('list-of-equipments.index')->with('success', 'The record(s) you have entered in the database was(were) created and stored successfully!');
+        return redirect()->route('equipment-records.index')->with('success', 'The record(s) you have entered in the database was(were) created and stored successfully!');
     }
 
     /**
@@ -78,13 +88,12 @@ class ArduinoEquipmentRecordController extends Controller
         $displaySingleRecord = $this->modelName
         ->select(
             'id',
-            'equipment_id',
-            'equipment_description',
-            'equipment_notes',
+            'arduino_list_of_equipment_id',
+            'equipment_value',
         )
-        ->where('equipment_is_active', '=', 1)
+        //->where('equipment_is_active', '=', 1)
         ->find($id);
-        return view('pages.list-of-equipments.show', compact('displaySingleRecord'));
+        return view('pages.equipment-records.show', compact('displaySingleRecord'));
     }
     
     /**
@@ -98,13 +107,12 @@ class ArduinoEquipmentRecordController extends Controller
         $editSingleRecord = $this->modelName
         ->select(
             'id',
-            'equipment_id',
-            'equipment_description',
-            'equipment_notes',
+            'arduino_list_of_equipment_id',
+            'equipment_value',
         )
-        ->where('equipment_is_active', '=', 1)
+        //->where('equipment_is_active', '=', 1)
         ->find($id);
-        return view('pages.list-of-equipments.edit', compact('editSingleRecord'));
+        return view('pages.equipment-records.edit', compact('editSingleRecord'));
     }
 
     /**
@@ -116,16 +124,15 @@ class ArduinoEquipmentRecordController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'equipment_description' => 'required|max:255',
-            'equipment_notes'       => 'required|max:255',
+            'arduino_list_of_equipment_id' => 'required|max:255',
+            'equipment_value'              => 'required|max:255',
         ]);
         $editSingleRecord = $this->modelName->find($request->id);
         $editSingleRecord->update([
-            'equipment_description' => $request->get('equipment_description'),
-            'equipment_notes'       => $request->get('equipment_notes'),
-            'equipment_is_active'   => '1',
+            'arduino_list_of_equipment_id' => $request->get('equipment_description'),
+            'equipment_value'              => $request->get('equipment_notes'),
         ]);
-        return redirect()->route('list-of-equipments.index')->with('success', 'The record(s) you have entered in the database was(were) modified successfully!');
+        return redirect()->route('equipment-records.index')->with('success', 'The record(s) you have entered in the database was(were) modified successfully!');
     }
 
     /**
@@ -136,8 +143,8 @@ class ArduinoEquipmentRecordController extends Controller
      */
     public function destroy($id)
     {
-        $displaySingleRecord = $this->modelName->select('id')->where('equipment_is_active', '=', 1)->find($id);
+        $displaySingleRecord = $this->modelName->select('id')->find($id);
         $deleteSingleRecord = $this->modelName->find($id)->delete();
-        return redirect()->route('list-of-equipments.index')->with('success', 'The record you have selected was successfully deleted!');
+        return redirect()->route('equipment-records.index')->with('success', 'The record you have selected was successfully deleted!');
     }
 }

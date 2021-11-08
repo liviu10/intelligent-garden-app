@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ArduinoListOfEquipmentController;
-use App\Http\Controllers\PhRecordsController;
+use App\Http\Controllers\ArduinoEquipmentRecordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index']);
 Route::resource('/list-of-equipments', ArduinoListOfEquipmentController::class);
-Route::resource('/ph-records', PhRecordsController::class);
+Route::resource('/equipment-records', ArduinoEquipmentRecordController::class);

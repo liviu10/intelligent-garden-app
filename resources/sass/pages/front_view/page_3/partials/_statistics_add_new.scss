@@ -1,8 +1,10 @@
 @mixin statistics-add-new() {
     & .modal-title {
+        
     }
     & .modal-body {
         & .lead, & .list {
+            
         }
     }
     & .container-form {
@@ -13,6 +15,7 @@
             }
             & .input-group-text {
                 @include flex-center();
+                
                 width: 100%;
                 height: rem-convertor(50px);
                 font-weight: bold;

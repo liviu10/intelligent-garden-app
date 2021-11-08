@@ -25,48 +25,10 @@
                         {{ __('navbar.navbar_menu.second_button') }}
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        {{ __('navbar.navbar_menu.third_button.title') }}
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ url('/equipment-records') }}">
+                        {{ __('navbar.navbar_menu.third_button') }}
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/ph-records') }}">
-                                {{ __('navbar.navbar_menu.third_button.dropdown.item_1') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/ec-records') }}">
-                                {{ __('navbar.navbar_menu.third_button.dropdown.item_2') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/level-records') }}">
-                                {{ __('navbar.navbar_menu.third_button.dropdown.item_3') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/pump1-records') }}">
-                                {{ __('navbar.navbar_menu.third_button.dropdown.item_4') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/pump2-records') }}">
-                                {{ __('navbar.navbar_menu.third_button.dropdown.item_5') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/pump3-records') }}">
-                                {{ __('navbar.navbar_menu.third_button.dropdown.item_6') }}
-                            </a>
-                        </li>
-                    </ul>
                 </li>
             </ul>
             <!-- NAVBAR BUTTONS, SECTION END -->

@@ -196,10 +196,10 @@
                         @media only screen and (max-width: 768px) {
                             @include flex-center();
                             &:nth-of-type(1):before {
-                                content: "VALUE";
+                                content: "EQUIPMENT VALUE";
                             }
                             &:nth-of-type(2):before { 
-                                content: "DATE READ"; 
+                                content: "EQUIPMENT DATE"; 
                             }
                             &:nth-of-type(3):before { 
                                 content: "ACTIONS"; 
