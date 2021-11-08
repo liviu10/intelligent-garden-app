@@ -42,7 +42,7 @@
                                 <div class="modal-header equipments-create-record__header">
                                     <div class="equipments-create-record__header-description">
                                         <h5 class="modal-title equipments-create-record__header-description-title" id="exampleModalCreateEquipmentLabel">
-                                            {{ strtoupper(__('list_of_equipments.page_modal_new.title', [ 'sensorDescription' => $displayAllRecords[0]['equipment_description'] ])) }}
+                                            {{ strtoupper(__('list_of_equipments.page_modal_new.title')) }}
                                         </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>

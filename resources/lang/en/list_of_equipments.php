@@ -12,7 +12,7 @@ return [
         ],
     ],
     'page_modal_new'=> [
-        'title'     => 'Information about the :sensorDescription',
+        'title'     => 'Add a new equipment',
         'info_1'    => 'Create and save a new equipment in the database',
         'form'      => [
             'label_1' => 'Equipment Id',
