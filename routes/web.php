@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::redirect('/', '/list-of-equipments');
 Route::resource('/list-of-equipments', ArduinoListOfEquipmentController::class);
 Route::resource('/equipment-records', ArduinoEquipmentRecordController::class);

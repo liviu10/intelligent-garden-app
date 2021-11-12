@@ -1,7 +1,7 @@
 <!-- NAVBAR, SECTION START -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name') }}</a>
+        <a class="navbar-brand" href="{{ url('/list-of-equipments') }}">{{ config('app.name') }}</a>
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -16,18 +16,13 @@
             <!-- NAVBAR BUTTONS, SECTION START -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ url('/') }}">
+                    <a class="nav-link" aria-current="page" href="{{ url('/list-of-equipments') }}">
                         {{ __('navbar.navbar_menu.first_button') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ url('/list-of-equipments') }}">
-                        {{ __('navbar.navbar_menu.second_button') }}
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ url('/equipment-records') }}">
-                        {{ __('navbar.navbar_menu.third_button') }}
+                        {{ __('navbar.navbar_menu.second_button') }}
                     </a>
                 </li>
             </ul>

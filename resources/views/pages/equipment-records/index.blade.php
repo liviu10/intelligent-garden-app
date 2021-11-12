@@ -204,122 +204,121 @@
                         <!-- PAGE: EQUIPMENT RECORDS STATISTICS MODAL, SECTION END -->
 
                         <div class="container-table">
+                            @if ($displayAllRecords->isEmpty() || $filterParameter > count($displayAllEquipments) || $filterParameter == null)
+                                <table class="table table--standard">
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION START -->
+                                        <thead class="table-head">
+                                            <tr>
+                                                <th class="table-head__cell">
+                                                    <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_1')) }}</p>
+                                                </th>
+                                                <th class="table-head__cell">
+                                                    <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_2')) }}</p>
+                                                </th>
+                                                <th class="table-head__cell">
+                                                    <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_3.title')) }}</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION END -->
 
-                        @if ($displayAllRecords->isEmpty() || $filterParameter > count($displayAllEquipments) || $filterParameter == null)
-                            <table class="table table--standard">
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION START -->
-                                    <thead class="table-head">
-                                        <tr>
-                                            <th class="table-head__cell">
-                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_1')) }}</p>
-                                            </th>
-                                            <th class="table-head__cell">
-                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_2')) }}</p>
-                                            </th>
-                                            <th class="table-head__cell">
-                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_3.title')) }}</p>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION END -->
-
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION START -->
-                                    <tbody class="table-body">
-                                        <tr>
-                                            <td colspan="3" class="table-body__cell">
-                                                <p class="table-body__typography text-center">
-                                                    Currently, you are not viewing any particular equipment record(s)! Start by pressing on one of the above filter buttons!
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION END -->
-                            </table>
-                        @else
-                            <table class="table table--standard">
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION START -->
-                                    <thead class="table-head">
-                                        <tr>
-                                            <th class="table-head__cell">
-                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_1')) }}</p>
-                                            </th>
-                                            <th class="table-head__cell">
-                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_2')) }}</p>
-                                            </th>
-                                            <th class="table-head__cell">
-                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_3.title')) }}</p>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION END -->
-
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION START -->
-                                    @foreach ($displayAllRecords as $key => $data)
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION START -->
                                         <tbody class="table-body">
                                             <tr>
-                                                <td class="table-body__cell">
-                                                    <p class="table-body__typography">
-                                                        @if ($data['arduino_list_of_equipment_id'] === 1)
-                                                            {{ number_format($data['equipment_value'], 2, '.', '') }} pH
-                                                        @elseif ($data['arduino_list_of_equipment_id'] === 2)
-                                                            {{ number_format($data['equipment_value'], 2, '.', '') }} [ms/cm] &vert; 
-                                                            {{ number_format($data['equipment_value'], 2, '.', '') * $truncheonMeasurement }} [ppm]
-                                                        @elseif ($data['arduino_list_of_equipment_id'] === 3)
-                                                            @if ($data['equipment_value'] === 1.00)
-                                                                low
-                                                            @elseif ($data['equipment_value'] === 2.00)
-                                                                normal
-                                                            @else
-                                                                high
-                                                            @endif
-                                                        @elseif ($data['arduino_list_of_equipment_id'] === 4 || $data['arduino_list_of_equipment_id'] === 5 || $data['arduino_list_of_equipment_id'] === 6)
-                                                            @if ($data['equipment_value'] === 1.00)
-                                                                stopped
-                                                            @else
-                                                                started
-                                                            @endif
-                                                        @endif
+                                                <td colspan="3" class="table-body__cell">
+                                                    <p class="table-body__typography text-center">
+                                                        Currently, you are not viewing any particular equipment record(s)! Start by pressing on one of the above filter buttons!
                                                     </p>
-                                                </td>
-                                                <td class="table-body__cell">
-                                                    <p class="table-body__typography">
-                                                        {{
-                                                            date("d", strtotime($data['updated_at'])) . '.' . 
-                                                            date("m", strtotime($data['updated_at'])) . '.' . 
-                                                            date("Y", strtotime($data['updated_at'])) . ' ' .
-                                                            date("H", strtotime($data['updated_at'])) . ':' . 
-                                                            date("i", strtotime($data['updated_at'])) . ':' . 
-                                                            date("s", strtotime($data['updated_at']))
-                                                        }}
-                                                    </p>
-                                                </td>
-                                                <td class="table-body__cell">
-                                                    <form action="{{ route('equipment-records.destroy', $data['id']) }}" method="POST" class="table-body-form">
-                                                        <div class="table-body-form__actions">
-                                                            <a href="{{ route('equipment-records.edit', $data['id']) }}"
-                                                                class="table-body-form__actions__btn table-body-form__actions__btn--warning"
-                                                                title="{{ __('equipment_records.page_table.column_4.btn_edit', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
-                                                            >
-                                                                <i class="fas fa-edit"></i>
-                                                            </a>
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit"
-                                                                    class="table-body-form__actions__btn table-body-form__actions__btn--danger"
-                                                                    title="{{ __('equipment_records.page_table.column_4.btn_delete', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
-                                                            >
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </button>
-                                                        </div>
-                                                    </form>
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    @endforeach
-                                <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION END -->
-                            </table>
-                            {!! $displayAllRecords->links('pagination::bootstrap-4') !!}
-                        @endif
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION END -->
+                                </table>
+                            @else
+                                <table class="table table--standard">
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION START -->
+                                        <thead class="table-head">
+                                            <tr>
+                                                <th class="table-head__cell">
+                                                    <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_1')) }}</p>
+                                                </th>
+                                                <th class="table-head__cell">
+                                                    <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_2')) }}</p>
+                                                </th>
+                                                <th class="table-head__cell">
+                                                    <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_3.title')) }}</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION END -->
+
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION START -->
+                                        @foreach ($displayAllRecords as $key => $data)
+                                            <tbody class="table-body">
+                                                <tr>
+                                                    <td class="table-body__cell">
+                                                        <p class="table-body__typography">
+                                                            @if ($data['arduino_list_of_equipment_id'] === 1)
+                                                                {{ number_format($data['equipment_value'], 2, '.', '') }} pH
+                                                            @elseif ($data['arduino_list_of_equipment_id'] === 2)
+                                                                {{ number_format($data['equipment_value'], 2, '.', '') }} [ms/cm] &vert; 
+                                                                {{ number_format($data['equipment_value'], 2, '.', '') * $truncheonMeasurement }} [ppm]
+                                                            @elseif ($data['arduino_list_of_equipment_id'] === 3)
+                                                                @if ($data['equipment_value'] === 1.00)
+                                                                    low
+                                                                @elseif ($data['equipment_value'] === 2.00)
+                                                                    normal
+                                                                @else
+                                                                    high
+                                                                @endif
+                                                            @elseif ($data['arduino_list_of_equipment_id'] === 4 || $data['arduino_list_of_equipment_id'] === 5 || $data['arduino_list_of_equipment_id'] === 6)
+                                                                @if ($data['equipment_value'] === 1.00)
+                                                                    stopped
+                                                                @else
+                                                                    started
+                                                                @endif
+                                                            @endif
+                                                        </p>
+                                                    </td>
+                                                    <td class="table-body__cell">
+                                                        <p class="table-body__typography">
+                                                            {{
+                                                                date("d", strtotime($data['updated_at'])) . '.' . 
+                                                                date("m", strtotime($data['updated_at'])) . '.' . 
+                                                                date("Y", strtotime($data['updated_at'])) . ' ' .
+                                                                date("H", strtotime($data['updated_at'])) . ':' . 
+                                                                date("i", strtotime($data['updated_at'])) . ':' . 
+                                                                date("s", strtotime($data['updated_at']))
+                                                            }}
+                                                        </p>
+                                                    </td>
+                                                    <td class="table-body__cell">
+                                                        <form action="{{ route('equipment-records.destroy', $data['id']) }}" method="POST" class="table-body-form">
+                                                            <div class="table-body-form__actions">
+                                                                <a href="{{ route('equipment-records.edit', $data['id']) }}"
+                                                                    class="table-body-form__actions__btn table-body-form__actions__btn--warning"
+                                                                    title="{{ __('equipment_records.page_table.column_4.btn_edit', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
+                                                                >
+                                                                    <i class="fas fa-edit"></i>
+                                                                </a>
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit"
+                                                                        class="table-body-form__actions__btn table-body-form__actions__btn--danger"
+                                                                        title="{{ __('equipment_records.page_table.column_4.btn_delete', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
+                                                                >
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        @endforeach
+                                    <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION END -->
+                                </table>
+                                {!! $displayAllRecords->links('pagination::bootstrap-4') !!}
+                            @endif
                         </div>
 
                     </div>
