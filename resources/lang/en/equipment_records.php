@@ -35,7 +35,7 @@ return [
     ],
     'page_modal_statistics' => [
         'ph_sensor' => [
-            'title'       => 'Statistics :sensorDescription',
+            'title'       => 'Statistics',
             'title_1'     => 'Last hour information',
             'title_2'     => 'Today\'s information',
             'title_3'     => 'Yesterday\'s information',

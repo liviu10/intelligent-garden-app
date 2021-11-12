@@ -211,6 +211,12 @@
   font-size: 0.875rem;
 }
 
+.google-data-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /***** FRONT VIEW CSS PAGES *****/
 /***** FRONT VIEW CSS PAGES *****/
 /* Import here all the CSS pages for the front view application. */
@@ -1044,11 +1050,11 @@
     align-items: center;
   }
 }
-.statistics__main-content-line-chart #phLineChart {
+.statistics__main-content-line-chart #googleDataChart {
   width: 56.25rem !important;
 }
 @media only screen and (max-width: 992px) {
-  .statistics__main-content-line-chart #phLineChart {
+  .statistics__main-content-line-chart #googleDataChart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1056,7 +1062,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  .statistics__main-content-line-chart #phLineChart {
+  .statistics__main-content-line-chart #googleDataChart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1064,7 +1070,7 @@
   }
 }
 @media only screen and (max-width: 576px) {
-  .statistics__main-content-line-chart #phLineChart {
+  .statistics__main-content-line-chart #googleDataChart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1072,7 +1078,7 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  .statistics__main-content-line-chart #phLineChart {
+  .statistics__main-content-line-chart #googleDataChart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1080,7 +1086,7 @@
   }
 }
 @media only screen and (max-width: 375px) {
-  .statistics__main-content-line-chart #phLineChart {
+  .statistics__main-content-line-chart #googleDataChart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1161,7 +1167,10 @@
   width: 75%;
   height: 3.125rem;
 }
-.statistics__main-content .container-form .input-group .form-control {
+.statistics__main-content .container-form .input-group .input-sensor-id {
+  border-radius: 0rem !important;
+}
+.statistics__main-content .container-form .input-group .form-select, .statistics__main-content .container-form .input-group .form-control {
   font-size: 1.125rem;
   margin-left: 0rem !important;
   height: 3.125rem;
@@ -1169,7 +1178,7 @@
   border-radius: 0rem;
 }
 @media only screen and (max-width: 768px) {
-  .statistics__main-content .container-form .input-group .form-control {
+  .statistics__main-content .container-form .input-group .form-select, .statistics__main-content .container-form .input-group .form-control {
     width: 100% !important;
     margin-left: 0rem !important;
   }

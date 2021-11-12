@@ -3,7 +3,7 @@
         @media only screen and (max-width: 1600px) {
             @include flex-center();
         }
-        #phLineChart {
+        #googleDataChart {
             width: rem-convertor(900px) !important;
             @media only screen and (max-width: 992px) {
                 @include flex-center();

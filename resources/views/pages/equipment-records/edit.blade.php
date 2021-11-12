@@ -26,12 +26,21 @@
                     <input type="hidden" name="id" value="{{ $editSingleRecord -> id }}">
                     <div class="container-form">
                         <div class="input-group">
-                            <span class="input-group-text">{{ strtoupper(__('statistics.Page edit form.First Label')) }}</span>
-                            <input type="text" class="form-control input-sensor-id" name="equipment_id" value="{{ $editSingleRecord -> equipment_id }}" required>
+                            <span class="input-group-text">
+                                {{ strtoupper(__('equipment_records.page_modal_new.form.label_1')) }}
+                            </span>
+                            <select class="form-select form-select-lg input-sensor-id" name="arduino_list_of_equipment_id" required>
+                                <option selected>Choose the equipment name</option>
+                                @foreach ($displayAllEquipments as $key => $equipment)
+                                <option value="{{ $equipment['id'] }}">
+                                    {{ $equipment['equipment_description'] }}
+                                </option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="input-group">
                             <span class="input-group-text">{{ strtoupper(__('statistics.Page edit form.Second Label')) }}</span>
-                            <input type="number" class="form-control input-sensor-value" name="equipment_value" min="" max="" step="0.01" value="{{ number_format($editSingleRecord -> equipment_value, 2, '.', '') }}" required>
+                            <input type="number" class="form-control input-sensor-value" name="equipment_value" min="0.00" max="" step="0.01" value="{{ number_format($editSingleRecord -> equipment_value, 2, '.', '') }}" required>
                         </div>
                         <div class="input-group-button">
                             <button type="submit" class="btn btn-success rounded-0 my-2" title="{{ __('statistics.Page edit form.Button Placeholder') }}">

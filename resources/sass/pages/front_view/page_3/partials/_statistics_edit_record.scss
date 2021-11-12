@@ -31,10 +31,13 @@
             padding: rem-convertor(4px);
             border-radius: 0rem;
         }
-        & .input-sensor-id, & .input-sensor-description {
+        & .input-sensor-id, & .input-sensor-value {
             @include flex-center();
             width: 100%;
             height: rem-convertor(50px);
+        }
+        & .input-sensor-id {
+            border-radius: 0rem !important;
         }
         & .form-control {
             margin-left: 0rem !important;

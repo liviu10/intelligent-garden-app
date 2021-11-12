@@ -19,12 +19,25 @@
                     </p>
                     <p class="statistics__header-description-paragraph">
                         {{ __('equipment_records.page_header.info_3') }}
+                        <b>
+                            <u>
+                                @if ($filterParameter == 1) pH Sensor
+                                @elseif ($filterParameter == 2) Electrical Conductivity Sensor
+                                @elseif ($filterParameter == 3) Level Sensor
+                                @elseif ($filterParameter == 4) pH-- Pump
+                                @elseif ($filterParameter == 5) pH++ Pump
+                                @elseif ($filterParameter == 6) Nutrients Pump
+                                @endif
+                            </u>
+                        </b>
+                                @if ($filterParameter > 6 || $filterParameter == null) &#8212;
+                                @endif
                     </p>
                     <p class="statistics__header-description-paragraph">
                         {{ __('equipment_records.page_header.info_4') }}<br>
-                        <form action="" method="">
+                        <form action="{{ route('equipment-records.index') }}" method="GET">
                             @foreach ($displayAllEquipments as $key => $equipments)
-                            <button type="submit" class="btn btn-info">                                
+                            <button type="submit" class="btn btn-info" value="{{ $equipments['id'] }}" name="equipment_id">
                                 {{ ucwords(strtolower(strtok(trim($equipments['equipment_id']), '_'))) }}
                                 {{ substr($equipments['equipment_id'], strrpos($equipments['equipment_id'], '_') + 1) }}
                             </button>
@@ -41,12 +54,30 @@
 
                 <!-- PAGE: EQUIPMENT RECORDS LINE CHART, SECTION START -->
                     <div class="statistics__main-content-line-chart">
-                        <!-- x-ph-line-chart -->
+                        <x-google-data-chart></x-google-data-chart>
                     </div>
                 <!-- PAGE: EQUIPMENT RECORDS LINE CHART, SECTION END -->
 
                 <!-- PAGE: EQUIPMENT RECORDS TABLE, SECTION START -->
                     <div class="statistics__main-content-table">
+
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <p class="my-0">{{ $message }}</p>
+                                <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                            {{ __('equipment_records.error_info') }}<br><br>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
                         <!-- PAGE: EQUIPMENT RECORDS TABLE OPTIONS, SECTION START -->
                             <div class="statistics__main-content-table__button">
@@ -99,20 +130,33 @@
                                             </p>
                                             <div class="equipments-create-record__form">
                                                 <!-- MODAL BODY FORM, SECTION START -->
-                                                <form action="{{ route('list-of-equipments.store') }}" method="POST">
+                                                <form action="{{ route('equipment-records.store') }}" method="POST">
                                                     @csrf
                                                     <div class="container-form">
                                                         <div class="input-group">
                                                             <span class="input-group-text">
                                                                 {{ strtoupper(__('equipment_records.page_modal_new.form.label_1')) }}
                                                             </span>
-                                                            <input type="text" class="form-control input-sensor-id" name="equipment_id" required>
+                                                            <select class="form-select form-select-lg input-sensor-id" name="arduino_list_of_equipment_id" required>
+                                                                <option selected>Choose the equipment name</option>
+                                                                @foreach ($displayAllEquipments as $key => $equipment)
+                                                                <option value="{{ $equipment['id'] }}">
+                                                                    {{ $equipment['equipment_description'] }}
+                                                                </option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
                                                         <div class="input-group">
                                                             <span class="input-group-text">
                                                                 {{ strtoupper(__('equipment_records.page_modal_new.form.label_2')) }}
                                                             </span>
-                                                            <input type="number" class="form-control input-sensor-value" name="equipment_value" required>
+                                                            <input type="number" class="form-control input-sensor-value" name="equipment_value" min="0.00" max="" step="0.01" required>
+                                                        </div>
+                                                        <div class="input-group-button">
+                                                            <button type="submit" class="btn btn-success rounded-0 my-2" title="{{ __('equipment_records.page_modal_new.btn_save.title') }}">
+                                                                <i class="fas fa-check"></i>
+                                                                {{ __('equipment_records.page_modal_new.btn_save.label') }}
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -131,75 +175,28 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalEquipmentStatistics">
-                                                {{ strtoupper(__('equipment_records.page_modal_statistics.ph_sensor.title', [ 'sensorDescription' => $displayAllRecords[0]['equipment_description'] ])) }}
+                                                {{ strtoupper(__('equipment_records.page_modal_statistics.ph_sensor.title')) }}:
+                                                @if ($filterParameter == 1) pH Sensor
+                                                @elseif ($filterParameter == 2) Electrical Conductivity Sensor
+                                                @elseif ($filterParameter == 3) Level Sensor
+                                                @elseif ($filterParameter == 4) pH-- Pump
+                                                @elseif ($filterParameter == 5) pH++ Pump
+                                                @elseif ($filterParameter == 6) Nutrients Pump
+                                                @else &#8212;
+                                                @endif
                                             </h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <p class="lead">{{ __('equipment_records.page_modal_statistics.ph_sensor.title_5') }}</p>
-                                            <ul class="list">
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_1') }}:
-                                                    $displayStatistics['# of Total Measurements']
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_2') }}:
-                                                    $displayStatistics['Smallest Value of all time'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_3') }}:
-                                                    $displayStatistics['Highest Value of all time'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_4') }}:
-                                                    $displayStatistics['Average Value of all time'] pH
-                                                </li>
-                                            </ul>
-                                            <p class="lead">{{ __('equipment_records.page_modal_statistics.ph_sensor.title_4') }}</p>
-                                            <ul class="list">
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_2') }}:
-                                                    $displayStatistics['Last Week Minimum value'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_3') }}:
-                                                    $displayStatistics['Last Week Maximum value'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_4') }}:
-                                                    $displayStatistics['Last Week Average value'] pH
-                                                </li>
-                                            </ul>
-                                            <p class="lead">{{ __('equipment_records.page_modal_statistics.ph_sensor.title_3') }}</p>
-                                            <ul class="list">
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_2') }}:
-                                                    $displayStatistics['Yesterday Minimum value'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_3') }}:
-                                                    $displayStatistics['Yesterday Maximum value'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_4') }}:
-                                                    $displayStatistics['Yesterday Average value'] pH
-                                                </li>
-                                            </ul>
-                                            <p class="lead">{{ __('equipment_records.page_modal_statistics.ph_sensor.title_2') }}</p>
-                                            <ul class="list">
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_2') }}:
-                                                    $displayStatistics['Today Minimum value'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_3') }}:
-                                                    $displayStatistics['Today Maximum value'] pH
-                                                </li>
-                                                <li class="list-item">
-                                                    {{ __('equipment_records.page_modal_statistics.ph_sensor.list_item_4') }}:
-                                                    $displayStatistics['Today Average value'] pH
-                                                </li>
-                                            </ul>
+                                            @if ($filterParameter == 1) @include('pages.equipment-records.partials.statistics-ph-sensor')
+                                            @elseif ($filterParameter == 2) @include('pages.equipment-records.partials.statistics-ec-sensor')
+                                            @elseif ($filterParameter == 3) @include('pages.equipment-records.partials.statistics-level-sensor')
+                                            @elseif ($filterParameter == 4) @include('pages.equipment-records.partials.statistics-pump1')
+                                            @elseif ($filterParameter == 5) @include('pages.equipment-records.partials.statistics-pump2')
+                                            @elseif ($filterParameter == 6) @include('pages.equipment-records.partials.statistics-pump3')
+                                            @else
+                                                <p class="lead">Currently, you are not viewing any particular equipment record(s)! To see the statistics of a certain equipment close this window and press on one of the above filter buttons!</p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -208,26 +205,38 @@
 
                         <div class="container-table">
 
-                            @if ($message = Session::get('success'))
-                                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    <p class="my-0">{{ $message }}</p>
-                                    <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                            @endif
-
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                {{ __('equipment_records.error_info') }}<br><br>
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-
+                        @if ($displayAllRecords->isEmpty() || $filterParameter > count($displayAllEquipments) || $filterParameter == null)
                             <table class="table table--standard">
+                                <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION START -->
+                                    <thead class="table-head">
+                                        <tr>
+                                            <th class="table-head__cell">
+                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_1')) }}</p>
+                                            </th>
+                                            <th class="table-head__cell">
+                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_2')) }}</p>
+                                            </th>
+                                            <th class="table-head__cell">
+                                                <p class="table-head__typography">{{ strtoupper(__('equipment_records.page_table.label_3.title')) }}</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION END -->
 
+                                <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION START -->
+                                    <tbody class="table-body">
+                                        <tr>
+                                            <td colspan="3" class="table-body__cell">
+                                                <p class="table-body__typography text-center">
+                                                    Currently, you are not viewing any particular equipment record(s)! Start by pressing on one of the above filter buttons!
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION END -->
+                            </table>
+                        @else
+                            <table class="table table--standard">
                                 <!-- PAGE: EQUIPMENT RECORDS TABLE HEADER, SECTION START -->
                                     <thead class="table-head">
                                         <tr>
@@ -246,52 +255,71 @@
 
                                 <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION START -->
                                     @foreach ($displayAllRecords as $key => $data)
-                                    <tbody class="table-body">
-                                        <tr>
-                                            <td class="table-body__cell">
-                                                <p class="table-body__typography">
-                                                    {{ number_format($data['equipment_value']) }}
-                                                </p>
-                                            </td>
-                                            <td class="table-body__cell">
-                                                <p class="table-body__typography">
-                                                    {{
-                                                        date("d", strtotime($data['updated_at'])) . '.' . 
-                                                        date("m", strtotime($data['updated_at'])) . '.' . 
-                                                        date("Y", strtotime($data['updated_at'])) . ' ' .
-                                                        date("H", strtotime($data['updated_at'])) . ':' . 
-                                                        date("i", strtotime($data['updated_at'])) . ':' . 
-                                                        date("s", strtotime($data['updated_at']))
-                                                    }}
-                                                </p>
-                                            </td>
-                                            <td class="table-body__cell">
-                                                <form action="{{ route('equipment-records.destroy', $data['id']) }}" method="POST" class="table-body-form">
-                                                    <div class="table-body-form__actions">
-                                                        <a href="{{ route('equipment-records.edit', $data['id']) }}"
-                                                            class="table-body-form__actions__btn table-body-form__actions__btn--warning"
-                                                            title="{{ __('equipment_records.page_table.column_4.btn_edit', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
-                                                        >
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit"
-                                                                class="table-body-form__actions__btn table-body-form__actions__btn--danger"
-                                                                title="{{ __('equipment_records.page_table.column_4.btn_delete', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
-                                                        >
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                        <tbody class="table-body">
+                                            <tr>
+                                                <td class="table-body__cell">
+                                                    <p class="table-body__typography">
+                                                        @if ($data['arduino_list_of_equipment_id'] === 1)
+                                                            {{ number_format($data['equipment_value'], 2, '.', '') }} pH
+                                                        @elseif ($data['arduino_list_of_equipment_id'] === 2)
+                                                            {{ number_format($data['equipment_value'], 2, '.', '') }} [ms/cm] &vert; 
+                                                            {{ number_format($data['equipment_value'], 2, '.', '') * $truncheonMeasurement }} [ppm]
+                                                        @elseif ($data['arduino_list_of_equipment_id'] === 3)
+                                                            @if ($data['equipment_value'] === 1.00)
+                                                                low
+                                                            @elseif ($data['equipment_value'] === 2.00)
+                                                                normal
+                                                            @else
+                                                                high
+                                                            @endif
+                                                        @elseif ($data['arduino_list_of_equipment_id'] === 4 || $data['arduino_list_of_equipment_id'] === 5 || $data['arduino_list_of_equipment_id'] === 6)
+                                                            @if ($data['equipment_value'] === 1.00)
+                                                                stopped
+                                                            @else
+                                                                started
+                                                            @endif
+                                                        @endif
+                                                    </p>
+                                                </td>
+                                                <td class="table-body__cell">
+                                                    <p class="table-body__typography">
+                                                        {{
+                                                            date("d", strtotime($data['updated_at'])) . '.' . 
+                                                            date("m", strtotime($data['updated_at'])) . '.' . 
+                                                            date("Y", strtotime($data['updated_at'])) . ' ' .
+                                                            date("H", strtotime($data['updated_at'])) . ':' . 
+                                                            date("i", strtotime($data['updated_at'])) . ':' . 
+                                                            date("s", strtotime($data['updated_at']))
+                                                        }}
+                                                    </p>
+                                                </td>
+                                                <td class="table-body__cell">
+                                                    <form action="{{ route('equipment-records.destroy', $data['id']) }}" method="POST" class="table-body-form">
+                                                        <div class="table-body-form__actions">
+                                                            <a href="{{ route('equipment-records.edit', $data['id']) }}"
+                                                                class="table-body-form__actions__btn table-body-form__actions__btn--warning"
+                                                                title="{{ __('equipment_records.page_table.column_4.btn_edit', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
+                                                            >
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit"
+                                                                    class="table-body-form__actions__btn table-body-form__actions__btn--danger"
+                                                                    title="{{ __('equipment_records.page_table.column_4.btn_delete', ['sensorDescription' => $displayAllRecords[0]['equipment_description']]) }}"
+                                                            >
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     @endforeach
                                 <!-- PAGE: EQUIPMENT RECORDS TABLE BODY, SECTION END -->
-
                             </table>
                             {!! $displayAllRecords->links('pagination::bootstrap-4') !!}
+                        @endif
                         </div>
 
                     </div>

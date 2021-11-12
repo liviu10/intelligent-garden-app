@@ -144,6 +144,10 @@ return [
         'equipment_notes' => [
             'regex'  => 'The field :attribute only accepts letters (upper and lowercase), numbers and symbols: + - / * = {} [] () !',
         ],
+        'equipment_value' => [
+            'regex'  => 'The field :attribute only accepts numerical values!',
+            'digits_between' => 'The record you have manually inserted for the selected equipment is invalid! The accepted values ',
+        ],
     ],
 
     /*
@@ -161,6 +165,7 @@ return [
         'equipment_id' => 'Equipment Id',
         'equipment_description' => 'Equipment Description',
         'equipment_notes' => 'Equipment Notes',
+        'equipment_value' => 'Equipment Value',
     ],
 
 ];
