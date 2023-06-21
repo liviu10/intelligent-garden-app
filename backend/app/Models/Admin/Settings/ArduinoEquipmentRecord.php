@@ -2,16 +2,19 @@
 
 namespace App\Models\Admin\Settings;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
-use App\Traits\ApiLogError;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class ArduinoEquipmentRecord extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable, ApiLogError;
+    use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'arduino_list_of_equipments';
 
     /**
      * The primary key associated with the table.
@@ -32,7 +35,7 @@ class User extends Authenticatable
      *
      * @var string
      */
-    protected $foreignKey = 'user_role_type_id';
+    protected $foreignKey = 'arduino_list_of_equipment_id';
 
     /**
      * The data type of the database table foreign key.
@@ -44,35 +47,11 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var string
      */
     protected $fillable = [
-        'full_name',
-        'first_name',
-        'last_name',
-        'nickname',
-        'email',
-        'password',
-        'user_role_type_id',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+        'equipment_value',
+        'arduino_list_of_equipment_id',
     ];
 
     /**
@@ -87,21 +66,12 @@ class User extends Authenticatable
     ];
 
     /**
-     * Eloquent relationship between users and user role types.
+     * Eloquent relationship between arduino equipment records and arduino list of equipments.
      *
      */
-    public function user_role_type()
+    public function arduino_list_of_equipment()
     {
-        return $this->belongsTo('App\Models\Admin\Settings\UserRoleType');
-    }
-
-    /**
-     * Eloquent relationship between users and arduino list of equipments.
-     *
-     */
-    public function arduino_list_of_equipments()
-    {
-        return $this->hasMany('App\Models\Admin\Settings\ArduinoListOfEquipments');
+        return $this->belongsTo('App\Models\Admin\Settings\ArduinoListOfEquipment');
     }
 
     /**
@@ -112,7 +82,17 @@ class User extends Authenticatable
     {
         try
         {
-            return $this->select('id', 'full_name', 'nickname', 'email')->paginate(15);
+            return $this->select(
+                'id',
+                'arduino_list_of_equipment_id',
+                'equipment_value'
+            )
+            ->with([
+                'arduino_list_of_equipment' => function ($query) {
+                    $query->select('id', 'equipment_id');
+                }
+            ])
+            ->paginate(15);
         }
         catch (\Illuminate\Database\QueryException $mysqlError)
         {
@@ -131,13 +111,8 @@ class User extends Authenticatable
         try
         {
             $this->create([
-                'full_name'         => $payload['full_name'],
-                'first_name'        => $payload['first_name'],
-                'last_name'         => $payload['last_name'],
-                'nickname'          => $payload['nickname'],
-                'email'             => $payload['email'],
-                'password'          => bcrypt($payload['password']),
-                'user_role_type_id' => $payload['user_role_type_id'],
+                'arduino_list_of_equipment_id' => $payload['arduino_list_of_equipment_id'],
+                'equipment_value'              => $payload['equipment_value'],
             ]);
 
             return True;
@@ -161,8 +136,8 @@ class User extends Authenticatable
             return $this->select('*')
                         ->where('id', '=', $id)
                         ->with([
-                            'user_role_type' => function ($query) {
-                                $query->select('id', 'user_role_name', 'user_role_description', 'user_role_slug', 'user_role_is_active');
+                            'arduino_list_of_equipment' => function ($query) {
+                                $query->select('id', 'equipment_id');
                             }
                         ])
                         ->get();
@@ -185,13 +160,8 @@ class User extends Authenticatable
         try
         {
             $this->find($id)->update([
-                'full_name'         => $payload['full_name'],
-                'first_name'        => $payload['first_name'],
-                'last_name'         => $payload['last_name'],
-                'nickname'          => $payload['nickname'],
-                'email'             => $payload['email'],
-                'password'          => bcrypt($payload['password']),
-                'user_role_type_id' => $payload['user_role_type_id'],
+                'arduino_list_of_equipment_id' => $payload['arduino_list_of_equipment_id'],
+                'equipment_value'              => $payload['equipment_value'],
             ]);
 
             return True;
