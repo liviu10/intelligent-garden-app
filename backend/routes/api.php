@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Import application's settings
+    use App\Http\Controllers\Admin\Settings\ListOfEquipmentController;
+    use App\Http\Controllers\Admin\Settings\EquipmentReadingController;
     use App\Http\Controllers\Admin\Settings\UserController;
     use App\Http\Controllers\Admin\Settings\UserRoleTypeController;
 
@@ -26,6 +28,18 @@ Route::group([ 'prefix' => config('app.version') ], function () {
     Route::group([ 'prefix' => '/admin' ], function () {
         // Application's settings api endpoints
         Route::group([ 'prefix' => '/settings' ], function () {
+            // List of equipments
+            Route::group([ 'prefix' => '/list-of-equipments' ], function () {
+                Route::get('/order', [ListOfEquipmentController::class, 'orderTableColumn']);
+                Route::get('/filter', [ListOfEquipmentController::class, 'filterTableColumn']);
+            });
+            Route::apiResource('/list-of-equipments', ListOfEquipmentController::class)->except('destroy');
+            // List of equipments readings
+            Route::group([ 'prefix' => '/list-of-equipment-readings' ], function () {
+                Route::get('/order', [EquipmentReadingController::class, 'orderTableColumn']);
+                Route::get('/filter', [EquipmentReadingController::class, 'filterTableColumn']);
+            });
+            Route::apiResource('/list-of-equipment-readings', EquipmentReadingController::class)->except('destroy');
             // Users
             Route::group([ 'prefix' => '/users' ], function () {
                 Route::get('/order', [UserController::class, 'orderTableColumn']);

@@ -96,12 +96,12 @@ class User extends Authenticatable
     }
 
     /**
-     * Eloquent relationship between users and arduino list of equipments.
+     * Eloquent relationship between users and list of equipments.
      *
      */
-    public function arduino_list_of_equipments()
+    public function list_of_equipments()
     {
-        return $this->hasMany('App\Models\Admin\Settings\ArduinoListOfEquipments');
+        return $this->hasMany('App\Models\Admin\Settings\ListOfEquipments');
     }
 
     /**

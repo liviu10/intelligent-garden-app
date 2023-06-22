@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Admin\Settings\ArduinoListOfEquipment;
+use App\Models\Admin\Settings\ListOfEquipment;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class ArduinoListOfEquipmentSeeder extends Seeder
+class ListOfEquipmentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class ArduinoListOfEquipmentSeeder extends Seeder
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        ArduinoListOfEquipment::truncate();
+        ListOfEquipment::truncate();
         $records = [
             [
                 'id'                    => 1,
@@ -80,7 +80,7 @@ class ArduinoListOfEquipmentSeeder extends Seeder
                 'updated_at'            => Carbon::now(),
             ],
         ];
-        ArduinoListOfEquipment::insert($records);
+        ListOfEquipment::insert($records);
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

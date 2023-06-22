@@ -4,17 +4,18 @@ namespace App\Models\Admin\Settings;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\ApiLogError;
 
-class ArduinoListOfEquipment extends Model
+class ListOfEquipment extends Model
 {
-    use HasFactory;
+    use HasFactory, ApiLogError;
 
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'arduino_list_of_equipments';
+    protected $table = 'list_of_equipments';
 
     /**
      * The primary key associated with the table.
@@ -78,7 +79,7 @@ class ArduinoListOfEquipment extends Model
     ];
 
     /**
-     * Eloquent relationship between arduino list of equipments and users.
+     * Eloquent relationship between list of equipments and users.
      *
      */
     public function user()
@@ -87,12 +88,12 @@ class ArduinoListOfEquipment extends Model
     }
 
     /**
-     * Eloquent relationship between arduino list of equipments and arduino equipment records.
+     * Eloquent relationship between list of equipments and equipment readings.
      *
      */
-    public function arduino_equipment_records()
+    public function equipment_readings()
     {
-        return $this->hasMany('App\Models\Admin\Settings\ArduinoEquipmentRecord');
+        return $this->hasMany('App\Models\Admin\Settings\EquipmentReading');
     }
 
     /**
@@ -131,6 +132,7 @@ class ArduinoListOfEquipment extends Model
                 'equipment_description' => $payload['equipment_description'],
                 'equipment_notes'       => $payload['equipment_notes'],
                 'equipment_is_active'   => $payload['equipment_is_active'],
+                'user_id'               => $payload['user_id'],
             ]);
 
             return True;
@@ -182,6 +184,7 @@ class ArduinoListOfEquipment extends Model
                 'equipment_description' => $payload['equipment_description'],
                 'equipment_notes'       => $payload['equipment_notes'],
                 'equipment_is_active'   => $payload['equipment_is_active'],
+                'user_id'               => $payload['user_id'],
             ]);
 
             return True;

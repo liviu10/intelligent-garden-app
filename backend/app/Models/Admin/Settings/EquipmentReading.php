@@ -4,17 +4,18 @@ namespace App\Models\Admin\Settings;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\ApiLogError;
 
-class ArduinoEquipmentRecord extends Model
+class EquipmentReading extends Model
 {
-    use HasFactory;
+    use HasFactory, ApiLogError;
 
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'arduino_list_of_equipments';
+    protected $table = 'equipment_readings';
 
     /**
      * The primary key associated with the table.
@@ -35,7 +36,7 @@ class ArduinoEquipmentRecord extends Model
      *
      * @var string
      */
-    protected $foreignKey = 'arduino_list_of_equipment_id';
+    protected $foreignKey = 'list_of_equipment_id';
 
     /**
      * The data type of the database table foreign key.
@@ -51,7 +52,7 @@ class ArduinoEquipmentRecord extends Model
      */
     protected $fillable = [
         'equipment_value',
-        'arduino_list_of_equipment_id',
+        'list_of_equipment_id',
     ];
 
     /**
@@ -66,12 +67,12 @@ class ArduinoEquipmentRecord extends Model
     ];
 
     /**
-     * Eloquent relationship between arduino equipment records and arduino list of equipments.
+     * Eloquent relationship between equipment readings and list of equipments.
      *
      */
-    public function arduino_list_of_equipment()
+    public function list_of_equipment()
     {
-        return $this->belongsTo('App\Models\Admin\Settings\ArduinoListOfEquipment');
+        return $this->belongsTo('App\Models\Admin\Settings\ListOfEquipment');
     }
 
     /**
@@ -84,11 +85,11 @@ class ArduinoEquipmentRecord extends Model
         {
             return $this->select(
                 'id',
-                'arduino_list_of_equipment_id',
+                'list_of_equipment_id',
                 'equipment_value'
             )
             ->with([
-                'arduino_list_of_equipment' => function ($query) {
+                'list_of_equipment' => function ($query) {
                     $query->select('id', 'equipment_id');
                 }
             ])
@@ -111,8 +112,9 @@ class ArduinoEquipmentRecord extends Model
         try
         {
             $this->create([
-                'arduino_list_of_equipment_id' => $payload['arduino_list_of_equipment_id'],
-                'equipment_value'              => $payload['equipment_value'],
+                'list_of_equipment_id' => $payload['list_of_equipment_id'],
+                'equipment_value'      => $payload['equipment_value'],
+                'user_id'              => $payload['user_id'],
             ]);
 
             return True;
@@ -136,7 +138,7 @@ class ArduinoEquipmentRecord extends Model
             return $this->select('*')
                         ->where('id', '=', $id)
                         ->with([
-                            'arduino_list_of_equipment' => function ($query) {
+                            'list_of_equipment' => function ($query) {
                                 $query->select('id', 'equipment_id');
                             }
                         ])
@@ -160,8 +162,9 @@ class ArduinoEquipmentRecord extends Model
         try
         {
             $this->find($id)->update([
-                'arduino_list_of_equipment_id' => $payload['arduino_list_of_equipment_id'],
-                'equipment_value'              => $payload['equipment_value'],
+                'list_of_equipment_id' => $payload['list_of_equipment_id'],
+                'equipment_value'      => $payload['equipment_value'],
+                'user_id'              => $payload['user_id'],
             ]);
 
             return True;

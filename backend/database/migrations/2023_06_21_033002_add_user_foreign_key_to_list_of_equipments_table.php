@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('arduino_list_of_equipments', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->index('idx_arduino_list_of_equipments_user_id');
+        Schema::table('list_of_equipments', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->index('idx_list_of_equipments_user_id');
         });
     }
 
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('arduino_list_of_equipments', function (Blueprint $table) {
+        Schema::table('list_of_equipments', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
         });

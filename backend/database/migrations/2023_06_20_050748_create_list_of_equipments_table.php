@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('arduino_list_of_equipments', function (Blueprint $table) {
+        Schema::create('list_of_equipments', function (Blueprint $table) {
             $table->id()->index('idx_id');
             $table->string('equipment_id', 15)->unique('equipment_id');
             $table->string('equipment_description');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('arduino_list_of_equipments');
+        Schema::dropIfExists('list_of_equipments');
     }
 };
