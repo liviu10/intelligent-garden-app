@@ -1,0 +1,67 @@
+/* Application's SCSS styles */
+
+@import 'src/css/utilities/_rem_convertor.scss';
+
+.main {
+  &__header {
+    &__title {
+    }
+  }
+  &__drawer {
+    &__list {
+      & .q-item {
+        padding-left: rem-convertor(8px);
+        padding-right: rem-convertor(8px);
+      }
+      &__item {
+        & .q-item__section {
+          &--side {
+            align-items: center;
+            padding-right: rem-convertor(8px);
+          }
+          & .q-item__label {
+            margin-top: 0rem;
+            letter-spacing: 0rem;
+          }
+        }
+        & .q-expansion-item {
+          &__content {
+            padding-left: rem-convertor(56px);
+            & .q-item {
+              padding-top: 0rem;
+              padding-bottom: 0rem;
+            }
+            & .navbar-submenu {
+              padding-left: 0rem;
+              padding-right: 0rem;
+              & .q-item__section {
+                & .q-expansion-item {
+                  &__content {
+                    padding-left: rem-convertor(32px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    padding-top: rem-convertor(16px);
+    padding-bottom: rem-convertor(5px);
+    & .q-toolbar {
+      justify-content: center;
+      min-height: auto;
+    }
+    &__title,
+    &__designer {
+      & p {
+        margin-bottom: 0rem;
+        font-size: rem-convertor(12px);
+      }
+    }
+    &__designer {
+    }
+  }
+}
