@@ -54,7 +54,7 @@ class ListOfEquipment extends Model
         'equipment_id',
         'equipment_description',
         'equipment_notes',
-        'equipment_is_active',
+        'is_active',
         'user_id',
     ];
 
@@ -64,7 +64,7 @@ class ListOfEquipment extends Model
      * @var string
      */
     protected $attributes = [
-        'equipment_is_active' => false,
+        'is_active' => false,
     ];
 
     /**
@@ -108,7 +108,7 @@ class ListOfEquipment extends Model
                 'id',
                 'equipment_id',
                 'equipment_description',
-                'equipment_is_active'
+                'is_active'
             )->paginate(15);
         }
         catch (\Illuminate\Database\QueryException $mysqlError)
@@ -131,7 +131,7 @@ class ListOfEquipment extends Model
                 'equipment_id'          => $payload['equipment_id'],
                 'equipment_description' => $payload['equipment_description'],
                 'equipment_notes'       => $payload['equipment_notes'],
-                'equipment_is_active'   => $payload['equipment_is_active'],
+                'is_active'             => $payload['is_active'],
                 'user_id'               => $payload['user_id'],
             ]);
 
@@ -183,7 +183,7 @@ class ListOfEquipment extends Model
                 'equipment_id'          => $payload['equipment_id'],
                 'equipment_description' => $payload['equipment_description'],
                 'equipment_notes'       => $payload['equipment_notes'],
-                'equipment_is_active'   => $payload['equipment_is_active'],
+                'is_active'             => $payload['is_active'],
                 'user_id'               => $payload['user_id'],
             ]);
 

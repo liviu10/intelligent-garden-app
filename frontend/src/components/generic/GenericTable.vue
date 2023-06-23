@@ -28,7 +28,7 @@
       <template v-slot:header="props">
         <q-tr :props="props" class="table__header">
           <q-th v-for="col in props.cols" :key="col.name" :props="props">
-            {{ col.label }}
+            {{ displayLabel(col.label) }}
           </q-th>
           <q-th v-if="displayTableActions">
             {{ $t('generic_table.actions_column_title') }}
@@ -38,7 +38,11 @@
       <template v-slot:body="props">
         <q-tr :props="props" class="table__row">
           <q-td v-for="col in props.cols" :key="col.name" :props="props">
-            {{ col.value }}
+            <p v-if="col.name === 'is_active'" class="q-mb-none">
+              <q-badge v-if="col.value === 0" rounded color="negative" label="No" />
+              <q-badge v-if="col.value === 1" rounded color="positive" label="Yes" />
+            </p>
+            <p v-else class="q-mb-none">{{ col.value }}</p>
           </q-td>
           <q-td v-if="displayTableActions">
             <generic-table-actions :rowId="props.row.id" @openGenericTableDialog="openGenericTableDialog" />
@@ -69,6 +73,7 @@ import GenericTableOptions from './GenericTableOptions.vue';
 import GenericTableActions from './GenericTableActions.vue';
 import GenericTableDialog from './GenericTableDialog.vue';
 import { notificationSystem } from 'src/library/NotificationSystem';
+import { displayLabel } from 'src/library/TextOperations';
 
 interface GenericTableProps {
   fullscreen?: boolean,

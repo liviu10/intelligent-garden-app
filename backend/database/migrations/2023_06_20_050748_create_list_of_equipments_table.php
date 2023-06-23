@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('equipment_id', 15)->unique('equipment_id');
             $table->string('equipment_description');
             $table->longText('equipment_notes');
-            $table->boolean('equipment_is_active')->nullable(true)->default(false);
+            $table->boolean('is_active')->nullable(true)->default(false);
             $table->timestamps();
         });
     }

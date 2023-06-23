@@ -34,7 +34,7 @@ class ListOfEquipmentRequest extends FormRequest
             ],
             'equipment_description' => 'required|max:255|regex:/^[A-Za-z]+$/',
             'equipment_notes'       => 'sometimes|string',
-            'equipment_is_active'   => [
+            'is_active'   => [
                 'sometimes',
                 function ($attribute, $value, $fail) {
                     if (!is_bool($value)) {

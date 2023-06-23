@@ -62,7 +62,7 @@ class ListOfEquipmentService implements ListOfEquipmentInterface
             'equipment_id'          => $request->get('equipment_id'),
             'equipment_description' => $request->get('equipment_description'),
             'equipment_notes'       => $request->get('equipment_notes'),
-            'equipment_is_active'   => $request->get('equipment_is_active'),
+            'is_active'             => $request->get('is_active'),
             'user_id'               => 1,
         ];
         $saveRecord = $this->modelName->createRecord($apiInsertRecord);
@@ -115,7 +115,7 @@ class ListOfEquipmentService implements ListOfEquipmentInterface
             'equipment_id'          => $request->get('equipment_id'),
             'equipment_description' => $request->get('equipment_description'),
             'equipment_notes'       => $request->get('equipment_notes'),
-            'equipment_is_active'   => $request->get('equipment_is_active'),
+            'is_active'             => $request->get('is_active'),
             'user_id'               => 1,
         ];
         $updateRecord = $this->modelName->updateRecord($apiUpdateRecord, $id);
