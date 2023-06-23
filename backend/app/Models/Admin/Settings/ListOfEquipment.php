@@ -156,7 +156,7 @@ class ListOfEquipment extends Model
             return $this->select('*')
                         ->where('id', '=', $id)
                         ->with([
-                            'users' => function ($query) {
+                            'user' => function ($query) {
                                 $query->select('id', 'full_name');
                             }
                         ])
