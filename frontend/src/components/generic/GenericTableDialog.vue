@@ -25,6 +25,10 @@
                       {{ displayLabel(k) }}: {{ i }}
                     </span>
                   </div>
+                  <div v-else-if="key === 'is_active'">
+                    <q-badge v-if="subItem === 0" rounded color="negative" label="No" />
+                    <q-badge v-if="subItem === 1" rounded color="positive" label="Yes" />
+                  </div>
                   <span v-else>{{ subItem }}</span>
                 </div>
               </q-item-section>

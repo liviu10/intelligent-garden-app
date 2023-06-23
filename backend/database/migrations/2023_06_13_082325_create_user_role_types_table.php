@@ -18,7 +18,7 @@ class CreateUserRoleTypesTable extends Migration
             $table->string('user_role_name');
             $table->string('user_role_description');
             $table->string('user_role_slug');
-            $table->boolean('user_role_is_active')->nullable(true)->default(false);
+            $table->boolean('is_active')->nullable(true)->default(false);
             $table->timestamps();
         });
     }

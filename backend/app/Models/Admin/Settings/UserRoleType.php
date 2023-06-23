@@ -39,7 +39,7 @@ class UserRoleType extends Model
         'user_role_name',
         'user_role_description',
         'user_role_slug',
-        'user_role_is_active',
+        'is_active',
     ];
 
     /**
@@ -48,7 +48,7 @@ class UserRoleType extends Model
     * @var string
     */
     protected $attributes = [
-        'user_role_is_active' => false,
+        'is_active' => false,
     ];
 
     /**
@@ -82,9 +82,8 @@ class UserRoleType extends Model
             return $this->select(
                 'id',
                 'user_role_name',
-                'user_role_description',
                 'user_role_slug',
-                'user_role_is_active'
+                'is_active'
             )
             ->paginate(15);
         }

@@ -1,6 +1,6 @@
 <template>
   <q-page class="admin">
-    <admin-page-title :admin-page-title="'Dashboard'" />
+    <admin-page-title :admin-page-title="'User role types'" />
 
     <generic-table
       v-if="getAllRecords.results?.data"
@@ -31,7 +31,7 @@ import GenericTable from 'src/components/generic/GenericTable.vue';
 const $q = useQuasar();
 
 // Defined the resource name
-const resourceName = ref('list-of-equipments')
+const resourceName = ref('user-role-types')
 
 // Instantiate the pinia store
 const adminSettings = adminSettingsStore();

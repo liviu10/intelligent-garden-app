@@ -162,7 +162,7 @@ class User extends Authenticatable
                         ->where('id', '=', $id)
                         ->with([
                             'user_role_type' => function ($query) {
-                                $query->select('id', 'user_role_name', 'user_role_description', 'user_role_slug', 'user_role_is_active');
+                                $query->select('id', 'user_role_name', 'user_role_description', 'user_role_slug', 'is_active');
                             }
                         ])
                         ->get();
