@@ -1,6 +1,8 @@
 <template>
   <q-page class="admin">
-    <admin-page-title :admin-page-title="'Equipment readings'" />
+    <admin-page-title :admin-page-title="pageTitle" />
+
+    <admin-page-description :admin-page-description="pageDescription" />
 
     <generic-table
       v-if="getAllRecords.results?.data"
@@ -25,6 +27,7 @@ import { adminSettingsStore } from 'src/stores/modules/admin/settings';
 
 // Import generic components, libraries and interfaces
 import AdminPageTitle from 'src/components/AdminPageTitle.vue';
+import AdminPageDescription from 'src/components/AdminPageDescription.vue';
 import GenericTable from 'src/components/generic/GenericTable.vue';
 
 // Defined the quasar variable
@@ -43,8 +46,33 @@ const getAllRecords = computed(() => {
 
 // Fetch single record
 const getSingleRecord = computed(() => {
-  return adminSettings.getSingleRecord;
+  const singleRecord = adminSettings.getSingleRecord;
+
+  if (singleRecord.results) {
+    const modifiedResults = singleRecord.results.map((result) => {
+      const modifiedResult = { ...result };
+      delete modifiedResult.list_of_equipment_id;
+      if (modifiedResult.list_of_equipment && typeof modifiedResult.list_of_equipment === 'object') {
+        modifiedResult.list_of_equipment = (modifiedResult.list_of_equipment as { id: number, equipment_id: string }).equipment_id || '';
+      } else {
+        modifiedResult.list_of_equipment = '';
+      }
+      return modifiedResult;
+    });
+
+    return {
+      title: singleRecord.title,
+      description: singleRecord.description,
+      results: modifiedResults,
+    };
+  }
+
+  return singleRecord;
 });
+
+// Page title and description
+const pageTitle = ref('Equipment readings')
+const pageDescription = ref('Here you will find all the values for that were recorded and sent to this web application via the API. The table displays these values in descending order based on the reading date and time. ')
 
 onMounted(async () => {
   $q.loading.show();

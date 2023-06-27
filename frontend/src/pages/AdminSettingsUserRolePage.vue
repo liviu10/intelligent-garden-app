@@ -2,6 +2,8 @@
   <q-page class="admin">
     <admin-page-title :admin-page-title="'User role types'" />
 
+    <admin-page-description :admin-page-description="'Description page here'" />
+
     <generic-table
       v-if="getAllRecords.results?.data"
       :rows="getAllRecords.results.data"
@@ -25,6 +27,7 @@ import { adminSettingsStore } from 'src/stores/modules/admin/settings';
 
 // Import generic components, libraries and interfaces
 import AdminPageTitle from 'src/components/AdminPageTitle.vue';
+import AdminPageDescription from 'src/components/AdminPageDescription.vue';
 import GenericTable from 'src/components/generic/GenericTable.vue';
 
 // Defined the quasar variable

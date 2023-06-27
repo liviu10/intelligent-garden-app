@@ -1,6 +1,8 @@
 <template>
   <q-page class="admin">
-    <admin-page-title :admin-page-title="'List all equipments'" />
+    <admin-page-title :admin-page-title="pageTitle" />
+
+    <admin-page-description :admin-page-description="pageDescription" />
 
     <generic-table
       v-if="getAllRecords.results?.data"
@@ -25,6 +27,7 @@ import { adminSettingsStore } from 'src/stores/modules/admin/settings';
 
 // Import generic components, libraries and interfaces
 import AdminPageTitle from 'src/components/AdminPageTitle.vue';
+import AdminPageDescription from 'src/components/AdminPageDescription.vue';
 import GenericTable from 'src/components/generic/GenericTable.vue';
 
 // Defined the quasar variable
@@ -41,10 +44,49 @@ const getAllRecords = computed(() => {
   return adminSettings.getAllRecords;
 });
 
-// Fetch single record
+/**
+ * Computes and returns a modified single record object.
+ * @returns Object The modified single record object.
+ * @typedef Object SingleRecord - The original single record object obtained from `adminSettings.getSingleRecord`.
+ * @property string title - The title of the single record.
+ * @property string description - The description of the single record.
+ * @property Array results - The modified results array with the `user_id` property removed (if present).
+ * @typedef Object Result - A modified result object based on the original result.
+ * @property string id - The ID of the result.
+ * @property string equipment_id - The equipment ID of the result.
+ * @property string equipment_description - The equipment description of the result.
+ * @property string user - The full name of the user extracted from the `user` object.
+ * @param SingleRecord singleRecord - The original single record object.
+ * @returns Object The modified single record object.
+ */
 const getSingleRecord = computed(() => {
-  return adminSettings.getSingleRecord;
+  const singleRecord = adminSettings.getSingleRecord;
+
+  if (singleRecord.results) {
+    const modifiedResults = singleRecord.results.map((result) => {
+      const modifiedResult = { ...result };
+      delete modifiedResult.user_id;
+      if (modifiedResult.user && typeof modifiedResult.user === 'object') {
+        modifiedResult.user = (modifiedResult.user as { id: number, full_name: string }).full_name || '';
+      } else {
+        modifiedResult.user = '';
+      }
+      return modifiedResult;
+    });
+
+    return {
+      title: singleRecord.title,
+      description: singleRecord.description,
+      results: modifiedResults,
+    };
+  }
+
+  return singleRecord;
 });
+
+// Page title and description
+const pageTitle = ref('List all equipments')
+const pageDescription = ref('This page is displaying a list of equipment records with various options and actions available, such as viewing/editing details. Users can interact with the table, select specific records, and perform actions like creating new records, downloading/uploading records, editing existing records, and deleting records. The available equipment includes: pH Sensor, Electrical Conductivity Sensor, Level Sensor, pH-- Pump, pH++ Pump, and Nutrients Pump.')
 
 onMounted(async () => {
   $q.loading.show();

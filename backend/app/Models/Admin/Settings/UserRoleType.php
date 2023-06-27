@@ -4,10 +4,11 @@ namespace App\Models\Admin\Settings;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\ApiLogError;
 
 class UserRoleType extends Model
 {
-    use HasFactory;
+    use HasFactory, ApiLogError;
 
     /**
      * The table associated with the model.
@@ -105,11 +106,6 @@ class UserRoleType extends Model
         {
             return $this->select('*')
                         ->where('id', '=', $id)
-                        ->with([
-                            'users' => function ($query) {
-                                $query->select('id', 'full_name');
-                            }
-                        ])
                         ->get();
         }
         catch (\Illuminate\Database\QueryException $mysqlError)

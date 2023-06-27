@@ -2,6 +2,8 @@
   <q-page class="admin">
     <admin-page-title :admin-page-title="'All users'" />
 
+    <admin-page-description :admin-page-description="'Description page here'" />
+
     <generic-table
       v-if="getAllRecords.results?.data"
       :rows="getAllRecords.results.data"
@@ -25,6 +27,7 @@ import { adminSettingsStore } from 'src/stores/modules/admin/settings';
 
 // Import generic components, libraries and interfaces
 import AdminPageTitle from 'src/components/AdminPageTitle.vue';
+import AdminPageDescription from 'src/components/AdminPageDescription.vue';
 import GenericTable from 'src/components/generic/GenericTable.vue';
 
 // Defined the quasar variable
@@ -43,7 +46,34 @@ const getAllRecords = computed(() => {
 
 // Fetch single record
 const getSingleRecord = computed(() => {
-  return adminSettings.getSingleRecord;
+  const singleRecord = adminSettings.getSingleRecord;
+
+  if (singleRecord.results) {
+    const modifiedResults = singleRecord.results.map((result) => {
+      const modifiedResult = { ...result };
+      delete modifiedResult.user_role_type_id;
+      if (modifiedResult.user_role_type && typeof modifiedResult.user_role_type === 'object') {
+        modifiedResult.user_role_type = (modifiedResult.user_role_type as {
+          id: number,
+          is_active: boolean,
+          user_role_description: string,
+          user_role_name: string,
+          user_role_slug: string
+        }).user_role_name || '';
+      } else {
+        modifiedResult.user_role_type = '';
+      }
+      return modifiedResult;
+    });
+
+    return {
+      title: singleRecord.title,
+      description: singleRecord.description,
+      results: modifiedResults,
+    };
+  }
+
+  return singleRecord;
 });
 
 onMounted(async () => {

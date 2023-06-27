@@ -11,9 +11,7 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/AdminIndexPage.vue'),
         meta: {
           title: 'Dashboard',
-          caption: `This section provides a comprehensive overview of settings
-            and equipment status, presenting a summary of information. It allows
-            seamless control, including the ability to toggle pumps on/off directly.`,
+          caption: 'This section provides detailed settings and equipment status for convenient pump control.',
           icon: 'home'
         },
       },
@@ -22,9 +20,7 @@ const routes: RouteRecordRaw[] = [
         name: 'AdminEquipmentsPage',
         meta: {
           title: 'Equipments and Measurements',
-          caption: `This section allows you to manage and monitor
-            equipment data, including viewing and editing equipment
-            details as well as analyzing equipment readings and generating reports.`,
+          caption: 'This section manages equipment data, including viewing/editing, analyzing, and generating reports.',
           icon: 'construction'
         },
         children: [
@@ -59,9 +55,7 @@ const routes: RouteRecordRaw[] = [
         name: 'AdminSettingsPage',
         meta: {
           title: 'Users and Roles',
-          caption: `This section provides control and management over
-            user accounts and roles, allowing you to configure
-            user settings and define role-based access permissions.`,
+          caption: 'This section controls user accounts and roles, configuring settings and permissions.',
           icon: 'settings'
         },
         children: [
